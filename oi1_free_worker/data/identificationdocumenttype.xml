@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="0">
+        <record model="oi1_identification_document_type" id="oi1_free_worker.oi1_identification_document_type_1">
+            <field name="name">Paspoort</field>
+        </record>
+         <record model="oi1_identification_document_type" id="oi1_free_worker.oi1_identification_document_type_2">
+            <field name="name">Identiteitskaart</field>
+        </record>
+        <record model="oi1_identification_document_type" id="oi1_free_worker.oi1_identification_document_type_3">
+            <field name="name">Rijbewijs</field>
+        </record>
+        <record model="oi1_identification_document_type" id="oi1_free_worker.oi1_identification_document_type_4">
+            <field name="name">Onbekend</field>
+        </record>
+         <record model="oi1_identification_document_type" id="oi1_free_worker.oi1_identification_document_type_5">
+            <field name="name">Verblijfsdocument</field>
+        </record>
+    </data>
+</odoo>

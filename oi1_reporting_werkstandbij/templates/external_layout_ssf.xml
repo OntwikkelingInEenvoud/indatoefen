@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="oi1_reporting_werkstandbij.external_layout_sff">
+
+              <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+
+             <div class="header" style="font-size:12px;font-family: Calibri;">
+                 <table style="width:100%">
+                     <tr style="height:120px;">
+                         <td style="width:20%">
+                             <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 120px;"  alt="Logo" />
+                         </td>
+                     </tr>
+                 </table>
+                 <div style="padding-top:25px;"/>
+                 <table style="width:100%;">
+                     <tr>
+                         <td style="width:60%;"><span t-field="company.street" /></td>
+                         <td style="width:20%;">Coc:</td>
+                         <td><span t-field="company.company_registry" /></td>
+                     </tr>
+                     <tr>
+                         <td style="width:60%;"><span t-field="company.zip" /> <span t-field="company.city" /></td>
+                         <td style="width:20%;">IBAN:</td>
+                         <td><span t-field="company.x_default_sales_bankId" /></td>
+                     </tr>
+                      <tr>
+                         <td style="width:60%;"><span t-field="company.phone" /></td>
+                         <td style="width:20%;">Account holder:</td>
+                         <td><span t-field="company.x_default_sales_bankId.partner_id.name"/></td>
+                     </tr>
+                     <t t-if="company.vat">
+                          <tr>
+                             <td style="width:60%;"></td>
+                             <td style="width:20%;">Vat:</td>
+                             <td><span t-field="company.vat"/></td>
+                         </tr>
+                     </t>
+                 </table>
+                 <div name="pageheader" />
+
+             </div>
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+
+            <div class="footer" style="font-size:9px;font-family: Calibri;">
+
+                <div name="page_footer" />
+                <div style="padding-top:25px;" />
+                <center>
+                    <p><span t-field="company.name"/> - <span t-field="company.x_default_sales_bankId" /> - <span t-field="company.street"/>  &#160; <span t-field="company.zip"/>
+                         &#160; <span t-field="company.city"/> - <span t-field="company.phone"/>
+
+                    </p>
+
+                </center>
+
+            </div>
+
+
+
+        </template>
+    </data>
+</odoo>

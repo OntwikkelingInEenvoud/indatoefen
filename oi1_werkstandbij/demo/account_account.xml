@@ -1,0 +1,18 @@
+<odoo>
+    <data noupdate="0">
+        <record id="revenue_payment_company" model="account.account">
+            <field name="code">8000</field>
+            <field name="name">Revenue Payment company</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="company_id" ref = "oi1_werkstandbij.payment_company_id" />
+        </record>
+
+        <record id="revenue_company" model="account.account">
+            <field name="code">8001</field>
+            <field name="name">Revenue company</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="x_wsb_code">8000</field>
+        </record>
+
+    </data>
+</odoo>

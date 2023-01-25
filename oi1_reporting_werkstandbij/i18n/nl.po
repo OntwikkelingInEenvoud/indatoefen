@@ -1,0 +1,412 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_reporting_werkstandbij
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20220725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-15 14:49+0000\n"
+"PO-Revision-Date: 2022-11-15 14:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_invoice_sff
+msgid "&amp;nbsp;<span>on</span>"
+msgstr "&amp;nbsp;<span>over</span>"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid ", latest payment date:"
+msgstr ", laatste betaaldatum:"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid ""
+"<br/>\n"
+"                                  To pay before"
+msgstr ""
+"<br/>\n"
+"                              Te betalen voor"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid ""
+"<br/>\n"
+"                              To pay before"
+msgstr ""
+"<br/>\n"
+"                              Te betalen voor"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+msgid "<br/>behandeld de betalingen namens"
+msgstr ""
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+msgid "<strong>Other</strong>"
+msgstr "<strong>Overig</strong>"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_invoice_sff
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "<strong>Payment</strong>"
+msgstr "<strong>Betaling</strong>"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "<strong>Total overview:</strong>"
+msgstr "<strong>Totaal overzicht:</strong>"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_invoice_sff
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "<strong>Total with Vat </strong>"
+msgstr "<strong>Totaal inclusief BTW</strong>"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_sff
+msgid "Account holder:"
+msgstr "Rekeninghouder"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Amount"
+msgstr "Bedrag"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Break"
+msgstr "Pauze"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Cancelled Invoice"
+msgstr "Geannuleerde factuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_sff
+msgid "Coc:"
+msgstr "Kvk."
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "Com."
+msgstr ""
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "Commission"
+msgstr "Commissie"
+
+#. module: oi1_reporting_werkstandbij
+#: model:ir.actions.report,name:oi1_reporting_werkstandbij.commission_payment_report
+msgid "Commission Payment"
+msgstr "Commissie betaling"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Credit Note"
+msgstr "Creditfactuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Customer no.:"
+msgstr "Klant nr."
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_hours_workers_specification_layout
+msgid "Customer number:"
+msgstr "Klantnummer"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Date"
+msgstr "Datum"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Draft Invoice"
+msgstr "Concept factuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "End"
+msgstr "Eind"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_reporting_werkstandbij
+#: model:ir.actions.report,name:oi1_reporting_werkstandbij.free_workers_specification_report
+msgid "Free workers specification"
+msgstr "Vrijewerker uren specificatie"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+msgid "Hours"
+msgstr "Uren"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_sff
+msgid "IBAN:"
+msgstr ""
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Invoice"
+msgstr "Factuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model:ir.actions.report,name:oi1_reporting_werkstandbij.invoice_report_sff
+msgid "Invoice Stichting Standbij Fonds"
+msgstr "Factuur Stichting Standbij Fonds"
+
+#. module: oi1_reporting_werkstandbij
+#: model:ir.actions.report,name:oi1_reporting_werkstandbij.invoice_report
+msgid "Invoice Werkstandbij"
+msgstr "Factuur Werkstandbij"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Invoice date:"
+msgstr "Factuur datum"
+
+#. module: oi1_reporting_werkstandbij
+#: model:ir.actions.report,name:oi1_reporting_werkstandbij.invoice_hours_workers_specification_report
+msgid "Invoice hours specification"
+msgstr "Specificatie Poule uren op de factuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Invoice no.:"
+msgstr "Factuur nr.:"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_hours_workers_specification_layout
+msgid "Invoice number:"
+msgstr "Factuur nummer:"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_sff
+msgid "Logo"
+msgstr ""
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "Order no."
+msgstr "Order nr."
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Overview of days and quantity of hours when there is worked by poule"
+msgstr ""
+"Overzicht van de dagen en de hoeveelheid uren welke door de poule is "
+"uitgevoerd"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+msgid "Page <span class=\"page\"/>  / <span class=\"topage\"/>"
+msgstr "Pagina <span class=\"page\"/>  / <span class=\"topage\"/>"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "Payed with invoice"
+msgstr "Betaald met factuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+msgid "Payment"
+msgstr "Betaling"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Poule name"
+msgstr "Poule naam"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Poule name / Date"
+msgstr "Poule naam / Datum"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Sent by e-mail to"
+msgstr "Verzonden per mail naar"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Specification Hours"
+msgstr "Urenspecificatie"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+msgid "Specification payment"
+msgstr "Betalingsspecificatie"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Start"
+msgstr "Begin"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+msgid "State"
+msgstr "Status"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_invoice_sff
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Subtotal without VAT"
+msgstr "Subtotaal zonder BTW"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Tariff"
+msgstr "Tarief"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "To pay amount"
+msgstr "Te betalen bedrag"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_commission_payment_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+msgid "Total"
+msgstr "Totaal"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Total amount"
+msgstr "Totaal bedrag"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Total worked time"
+msgstr "Totaal gewerkte uren"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_sff
+msgid "Vat:"
+msgstr "BTW:"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Vendor Bill"
+msgstr "Leveranciersfactuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Vendor Credit Note"
+msgstr "Leveranciers creditfactuur"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document
+msgid "Work time"
+msgstr "Werktijd"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "Work time (hour)"
+msgstr "Werktijd (uur)"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_free_workers_specification_document
+msgid "Year total"
+msgstr "Jaartotaal"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+msgid "Your vat number:"
+msgstr "Uw BTW nummer: "
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+msgid "betalingsverkeer behandeld door"
+msgstr ""
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "in the name of"
+msgstr "namens"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_invoice_sff
+msgid "latest payment date:"
+msgstr "Laatste betaaldatum:"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "on"
+msgstr "aan"
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout_invoice_sff
+msgid "over"
+msgstr ""
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_layout
+msgid "phone."
+msgstr "Tel."
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.external_invoice_layout
+msgid "phone:"
+msgstr "Tel."
+
+#. module: oi1_reporting_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:oi1_reporting_werkstandbij.report_invoice_document_sff
+msgid "with mention of invoice number"
+msgstr "onder de vermelding van factuurnummer"

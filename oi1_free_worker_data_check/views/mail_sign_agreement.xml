@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="sign_agreement_template_email" model="mail.template">
+            <field name="name">FreeWorker Payment - Send contract by Email</field>
+            <field name="email_from">${(user.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+            <field name="subject">Ontbrekende ondertekening van ${object.name|safe} bij werkstandby</field>
+            <field name="email_to">${(object.partner_id.x_communication_email)}</field>
+            <field name="model_id" ref="oi1_free_worker.model_oi1_free_worker"/>
+            <field eval="True" name="auto_delete"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="body_html"><![CDATA[
+                Beste ${object.partner_id.name}, <br><br>
+
+                Je hebt je ingeschreven als vrije werker via ons portaal:<br>
+                inschrijven.werkstandby.nl/register<br>
+
+                Helaas is de ondertekening van je machtiging om voortaan in ons geautomatiseerde systeem alle benodigde akkoordverklaringen op onze 3-partijen Modelovereenkomst niet gevonden.<br>
+                Wil je opnieuw inloggen om dit in orde te brengen?<br>
+
+                Je kan een wachtwoord genereren door bij inloggen aan te geven dat je het vergeten bent (dat is natuurlijk niet zo, want je kreeg er geen, maar het werkt wel).<br>
+                Daarna kunnen we je gewerkte uren verwerken en uitbetalen.<br>
+
+                Mocht je dit toch niet lukken, dan kan je ons mailen of we hem als pdf naar je toe kunnen sturen ter ondertekening.<br>
+
+                <br><br>Met vriendelijk groet,<br><br>Backoffce Werk Standby<br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>
+
+                ]]></field>
+        </record>
+
+    </data>
+</odoo>

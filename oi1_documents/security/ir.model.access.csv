@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_oi1_document_information,access_oi1_document_information,model_oi1_document_information,base.group_user,1,1,1,1
+
+
+
+
+
+
+

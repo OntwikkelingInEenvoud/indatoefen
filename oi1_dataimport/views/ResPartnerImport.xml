@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<openerp>
+ 
+ <data>
+ 
+ <record id="oi1_dataimport.template_main_res_partner" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Relaties (ResPartner)</field>
+            <field name="module">dataimport</field>           
+        </record>            
+                  
+        <record id="oi1_dataimport.template_main_res_partner_field_name" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_x_prev_code" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_x_parent_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_parent_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_x_parent_name"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_parent_name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_x_mnem" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_mnem</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_street" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">street</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_street_number"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">street_number</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+          <record id="oi1_dataimport.template_main_res_partner_field_lang"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">lang</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+         <record id="oi1_dataimport.template_main_res_partner_field_street2"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">street2</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_landcode" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">countrycode</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_countryname"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">countryname</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_zip" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">zip</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+        
+         <record id="oi1_dataimport.template_main_res_partner_field_city" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">city</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_phone" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">phone</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+
+          <record id="oi1_dataimport.template_main_res_partner_field_mobile"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">mobile</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_fax" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">fax</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+
+        
+        <record id="oi1_dataimport.template_main_res_partner_field_iscompany"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">iscompany</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />           
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_comment"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">comment</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+         <record id="oi1_dataimport.template_main_res_partner_field_vat"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">vat</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_deliverystreet"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">deliverystreet</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_deliverycity"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">deliverycity</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_deliveryzip"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">deliveryzip</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_iban"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">iban</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+         <record id="oi1_dataimport.template_main_res_partner_field_email"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">email</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+          <record id="oi1_dataimport.template_main_res_partner_field_ref"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">ref</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_website"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">website</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+        <record id="oi1_dataimport.template_main_res_partner_field_x_firstname"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_firstname</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+
+
+       <record id="oi1_dataimport.template_main_res_partner_field_function"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">function</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+        </record>
+
+      <record id="oi1_dataimport.template_main_res_partner_field_x_gender"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_gender</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+       <record id="oi1_dataimport.template_main_res_partner_field_x_initials"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_initials</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+     <record id="oi1_dataimport.template_main_res_partner_field_x_name"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+     <record id="oi1_dataimport.template_main_res_partner_field_debtor_no"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">debtorno</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+      <record id="oi1_dataimport.template_main_res_partner_field_x_coc"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_coc</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+      <record id="oi1_dataimport.template_main_res_partner_field_x_coc"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_coc</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+      <record id="oi1_dataimport.template_main_res_partner_field_property_supplier_payment_term_days"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">property_supplier_payment_term_days</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+         <record id="oi1_dataimport.template_main_res_partner_field_property_supplier_payment_term_description"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">property_supplier_payment_term_description</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner" />
+       </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+ </data>
+ </openerp>

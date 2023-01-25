@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+
+              <record id="oi1_werkstandbij_commission.text_commission_type" model="oi1_text.text_type">
+                <field name="name">Commission text</field>
+            </record>
+    </data>
+</odoo>

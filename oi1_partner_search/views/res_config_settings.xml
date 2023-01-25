@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_partner_search.res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">oi1_partner_search.view.form.inherit.account</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="40"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Partners" string="Partners" data-key="Partners" groups="base.group_no_one">
+                        <h2>Partners</h2>
+                        <div class="row mt16 o_settings_container" id="general_partner_settings">
+                            <div class="col-12 col-lg-6 o_setting_box" title="Comma separated list of fields for wildcard search partners">
+                                <div class="o_setting_right_pane">
+                                    <label string="Comma separated list of fields for wildcard search partners" for="x_partner_search_wildcard"/>
+                                    <div class="text-muted">
+                                        Makes searching of partners easier by search for more fields
+                                    </div>
+                                    <field name="x_partner_search_wildcard"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+
+    <data noupdate="1">
+
+	<record id="oi1_partner_search.calculate_search_code_cron" model="ir.cron">
+        <field name="name">Calculate search codes of the partners</field>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="state">code</field>
+        <field name="code">model.do_calculate_search_code_cron()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">0</field>
+        <field name="doall" eval="False"/>
+    </record>
+</data>
+</odoo>

@@ -1,0 +1,16 @@
+<openerp> 
+ <data>
+    <!--
+    <record model="ir.sequence.type" id="ek_importdata.debcode">
+        <field name="name">Contacts</field>
+        <field name="code">ek_res_partner</field>
+    </record>
+    --> 
+    <record model="ir.sequence" id="oi1_dataimport.res_partner_debcode_seq">
+        <field name="name">oi1_dataimport.res_partner_debcode</field>  
+        <field name="prefix"></field>
+        <field name="padding">0</field>
+        <field name="code">oi1_dataimport.res_partner_debcode_seq</field>
+    </record>
+  </data> 
+</openerp>

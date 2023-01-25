@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_werkstandbij_commission.commission_payment_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_commission_commission_form</field>
+            <field name="model">oi1_sale_commission_payment</field>
+            <field name="arch" type="xml">
+                <form string="commission form">
+
+                    <header>
+                        <field name="are_action_buttons_visible"  invisible="1" />
+                        <field name="is_do_approve_visible"  invisible="1" />
+                        <field name="is_do_disapprove_visible"  invisible="1" />
+                        <field name="is_do_invoice_visible" invisible="1" />
+                        <field name="is_do_un_reserve_visible" invisible="1" />
+                        <button name="do_approve"  type="object" string="Approve"
+                                class="btn-primary"  attrs="{'invisible': [('is_do_approve_visible', '=', False)]}" />
+                         <button name="do_invoice"  type="object" string="Invoice"
+                                class="btn-primary"  attrs="{'invisible': [('is_do_invoice_visible', '=', False)]}" />
+                         <button name="%(oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_action)d" string="Make unreserve wizard"
+                         type="action" class="btn-primary" attrs="{'invisible': [('is_do_un_reserve_visible', '=', False)]}" />
+                        <button name="do_disapprove" type="object" string="Disapprove" attrs="{'invisible': [('is_do_disapprove_visible', '=', False)]}"  />
+                        <button name="do_print_commissionreport" type="object" string="Print" attrs="{'invisible': [('are_action_buttons_visible', '=', False)]}" />
+                        <button name="do_email_commissionreport" type="object" string="Email"  attrs="{'invisible': [('are_action_buttons_visible', '=', False)]}" />
+                        <field name="state" widget="statusbar"/>
+                    </header>
+
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="number" readonly="1"/>
+                                </group>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="company_id" readonly="1"/>
+                                <field name="partner_is_freeworker"  invisible="1" />
+                                <field name="partner_id" readonly="1"  attrs="{'invisible': [('partner_is_freeworker', '=', True)]}" />
+                                <field name="freeworker_id" readonly="1"  attrs="{'invisible': [('partner_is_freeworker', '=', False)]}" />
+                                <field name="period"  />
+                                <field name="type" />
+                                <field name="amount" readonly="1"/>
+                                <field name="invoice_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="commission_contact" />
+                                <field name="communication_email" />
+                                <field name="commission_agreement"  />
+                            </group>
+                        </group>
+
+
+                        <notebook>
+                            <page string="Commission lines">
+                                <field name="sale_commission_payment_lines" readonly="1">
+                                    <tree>
+                                        <field name="date"/>
+                                        <field name="type"  optional="hide" />
+                                        <field name="name"/>
+                                        <field name="commission_id" optional="show"/>
+                                        <field name="has_a_reservation" optional="hide" />
+                                        <field name="reservation_commission_payment_line_id" optional="hide" />
+                                        <field name="sale_id" optional="show" />
+                                        <field name="partner_worker_id" optional="show" />
+                                        <field name="qty"/>
+                                        <field name="rate"/>
+                                        <field name="amount" sum="total amount" />
+                                    </tree>
+                                </field>
+
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+         <record id="oi1_werkstandbij_commission.commission_payment_line_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_commission_commission_line_form</field>
+            <field name="model">oi1_sale_commission_payment_line</field>
+            <field name="arch" type="xml">
+                <form string="commission line form">
+
+                    <sheet>
+                         <div class="oe_title oe_left">
+                                <field name="name" readonly="1"/>
+                        </div>
+
+                        <group>
+                            <field name="date" />
+                            <field name="type" />
+                            <field name="commission_id"  />
+                            <field name="qty" />
+                            <field name="unit" />
+                            <field name="rate" />
+                            <field name="amount" />
+
+
+                            <field name="account_analytic_line_id"  />
+                            <field name="sale_id"  />
+                            <field name="partner_worker_id" />
+                            <field name="pur_invoice_line_id" />
+                        </group>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij_commission.commission_payment_tree" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_commission_commission_tree</field>
+            <field name="model">oi1_sale_commission_payment</field>
+            <field name="arch" type="xml">
+                <tree string="Commissions" create="false" delete="false">
+                    <field name="partner_id"/>
+                    <field name="number"/>
+                    <field name="type"   optional="show" />
+                    <field name="period"  optional="show" />
+                    <field name="name"  optional="show" />
+                    <field name="date"  optional="show" />
+                    <field name="amount" sum="Total" />
+                    <field name="state"  optional="show" />
+                    <field name="commission_agreement"  optional="show" />
+                    <field name="invoice_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij_commission.commission_payment_search" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_commission_commission_search</field>
+            <field name="model">oi1_sale_commission_payment</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Search"  filter_domain="['|', '|', ('name','ilike',self), ('number','ilike',self), ('partner_id','ilike',self)]" />
+                    <field name="number"/>
+                    <field name="name"/>
+                    <field name="partner_id" />
+                    <field name="type" />
+                    <filter string="Approved" name="approved" domain="[('state', '=', 'approved')]"/>
+                    <filter string="InProgress" name="in_progress" domain="[('state','in',['concept','approved'])]"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Partner" name="partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Type" name="type" domain="[]" context="{'group_by':'type'}"/>
+                        <filter string="State" name="type" domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="oi1_werkstandbij_commission.commission_payment_action">
+            <field name="name">Commissions</field>
+            <field name="res_model">oi1_sale_commission_payment</field>
+            <field name="context">{"search_default_in_progress":1}</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Here are the commissions shown which are earned by the partners
+                </p>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij_commission.oi1_sale_commission_payment_sequence" model="ir.sequence">
+            <field name="name">Commission payments sequence</field>
+            <field name="code">oi1_werkstandbij_commission.oi1_sale_commission_payment</field>
+            <field name="prefix">COM/%(range_year)s/</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field eval="False" name="company_id"/>
+            <field name="padding">4</field>
+        </record>
+
+
+        <menuitem id="oi1_werkstandbij_commission.commission_payment_menu" name="Commission Payments"
+                  parent="account.menu_finance_payables"
+                  action="oi1_werkstandbij_commission.commission_payment_action" sequence="5" groups="base.group_user"/>
+        </data>
+
+        <data noupdate="0">
+            <record id="oi1_werkstandbij_commission.commission_template_email" model="mail.template">
+                 <field name="name">Commission Payment - Send contract by Email</field>
+                 <field name="email_from">{{(object.company_id.email or '')}}</field>
+                 <field name="email_to">{{(object.partner_id.x_communication_email)}}</field>
+                 <field name="model_id" ref="oi1_werkstandbij_commission.model_oi1_sale_commission_payment"/>
+                 <field name="subject">Commission Payment {{( object.number )}}</field>
+                 <field eval="True" name="auto_delete"/>
+                 <field name="report_name">Commission Payment {{( object.number )}}</field>
+                 <field name="lang">{{(object.partner_id.lang)}}</field>
+                 <field name="body_html" type="html">
+                     <html>
+                        <body>
+                            <p>
+                                Beste <t t-out="object.partner_id.name" />
+                            </p>
+                            <p>
+                                Hierbij ontvangt u de opbouw van uw vergoeding <t t-out="object.number" />
+                            </p>
+                            <p>
+                                Met vriendelijke groet, <br></br>
+                                <t t-out="user.name" /> <br></br>
+                            </p>
+                        </body>
+                     </html>
+                 </field>
+            </record>
+
+        </data>
+</odoo>

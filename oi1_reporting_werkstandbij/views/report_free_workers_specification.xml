@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+     <record id="Page_FreeWorkers_Specification" model="report.paperformat">
+        <field name="name">FreeWorkers Specification Invoice a4 (Default)</field>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">30</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="oi1_reporting_werkstandbij.free_workers_specification_report" model="ir.actions.report">
+        <field name="name">Free workers specification</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">oi1_reporting_werkstandbij.report_free_workers_specification</field>
+        <field name="report_file">oi1_reporting_werkstandbij.report_free_workers_specification</field>
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="Invoice" />
+    </record>
+
+
+
+
+    <template id="oi1_reporting_werkstandbij.report_free_workers_specification">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="oi1_reporting_werkstandbij.report_free_workers_specification_document" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+    </template>
+
+    <template id="oi1_reporting_werkstandbij.report_free_workers_specification_document">
+          <t t-call="oi1_reporting_werkstandbij.external_layout">
+              <div class="page" style="font-size:11px;">
+                  <h2 style="text-align:center">Specification payment  <span t-field="o.name" /> </h2>
+
+                  <table style="width:100%;border-top: 1px solid LightGrey;border-bottom: 1px solid LightGrey;">
+                      <tr>
+                          <td style="padding-top:10px;width:60%;"><span t-field="o.partner_id.name" /></td>
+                          <td style="padding-top:10px;width:20%">Date</td>
+                          <td style="padding-top:10px;width:20%"><span t-field="o.invoice_date" /></td>
+                      </tr>
+                      <tr>
+                          <td><span t-field="o.partner_id.street"/></td>
+                          <td style="width:20%">Payment</td>
+                          <td style="width:20%"><strong><span t-field="o.amount_total" /></strong></td>
+                      </tr>
+                      <tr>
+                          <td style="padding-bottom:10px;"><span t-field="o.partner_id.zip"/> <span t-field="o.partner_id.city"/></td>
+                          <td style="width:20%">Year total <span t-esc="o.invoice_date.year"/></td>
+                          <td style="width:20%"><span t-field="o.x_partner_year_amount" /></td>
+                      </tr>
+
+                  </table>
+
+                  <div style="padding-top:15px;" />
+
+                  <t t-set="work_poule_id" t-value="-1"/>
+                  <t t-set="hours"  t-value="0.0" />
+
+                  <table style="width:100%;">
+                      <tbody>
+                           <t t-foreach="o.sudo().x_account_analytic_line_ids.sorted(key=lambda r: (r.project_id, r.date, r.x_from_time))" t-as="line" >
+                           <t t-set="hours" t-value="hours + line.unit_amount" />
+                           <t t-if="line.x_poule_id.id != work_poule_id">
+                               <tr>
+                                   <td colspan="4" style="font-size:15px;padding-top:10px;"><span t-field="line.x_poule_id.description"/></td>
+                                   <td colspan="3" style="font-size:15px;text-align:right"><strong><span t-field="line.x_sale_id.partner_id.name"/></strong></td>
+                               </tr>
+                               <tr>
+                                   <td colspan="7" style="font-size:15px;padding-bottom:10px;border-bottom: 1px solid LightGrey;"><span t-field="line.x_poule_id.act_description"/></td>
+                               </tr>
+                               <tr style="font-size:9px;font-style:italic;">
+                                  <td style="padding-bottom:10px;">Date</td>
+                                  <td>Start</td>
+                                  <td>End</td>
+                                  <td style="width:30%">Break</td>
+                                  <td style="text-align:right;">Total</td>
+                                  <td style="text-align:right;width:10%;">Tariff</td>
+                                  <td style="text-align:right;width:10%;">Amount</td>
+                                </tr>
+                               <t t-set="work_poule_id" t-value="line.x_poule_id.id"/>
+                           </t>
+                           <tr>
+                               <td><span t-field="line.date" widget="date" /></td>
+                               <td><span t-field="line.x_from_time"/></td>
+                               <td><span t-field="line.x_to_time"/></td>
+                               <td><span t-field="line.x_pause_time"/></td>
+                               <td style="text-align:right;"><span t-esc="line.unit_amount" t-options='{"widget": "float", "precision": 2}' /></td>
+                               <td style="text-align:right;width:10%;"><span t-field="o.currency_id.symbol"/> <span t-field="line.x_rate" t-options='{"widget": "float", "precision": 2}' /></td>
+                               <td style="text-align:right;width:10%;"><span t-field="o.currency_id.symbol"/> <span t-field="line.x_amount" t-options='{"widget": "float", "precision": 2}'/></td>
+                           </tr>
+                           </t>
+
+                            <t t-if="len(o.x_no_work_invoice_line_ids) !=0"  >
+                                 <tr>
+                                   <td colspan="4" />
+                                   <td colspan="3" style="font-size:15px;text-align:right;padding-bottom:10px;border-bottom: 1px solid LightGrey;padding-top:25px;"><strong>Other</strong></td>
+                               </tr>
+
+                            </t>
+
+                            <t t-foreach="o.x_no_work_invoice_line_ids" t-as="line" >
+                               <tr>
+                                   <td colspan="4" ><span t-field="line.name"/></td>
+                                  <td style="text-align:right;"><span t-field="line.quantity" t-options='{"widget": "float", "precision": 2}'/></td>
+                                  <td style="text-align:right;width:10%;"><span t-field="o.currency_id.symbol"/> <span t-field="line.price_unit" t-options='{"widget": "float", "precision": 2}' /></td>
+                                  <td style="text-align:right;width:10%;"><span t-field="o.currency_id.symbol"/> <span t-field="line.price_subtotal" t-options='{"widget": "float", "precision": 2}'/></td>
+
+                               </tr>
+
+
+                            </t>
+
+                      </tbody>
+
+
+                  </table>
+
+                  <div style="padding-top:15px;" />
+
+                  <table style="width:100%">
+                      <tr>
+                          <td style="width:50%" />
+                          <td style="width:50%;">
+                              <table style="width:100%;">
+                                  <tr>
+                                      <td></td>
+                                      <td style="width:20%;"></td>
+                                      <td style="border-top: 1px solid LightGrey;height:5px;;width:20%;"></td>
+                                  </tr>
+                                  <tr>
+                                      <td style="text-align:right;">Total <span t-field="o.name"/>: </td>
+                                      <td style="text-align:right;">Amount</td>
+                                      <td style="border-top: 1px solid LightGrey;text-align:right;font-weight: bold;font-size:15px;">
+                                        <span t-field="o.amount_total" /></td>
+                                  </tr>
+                                   <tr>
+                                      <td></td>
+                                      <td style="text-align:right;">Hours</td>
+                                      <td style="text-align:right;font-weight: bold;font-size:15px;">
+                                        <span t-esc="hours" t-options='{"widget": "float", "precision": 2}' /></td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </t>
+    </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+ 
+ <data>
+     <record id="oi1_dataimport.template_main_mail_activity" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Activiteiten (mail.activity)</field>
+            <field name="module">dataimport</field>           
+      </record>
+                  
+     <record id="oi1_dataimport.template_main_mail_activity_field_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_activity_field_partner_id_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">partner_id_x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_activity_field_crm_lead_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">crm_lead_id_x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_activity_field_subject"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">note</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+      <record id="oi1_dataimport.template_main_mail_activity_field_date"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">date</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+     <record id="oi1_dataimport.template_main_mail_activity_field_type_name"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">type_name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+      <record id="oi1_dataimport.template_main_mail_activity_field_summary"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">summary</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+
+      <record id="oi1_dataimport.template_main_mail_activity_field_make_old_ready"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">make_old_ready</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_activity" />
+     </record>
+
+
+
+
+
+
+
+
+
+        
+ </data>
+ </odoo>

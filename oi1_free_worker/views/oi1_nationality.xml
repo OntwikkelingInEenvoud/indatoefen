@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker.nationality_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_nationality_form</field>
+            <field name="model">oi1_nationality</field>
+            <field name="arch" type="xml">
+                <form string="Education form">
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="country_id"  options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"  />
+                            <field name="description" />
+                            <field name="country_code" />
+                            <field name="schengen_insurance" />
+                            <field name="active" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="oi1_free_worker.nationality_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker_nationality_tree</field>
+            <field name="model">oi1_nationality</field>
+            <field name="arch" type="xml">
+                <tree string="Nationalities">
+                    <field name='sequence' widget='handle'/>
+                    <field name="name"/>
+                    <field name="country_id" />
+                    <field name="country_code" />
+                    <field name="schengen_insurance" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oi1_free_worker.nationality_action">
+            <field name="name">Nationalities</field>
+            <field name="res_model">oi1_nationality</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create a nationality
+                </p>
+            </field>
+        </record>
+
+
+         <menuitem id="oi1_free_worker.nationality_menu" name="Nationalities" parent="oi1_free_worker.settings_menu"
+                  action="oi1_free_worker.nationality_action" sequence="10" groups="oi1_free_worker.freeworker_view_private" />
+
+
+
+
+
+
+    </data>
+</odoo>

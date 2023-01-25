@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.view_timesheet_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.view_sheet_form</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="date" position="before">
+                        <field name="x_partner_id" required="True"/>
+                    </field>
+                </data>
+
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
+        

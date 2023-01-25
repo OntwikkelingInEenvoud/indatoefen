@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+          <record id="oi1_free_worker_data_check.oi1_data_check_wizard" model="ir.ui.view">
+                <field name="name">oi1_free_worker_data_check.oi1_data_check_wizard</field>
+                <field name="model">oi1_free_worker_data_wizard</field>
+                <field name="arch" type="xml">
+                    <form string="">
+                        <group>
+                             <field name="free_worker_id"  readonly="1"/>
+                             <field name="agreement_with_principals" />
+                             <field name="naw_data_correct"  />
+                             <field name="has_iban"  />
+                        </group>
+                        <footer>
+                            <button name="do_save_data" string="do_save_data" type="object" />
+                            <button name="do_send_sign_agreement_with_principals" string="send_sign_agreement_with_principals" type="object" />
+                            <button name="do_send_fill_naw_data" string="send_fill_naw_data" type="object" />
+                            <button name="do_send_mail_iban" string="send_mail_iban" type="object"  />
+                            <button name="cancel" string="cancel" special="cancel" />
+                        </footer>
+                    </form>
+                </field>
+          </record>
+      </data>
+</odoo>

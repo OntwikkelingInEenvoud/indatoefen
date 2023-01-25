@@ -1,0 +1,30 @@
+<odoo>
+    <data noupdate="1">
+         <record model="oi1_commission_role" id="oi1_commission_role_wsb_ssf">
+            <field name="name">SSF Licentienemer</field>
+            <field name="description">De afdracht van gelden ten behoeve van het beschikbaar stellen van het vrije werkers model en sociaal ondernemen</field>
+        </record>
+
+        <record model="product.product" id="product_product_wsb_ssf">
+            <field name="name">WSB / SSF Afdracht </field>
+        </record>
+
+         <record model="product.product" id="product_product_reserve">
+            <field name="name">Reservation </field>
+        </record>
+
+         <record model="oi1_commission" id="oi1_commission_wsb_ssf">
+            <field name="name">WSB / SSF Afdracht </field>
+            <field name="description">De afdracht van gelden ten behoeve van het beschikbaar stellen van het vrije werkers model en sociaal ondernemen</field>
+            <field name="commission_role_id"  ref="oi1_commission_role_wsb_ssf"  />
+            <field name="product_id" ref="product_product_wsb_ssf" />
+        </record>
+
+        <record model="oi1_commission" id="oi1_commission_reservation">
+            <field name="name">Reservations</field>
+            <field name="description">De afdracht voor het reserveren van kosten van o.a. cursussen en onverwachte uitgaven</field>
+            <field name="commission_role_id"  ref="oi1_werkstandbij_commission.oi1_commission_role_reservation"  />
+            <field name="product_id" ref="product_product_reserve" />
+        </record>
+    </data>
+</odoo>

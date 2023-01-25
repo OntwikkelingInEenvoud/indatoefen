@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+     <record id="Page_Hours_Specification" model="report.paperformat">
+        <field name="name">Invoice hours Specification Invoice a4 (Default)</field>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">50</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">40</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="oi1_reporting_werkstandbij.invoice_hours_workers_specification_report" model="ir.actions.report">
+        <field name="name">Invoice hours specification</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">oi1_reporting_werkstandbij.report_invoice_hours_workers_specification</field>
+        <field name="report_file">oi1_reporting_werkstandbij.report_invoice_hours_workers_specification</field>
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="Page_Hours_Specification" />
+    </record>
+
+
+
+    <template id="oi1_reporting_werkstandbij.external_hours_workers_specification_layout" inherit_id="oi1_reporting_werkstandbij.external_layout" primary="True">
+             <xpath expr="//div[@name='pageheader']" position="replace">
+                 <table style="width:40%">
+                     <tr>
+                         <td>Customer number:</td>
+                         <td><span t-field="o.partner_id.x_prev_code"/></td>
+                     </tr>
+                     <tr>
+                         <td>Invoice number:</td>
+                         <td><span t-field="o.name"/></td>
+                     </tr>
+                 </table>
+             </xpath>
+    </template>
+
+
+    <template id="oi1_reporting_werkstandbij.report_invoice_hours_workers_specification">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+    </template>
+
+    <template id="oi1_reporting_werkstandbij.report_invoice_hours_workers_specification_document">
+          <t t-call="oi1_reporting_werkstandbij.external_hours_workers_specification_layout">
+              <t t-set="company" t-value="o.company_id"  />
+              <div class="page" style="font-size:11px;">
+                  <h2 style="text-align:center">Specification Hours</h2>
+                   <div style="page-break-inside: avoid">
+                       <t t-set="hours" t-value="0.0" />
+                       <t t-set="amount" t-value="0.0"/>
+                        <t t-foreach="o.sudo().x_poule_ids" t-as="poule">
+                            Overview of days and quantity of hours when there is worked by poule <span t-field="poule.name"/>
+                            <div style="padding-top:15px;" />
+                            <table style="width:100%;">
+                                <thead style="font-style:italic;font-size:8px;border-bottom: 10px solid white">
+                                    <td >Free worker</td>
+                                    <td >Date</td>
+                                    <td >Start</td>
+                                    <td>End</td>
+                                    <td>Break</td>
+                                    <td style="text-align:right;">Work time</td>
+                                    <td style="text-align:right;">Tariff</td>
+                                    <td style="text-align:right;">Amount</td>
+                                </thead>
+                                <tbody>
+                                 <t t-set="freeworker" t-value="" />
+                                 <t t-foreach="o.sudo().x_sale_account_analytic_line_ids.sorted(key=lambda r:(r.x_partner_id.name, r.date, r.x_from_time)).filtered(lambda r: r.x_poule_id.id == poule.id)" t-as="work">
+                                     <t t-set="hours" t-value="hours + work.unit_amount"/>
+                                     <t t-set="amount" t-value="amount + work.x_amount"/>
+                                     <tr>
+                                        <td>
+                                            <t t-if="work.x_partner_id.name != freeworker">
+                                                <span t-field="work.x_partner_id.name" />
+                                                 <t t-set="freeworker" t-value="work.x_partner_id.name" />
+                                            </t>
+                                        </td>
+                                        <td><span t-field="work.date" /></td>
+                                        <td><span t-field="work.x_from_time" /></td>
+                                        <td><span t-field="work.x_to_time" /></td>
+                                        <td><span t-field="work.x_pause_time" /></td>
+                                        <td style="text-align:right;width:10%;"><span t-field="work.unit_amount" t-options='{"widget": "float", "precision": 2}'  /></td>
+                                        <td style="text-align:right;width:10%;"><span t-field="work.currency_id.symbol"/> <span t-field="work.x_rate" t-options='{"widget": "float", "precision": 2}'  /></td>
+                                        <td style="text-align:right;width:10%;"><span t-field="work.currency_id.symbol"/> <span t-field="work.x_amount" t-options='{"widget": "float", "precision": 2}'  /></td>
+                                     </tr>
+                                 </t>
+                                </tbody>
+                            </table>
+                        </t>
+                   </div>
+                  <div style="padding-top:15px;" />.
+                  <table style="width:100%; ">
+                      <tr style="font-size:15px;font-weight:bold;">
+                        <td style="width:70%;text-align:right;">Total worked time</td>
+                        <td style="width:10%;text-align:right;border-top: 1px solid lightGrey"><span t-esc="hours" t-options='{"widget": "float", "precision": 2}' /></td>
+                        <td style="width:20%;text-align:right;border-top: 1px solid lightGrey"><span t-field="o.currency_id.symbol"/> <span t-esc="amount" t-options='{"widget": "float", "precision": 2}' /></td>
+                      </tr>
+                  </table>
+              </div>
+          </t>
+    </template>
+
+    </data>
+</odoo>

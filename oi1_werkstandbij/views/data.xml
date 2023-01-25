@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record forcecreate="True" id="decimal_surcharge_amount_uom" model="decimal.precision">
+            <field name="name">Surcharge Amount</field>
+            <field name="digits" eval="4"/>
+        </record>
+    </data>
+</odoo>

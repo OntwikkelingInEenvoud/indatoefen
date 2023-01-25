@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_free_worker_data_check
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20210507\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-01 07:46+0000\n"
+"PO-Revision-Date: 2022-07-01 07:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,body_html:oi1_free_worker_data_check.sign_agreement_template_email
+msgid ""
+"\n"
+"                Beste ${object.partner_id.name}, <br><br>\n"
+"\n"
+"                Je hebt je ingeschreven als vrije werker via ons portaal:<br>\n"
+"                inschrijven.werkstandby.nl/register<br>\n"
+"\n"
+"                Helaas is de ondertekening van je machtiging om voortaan in ons geautomatiseerde systeem alle benodigde akkoordverklaringen op onze 3-partijen Modelovereenkomst niet gevonden.<br>\n"
+"                Wil je opnieuw inloggen om dit in orde te brengen?<br>\n"
+"\n"
+"                Je kan een wachtwoord genereren door bij inloggen aan te geven dat je het vergeten bent (dat is natuurlijk niet zo, want je kreeg er geen, maar het werkt wel).<br>\n"
+"                Daarna kunnen we je gewerkte uren verwerken en uitbetalen.<br>\n"
+"\n"
+"                Mocht je dit toch niet lukken, dan kan je ons mailen of we hem als pdf naar je toe kunnen sturen ter ondertekening.<br>\n"
+"\n"
+"                <br><br>Met vriendelijk groet,<br><br>Backoffce Werk Standby<br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>\n"
+"\n"
+"                "
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,body_html:oi1_free_worker_data_check.mail_send_iban
+msgid ""
+"\n"
+"                Beste ${object.partner_id.name}, <br><br>\n"
+"\n"
+"                Je hebt je ingeschreven als vrije werker via ons portaal:<br>\n"
+"                inschrijven.werkstandby.nl/register<br>\n"
+"\n"
+"                We hebben je inschrijving ontvangen, maar helaas zijn nog niet al je gegevens compleet.<br>\n"
+"                In elk geval missen we nog je bankrekeningnummer en de tenaamstelling van je.<br>\n"
+"\n"
+"                Kan je opnieuw naar inschrijven.werkstandby.nl/login gaan?<br>\n"
+"                Om een wachtwoord te krijgen moet je aangeven dat je het vergeten bent. Dan ontvang je een mailbericht om een nieuw wachtwoord aan te maken.<br><br>\n"
+"\n"
+"                Wil je na het aanvullen van je bank-gegevens ook meteen even checken of je kopie ID goed is geüpload, zodanig dat we kunnen zien dat jij het bent met een ID uit een EU-land? En kijk ook even of je de machtiging wel had ondertekend.<br>\n"
+"                Zonder deze gegevens kunnen wij je straks niet uitbetalen.\n"
+"\n"
+"                <br><br>Met vriendelijk groet,<br><br>Backoffce Werk Standby<br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>\n"
+"\n"
+"                "
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,body_html:oi1_free_worker_data_check.mail_complete_nav
+msgid ""
+"\n"
+"                Beste ${object.partner_id.name}, <br><br>\n"
+"\n"
+"                Je hebt je ingeschreven als vrije werker via ons portaal:<br>\n"
+"                inschrijven.werkstandby.nl/register<br>\n"
+"\n"
+"                We hebben je inschrijving ontvangen, maar helaas zijn nog niet al je gegevens compleet.<br>\n"
+"                In elk geval missen we nog wat NAW-gegevens van je.<br><br>\n"
+"\n"
+"                Kan je opnieuw naar inschrijven.werkstandby.nl/login gaan?<br>\n"
+"                Om een wachtwoord te krijgen moet je aangeven dat je het vergeten bent. Dan ontvang je een mailbericht om een nieuw wachtwoord aan te maken.<br><br>\n"
+"\n"
+"                Wil je na het aanvullen van je NAW-gegevens ook meteen even checken of je kopie ID goed is geüpload, zodanig dat we kunnen zien dat jij het bent met een ID uit een EU-land? En kijk ook even of je de machtiging wel had ondertekend.<br>\n"
+"                Zonder deze gegevens kunnen wij je straks niet uitbetalen.\n"
+"\n"
+"                <br><br>Met vriendelijk groet,<br><br>Backoffce Werk Standby<br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>\n"
+"\n"
+"                "
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__agreement_with_principals
+msgid "Agreement_with_principals"
+msgstr "Overeenkomst getekend"
+
+#. module: oi1_free_worker_data_check
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker.py:0
+#, python-format
+msgid "Check freeworker data wizard"
+msgstr "Vrije werkers gegevens check"
+
+#. module: oi1_free_worker_data_check
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#, python-format
+msgid "Compose Email"
+msgstr "Mail samenstellen"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__create_uid
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__create_date
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__display_name
+msgid "Display Name"
+msgstr "Weergave"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model,name:oi1_free_worker_data_check.model_oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__free_worker_id
+msgid "Free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__has_iban
+msgid "Has iban"
+msgstr "Heeft een bankrekening"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard____last_update
+msgid "Last Modified on"
+msgstr "Laatst aangepast op"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst geupdate door"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst aangepast op"
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,subject:oi1_free_worker_data_check.mail_complete_nav
+msgid "Missende NAV-gegevens van ${object.name|safe} bij werkstandby"
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model.fields,field_description:oi1_free_worker_data_check.field_oi1_free_worker_data_wizard__naw_data_correct
+msgid "NAW data ok"
+msgstr "Adresgegevens ok,"
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,subject:oi1_free_worker_data_check.mail_send_iban
+msgid ""
+"Ontbrekende bankrekening gegevens van ${object.name|safe} bij werkstandby"
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,subject:oi1_free_worker_data_check.sign_agreement_template_email
+msgid "Ontbrekende ondertekening van ${object.name|safe} bij werkstandby"
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#, python-format
+msgid "The free worker has agreeed with the principals"
+msgstr "De vrije werker heeft de overeenkomst getekend"
+
+#. module: oi1_free_worker_data_check
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#, python-format
+msgid "The free worker has completely filled in the NAW-data"
+msgstr "De vrije werker heeft volledig de adresgegevens ingevuld"
+
+#. module: oi1_free_worker_data_check
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#, python-format
+msgid "The free worker has completely filled in the iban data"
+msgstr "De vrije werker heeft de bankgegevens ingevuld"
+
+#. module: oi1_free_worker_data_check
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#: code:addons/oi1_free_worker_data_check/models/oi1_free_worker_data_check_wizard.py:0
+#, python-format
+msgid "The is no free worker related to the wizard"
+msgstr "Er is geen vrije werker gekoppeld aan de wizard"
+
+#. module: oi1_free_worker_data_check
+#: model:mail.template,report_name:oi1_free_worker_data_check.mail_complete_nav
+#: model:mail.template,report_name:oi1_free_worker_data_check.mail_send_iban
+#: model:mail.template,report_name:oi1_free_worker_data_check.sign_agreement_template_email
+msgid "Vergoedingsbetaling ${object.name}"
+msgstr ""
+
+#. module: oi1_free_worker_data_check
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_data_check.oi1_data_check_wizard
+msgid "cancel"
+msgstr "Annuleren"
+
+#. module: oi1_free_worker_data_check
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_data_check.freeworker_form
+msgid "do_action_check_data"
+msgstr "Controleren gegevens"
+
+#. module: oi1_free_worker_data_check
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_data_check.oi1_data_check_wizard
+msgid "do_save_data"
+msgstr "Ok"
+
+#. module: oi1_free_worker_data_check
+#: model:ir.model,name:oi1_free_worker_data_check.model_oi1_free_worker_data_wizard
+msgid "freeworker check data wizard"
+msgstr "Vrije werkers gegevens controle wizard"
+
+#. module: oi1_free_worker_data_check
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_data_check.oi1_data_check_wizard
+msgid "send_fill_naw_data"
+msgstr "Stuur mail vul NAV-gegevens aan"
+
+#. module: oi1_free_worker_data_check
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_data_check.oi1_data_check_wizard
+msgid "send_mail_iban"
+msgstr "Stuur mail vul bankrekening aan"
+
+#. module: oi1_free_worker_data_check
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_data_check.oi1_data_check_wizard
+msgid "send_sign_agreement_with_principals"
+msgstr "Stuur mail teken overeenkomst"

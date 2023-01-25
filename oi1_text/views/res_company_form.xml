@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="oi1_text.res_company_view_form" model="ir.ui.view">
+         <field name="model">res.company</field>
+         <field name="inherit_id" ref="base.view_company_form"/>
+         <field name="arch" type="xml">
+                 <field name="company_registry" position="after" >
+                    <field name="x_default_sales_bankId" />
+                    <field name="x_default_pur_bank_id" />
+                </field>
+         </field>
+        </record>
+    </data>
+ </odoo>

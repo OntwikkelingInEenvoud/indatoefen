@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record model="account.tax" id="oi1_account_move_vat_shifted.account_tax_id">
+            <field name="name">Shifted tax</field>
+            <field name="amount">0</field>
+        </record>
+    </data>
+</odoo>

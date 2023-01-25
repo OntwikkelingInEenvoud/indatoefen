@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template xml:space="preserve">
+
+        <t t-extend="ListView.buttons">
+
+            <t t-jquery="button.o_list_button_add" t-operation="after">
+
+                
+
+                <button t-if="widget.model == 'account.analytic.line'" type="button"
+                        class="btn btn-primary btn-sm oi1_list_create_multiple" accesskey="m">
+
+                    Create Multiple 
+
+                </button> 
+
+            </t>
+
+        </t>
+
+</template>

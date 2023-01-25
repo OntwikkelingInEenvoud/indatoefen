@@ -1,0 +1,2838 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_free_worker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20220725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-10 09:50+0000\n"
+"PO-Revision-Date: 2022-10-10 09:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__meeting_count
+msgid "# Meetings"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__task_count
+msgid "# Tasks"
+msgstr "# Taken"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__travel_distance__>50_km
+msgid ">50 km"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_defaults
+msgid ""
+"A Python dictionary that will be evaluated to provide default values when "
+"creating new records for this alias."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__property_account_payable_id
+msgid "Account Payable"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__property_account_receivable_id
+msgid "Account Receivable"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_needaction
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_needaction
+msgid "Action Needed"
+msgstr "Vereist actie"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__active
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__active
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__active
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__state__active
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_search
+msgid "Active"
+msgstr "Actief"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_search
+msgid "Active Freeworkers"
+msgstr "Actieve vrije werkers"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__active_lang_count
+msgid "Active Lang Count"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_ids
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_exception_decoration
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_state
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_state
+msgid "Activity State"
+msgstr "Activiteitsfase"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__act_description
+msgid "Activity description"
+msgstr "Omschrijving werkzaamheden"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__additional_info
+msgid "Additional info"
+msgstr "Extra info"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__partner_id
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Address"
+msgstr "Adres"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__type
+msgid "Address Type"
+msgstr "Adrestype"
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/free_worker.py:0
+#, python-format
+msgid "Adjusting of the bank account is not allowed for the benificiary %s "
+msgstr ""
+"Het wijzigen van de bankrekening is niet toegestaan voor de begunstige %s"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__day_period__afternoon
+msgid "Afternoon"
+msgstr "Middag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__agreement_with_principals
+msgid "Agreement with principals"
+msgstr "Machtiging ondertekend"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Agreements"
+msgstr "Afspraken / Aanvullende teksten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_id
+msgid "Alias"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_contact
+msgid "Alias Contact Security"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_name
+msgid "Alias Name"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_domain
+msgid "Alias domain"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_model_id
+msgid "Aliased Model"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__all
+msgid "All dagen"
+msgstr "Alle dagen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr ""
+"Al de e-mails en documenten verzonden naar dit contact worden vertaald in "
+"deze taal."
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/res_partner.py:0
+#, python-format
+msgid ""
+"An free worker should have an unique email address. Free worker %s has "
+"already the same email. You could select a communication partner for this "
+"freeworker"
+msgstr ""
+"Een vrije werkers moet een uniek email adres hebben.  De vrije werker %s "
+"heeft al hetzelfde email adres. Indien de betreffende vrije werker "
+"verantwoordelijk is voor de communicatie, kan je deze als contactpersoon "
+"selecteren"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__analytic_account_id
+msgid "Analytic Account"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__analytic_account_id
+msgid ""
+"Analytic account to which this project is linked for financial management. "
+"Use an analytic account to record cost and revenue on your project."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_search
+msgid "Archived"
+msgstr "Gearchiveerd"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__billable_type
+msgid ""
+"At which rate timesheets will be billed:\n"
+" - At task rate: each time spend on a task is billed at task rate.\n"
+" - At employee rate: each employee log time billed at his rate.\n"
+" - No Billable: track time without invoicing it"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_attachment_count
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__bank_account_count
+msgid "Bank"
+msgstr ""
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/free_worker.py:0
+#, python-format
+msgid "Bank account changed to %s"
+msgstr "Bankrekening gewijzigd naar %s"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__bank_ids
+msgid "Banks"
+msgstr "Banken"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__commercial_partner_id
+msgid "Beneficiary"
+msgstr "Begunstige"
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/free_worker.py:0
+#, python-format
+msgid "Beneficiary changed to %s"
+msgstr "Begunstige is gewijzigd naar %s"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__billable_type
+msgid "Billable Type"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__birthdate
+msgid "Birth date"
+msgstr "Geboortedatum"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__is_blacklisted
+msgid "Blacklist"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_bounce
+msgid "Bounce"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.oi1_identification_data_wizard
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__channel_ids
+msgid "Channels"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Een vrije werker kan eigenlijk geen bedrijf zijn. Controleer dit"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__employee
+msgid "Check this box if this contact is an Employee."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__state__checked
+msgid "Checked"
+msgstr "Gecontroleerd"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__child_ids
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "Child poules"
+msgstr "Onderliggende poules"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "Childs"
+msgstr "Onderliggende poules"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__city
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "City"
+msgstr "Plaats"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__code
+msgid "Code"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__color
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__color
+msgid "Color Index"
+msgstr "Kleur index"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_sale_commission_payment
+msgid "Commission payment"
+msgstr "Commissie betaling"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__communication_email
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_communication_email
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_partner__x_communication_email
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_users__x_communication_email
+msgid "Communication email"
+msgstr "Communicatie email"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__communication_partner_id
+msgid "Communication partner"
+msgstr "Contact persoon"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__x_company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__company_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__company_name
+msgid "Company Name"
+msgstr "Bedrijfsnaam"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__commercial_company_name
+msgid "Company Name Entity"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__company_type
+msgid "Company Type"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__partner_gid
+msgid "Company database ID"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_education__x_company_id
+msgid "Company related to this education"
+msgstr "Bedrijf gekoppeld aan deze opleiding"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_experience__company_id
+msgid "Company related to this experience"
+msgstr "Bedrijf gekoppeld aan deze ervaring"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_experience_level__company_id
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_language_level__company_id
+msgid "Company related to this experience level"
+msgstr "Bedrijf gekoppeld aan dit ervaringsniveau"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_level__company_id
+msgid "Company related to this level"
+msgstr "Bedrijf gerelateerd aan dit niveau"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__company_id
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_poule_rate__company_id
+msgid "Company related to this poule"
+msgstr "Bedrijf gekoppeld aan deze poele"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__owner_company
+msgid "Company who owns the freeworker data"
+msgstr "Bedrijf welke eigenaar is van de vrije werker gegevens"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__contact_address
+msgid "Complete Address"
+msgstr "Volledig adres"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_res_partner
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__child_ids
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Contact"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__contact_address_complete
+msgid "Contact Address Complete"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_contact_name
+msgid "Contact naam"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__payment_token_count
+msgid "Count Payment Token"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__country_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__country_id
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Country"
+msgstr "Land"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__description
+msgid "Country Des."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__country_code
+msgid "CountryCode"
+msgstr "Landcode"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.nationality_action
+msgid "Create a nationality"
+msgstr "Maak een nationaliteit aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.education_action
+msgid "Create the first education"
+msgstr "Maak een opleiding aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.experience_action
+msgid "Create the first experience"
+msgstr "Maak een ervaring aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.experience_level_action
+msgid "Create the first experience_level"
+msgstr "Maak een ervaringsniveau aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.free_worker_action
+msgid "Create the first free worker"
+msgstr "Maak de eerste vrije werker aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.freeworkerpoule_action
+msgid "Create the first freeworkerpoule"
+msgstr "Maak een vrije werkerspoule aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.language_level_action
+msgid "Create the first language_level"
+msgstr "Maak een taalniveau aan"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.level_action
+msgid "Create the first level"
+msgstr "Maak een niveau aan"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__credit_limit
+msgid "Credit Limit"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__currency_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__currency_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__partner_id
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_view_map1
+msgid "Customer"
+msgstr "Klant"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__customer_rank
+msgid "Customer Rank"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__rating_status
+msgid "Customer(s) Ratings"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__day_period
+msgid "Day Period"
+msgstr "Dag periode"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__dayofweek
+msgid "Day of Week"
+msgstr "Dag v/d week"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__daytype
+msgid "Daytype"
+msgstr "Dagtype"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_prev_code
+msgid "Debtor code"
+msgstr "Code"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_defaults
+msgid "Default Values"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__trust
+msgid "Degree of trust you have in this debtor"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.education_tree
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.experience_level_tree
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.experience_tree
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.language_level_tree
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.level_tree
+msgid "Departments"
+msgstr "Afdelingen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__description
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__description
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__has_vat_on_invoice
+msgid ""
+"Determines if BTW should be added on the invoices. If the Free worker is a "
+"entrepreneur for VAT then is should be checked off"
+msgstr ""
+"Bepaalt of BTW moet worden toegevoegd aan de facturen. Als de vrije werker "
+"BTW-plichtig is voor de belastingdienst and zal deze moeten worden "
+"afgevinkt."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__tue
+msgid "Dinsdag"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__document_count
+msgid "Document Count"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__document_type_id
+msgid "Document type"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__thur
+msgid "Donderdag"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__street_number2
+msgid "Door"
+msgstr "Toevoeging"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__residence_street_number2
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__street_number2
+msgid "Door Number"
+msgstr "Toevoeging"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__drivers_license
+msgid "Drivers license"
+msgstr "Rijbewijs"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_education
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__education_text
+msgid "Education"
+msgstr "Opleiding"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.education_form
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.nationality_form
+msgid "Education form"
+msgstr "Opleidingsformulier"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.education_action
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__education_ids
+#: model:ir.ui.menu,name:oi1_free_worker.education_menu
+msgid "Educations"
+msgstr "Opleidingen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__email
+msgid "Email"
+msgstr "E-mail"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__employee
+msgid "Employee"
+msgstr "Werknemer"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__sale_line_employee_ids
+msgid ""
+"Employee/Sale Order Item Mapping:\n"
+" Defines to which sales order item an employee's timesheet entry will be linked.By extension, it defines the rate at which an employee's time on the project is billed."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__allow_timesheets
+msgid "Enable timesheeting on the project."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__to_time
+msgid "End"
+msgstr "Eind"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__day_period__evening
+msgid "Evening"
+msgstr "Avond"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_experience
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__experience_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__experience_level_ids
+#: model:ir.ui.menu,name:oi1_free_worker.experience_main_menu
+msgid "Experience"
+msgstr "Ervaring"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.experience_level_menu
+msgid "Experience Levels"
+msgstr "Ervaringsniveau's"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.experience_menu
+msgid "Experience fields"
+msgstr "Ervaringsgebieden"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_experience_level
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_level__object_id__oi1_experience_level
+msgid "Experience level"
+msgstr "Ervaringsniveau"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__date
+msgid "Expiration Date"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__expiration_date
+msgid "Expiration date"
+msgstr "Vervaldatum"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__x_gender__fam
+msgid "Family"
+msgstr "Familie"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__x_gender__f
+msgid "Female"
+msgstr "Vrouw"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__property_account_position_id
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__followup_level
+msgid "Follow-up Level"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__payment_responsible_id
+msgid "Follow-up Responsible"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__followup_status
+msgid "Follow-up Status"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_follower_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_channel_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Volgers (Kanalen)"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_partner_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Relaties)"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__email_formatted
+msgid "Formatted Email"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__free_worker_label_ids
+msgid "Free Worker Label"
+msgstr "Labels"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_search
+msgid "Free Worker Poule"
+msgstr "Vrije werkers poule"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.main_free_worker_menu
+msgid "Free Workers"
+msgstr "Vrije werkers"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_account_move__x_freeworker_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_freeworker_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__free_worker_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_partner__x_freeworker_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_users__x_freeworker_id
+msgid "Free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Free worker form"
+msgstr "Vrije werker formulier"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_free_worker_label
+msgid "Free worker label"
+msgstr "Vrije werker label"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_search
+msgid "Free worker poule"
+msgstr "Vrije werkers poule"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_tree
+msgid "Free worker poules"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.free_worker_action
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_freeworker_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_partner__x_freeworker_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_users__x_freeworker_ids
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_tree
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "Free workers"
+msgstr "Vrije werkers"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__poule_ids
+msgid "Free workers poules"
+msgstr "Vrije werkers poules"
+
+#. module: oi1_free_worker
+#: model:res.groups,name:oi1_free_worker.freeworker_view_accounting
+msgid "FreeWorker / Accounting "
+msgstr "Vrije werker / Boekhouding"
+
+#. module: oi1_free_worker
+#: model:res.groups,name:oi1_free_worker.freeworker_view_private
+msgid "FreeWorker / Private Data "
+msgstr "Vrije werker / Prive gegevens "
+
+#. module: oi1_free_worker
+#: model:res.groups,name:oi1_free_worker.freeworker_view_group
+msgid "FreeWorker / View"
+msgstr "Vrije werkers / Toegang "
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__partner_id
+msgid "Freeworker"
+msgstr "Vrije werker"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__freeworker_code
+msgid "Freeworker code"
+msgstr "Vrijewerkerscode"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_freeworkerpoule
+msgid "Freeworker poule"
+msgstr "Vrije werker poule"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.freeworkerpoule_menu
+#: model:ir.ui.menu,name:oi1_free_worker.freeworkerpoule_sales_menu
+msgid "Freeworkerpoules"
+msgstr "Vrije werkers poules"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__x_partner_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__partner_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__partner_ids
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_search
+msgid "Freeworkers"
+msgstr "Vrije werkers"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__free_worker_ids
+msgid "Freeworkers1"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__4
+msgid "Friday"
+msgstr "Vrijdag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_gender
+msgid "Gender"
+msgstr "Geslacht"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "General"
+msgstr "Algemeen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__general_experience_info
+msgid "General experience info"
+msgstr "Algemene ervarings informatie"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__info
+msgid "General info of the freeworker which is visible for everyone"
+msgstr ""
+"Algemene informatie over de vrije werker welke voor iedereen zichtbaar is"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__partner_latitude
+msgid "Geo Latitude"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__partner_longitude
+msgid "Geo Longitude"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__date_localization
+msgid "Geolocation Date"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_search
+msgid "Group By"
+msgstr "Groepeer op"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_search
+msgid "Group By..."
+msgstr "Groepeer op ..."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__has_a_communication_partner_id
+msgid "Has A Communication Partner"
+msgstr "Heeft een communicatie partner"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__has_vat_on_invoice
+msgid "Has Vat on invoice"
+msgstr "Heeft BTW op de factuur"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__valid_registration_date
+msgid "Has a valid identification code until this date"
+msgstr "Heeft een geldige legitimatie tot deze datum"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__has_a_valid_legitimation
+msgid "Has valid legitimation"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Home address"
+msgstr "Thuis adres"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "Hour rates"
+msgstr "Uurtarief"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__street_number
+msgid "House"
+msgstr "Huisnr."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__residence_street_number
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__street_number
+msgid "House Number"
+msgstr "Huisnummer"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__rating_status
+msgid ""
+"How to get customer feedback?\n"
+"- Rating when changing stage: an email will be sent when a task is pulled in another stage.\n"
+"- Periodical Rating: email will be sent periodically.\n"
+"\n"
+"Don't forget to set up the mail templates on the stages for which you want to get the customer's feedbacks."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__id
+msgid "ID"
+msgstr "Id"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_parent_thread_id
+msgid ""
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__im_status
+msgid "IM Status"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_exception_icon
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__activity_exception_icon
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_identification_document_type
+msgid "Identification document type"
+msgstr "Legitimatie bewijs type"
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/oi1_identification_data_wizard.py:0
+#, python-format
+msgid "Identiteit is gevalideerd door %s"
+msgstr ""
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/oi1_identification_data_wizard.py:0
+#, python-format
+msgid "Identiteitsgegevens zijn ingezien door %s"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_needaction
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_unread
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_needaction
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt vragen nieuwe berichten uw aandacht."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_has_error
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_has_sms_error
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_has_error
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "indien aangevinkt hebben sommige leveringen een fout."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__team_id
+msgid ""
+"If set, this Sales Team will be used for sales and assignations related to "
+"this partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the project "
+"without removing it."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__is_blacklisted
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__phone_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__image_1920
+msgid "Image"
+msgstr "Foto"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__industry_id
+msgid "Industry"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__info
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Info"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_initials
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Initials"
+msgstr "Initialen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_id
+msgid ""
+"Internal email associated with this project. Incoming emails are "
+"automatically synchronized with Tasks (or optionally Issues if the Issue "
+"Tracker module is installed)."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__invoice_warn
+msgid "Invoice"
+msgstr "Factuur"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__product_id
+msgid "Invoice product"
+msgstr "Product op de facturen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__invoice_ids
+msgid "Invoices"
+msgstr "Facturen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__is_communication_email_different_from_email
+msgid "Is Communication Email Different From Email"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_is_follower
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_is_follower
+msgid "Is Follower"
+msgstr "Is een volger"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__is_company
+msgid "Is a Company"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_is_freeworker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_partner__x_is_freeworker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_users__x_is_freeworker
+msgid "Is freeworker"
+msgstr "Is een vrije werker"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__is_from_commercial_partner_id
+msgid "Is from commercial partner id"
+msgstr "Komt van een begunstige"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__function
+msgid "Job Position"
+msgstr "Functie"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_account_move
+msgid "Journal Entries"
+msgstr "Boekingen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__journal_item_count
+msgid "Journal Items"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__label_tasks
+msgid "Label used for the tasks of the project."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Labels of the free worker"
+msgstr "Labels van de vrije werker"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__lang
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__lang
+#: model:ir.ui.menu,name:oi1_free_worker.language_main_menu
+msgid "Language"
+msgstr "Taal"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.language_level_menu
+msgid "Language Levels"
+msgstr "Taal niveaus"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_language_level
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_level__object_id__oi1_language_level
+msgid "Language level"
+msgstr "Taal niveau"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__language_level_ids
+msgid "Languages"
+msgstr "Talen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_name
+msgid "Last Name"
+msgstr "Achternaam"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_convert_free_worker_identification_data__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__calendar_last_notif_ack
+msgid "Last notification marked as read from base Calendar"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__last_time_entries_checked
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. "
+"It is set either if there's not at least an unreconciled debit and an "
+"unreconciled credit or if you click the \"Done\" button."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_level
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__level_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__level_id
+msgid "Level"
+msgstr "Niveau"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.level_menu
+msgid "Levels"
+msgstr "Niveau's"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__mon
+msgid "Maandag"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_main_attachment_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hoofd bijlage"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__x_gender__m
+msgid "Male"
+msgstr "Man"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Matching"
+msgstr "Werkervaring"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__travel_distance
+msgid "Max. Travel distance"
+msgstr "Maximale reisafstand"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__image_medium
+msgid "Medium-sized image"
+msgstr "Middelgrote afbeelding"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__meeting_ids
+msgid "Meetings"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__favorite_user_ids
+msgid "Members"
+msgstr "Leden"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_has_error
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_has_error
+msgid "Message Delivery error"
+msgstr "Bericht afleverfout"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__sale_warn_msg
+msgid "Message for Sales Order"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__mobile
+msgid "Mobile"
+msgstr "Mobiel"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__0
+msgid "Monday"
+msgstr "Maandag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__day_period__morning
+msgid "Morning"
+msgstr "Ochtend"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__name
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Name"
+msgstr "Naam"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.nationality_action
+#: model:ir.ui.menu,name:oi1_free_worker.nationality_menu
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.nationality_tree
+msgid "Nationalities"
+msgstr "Nationaliteiten"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_nationality
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__nationality_id
+msgid "Nationality"
+msgstr "Nationaliteit"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__experiences_ids
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "Needed experience"
+msgstr "Gevraagde ervaring"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__payment_next_action_date
+msgid "Next Action Date"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_date_deadline
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Volgende activiteit deadline"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_summary
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_summary
+msgid "Next Activity Summary"
+msgstr "Omschrijving volgende actie"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_type_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_type_id
+msgid "Next Activity Type"
+msgstr "Volgende activiteit type"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_nickname
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Nickname"
+msgstr "Interne niet officiële roepnaam"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__day_period__night
+msgid "Night"
+msgstr "Nacht"
+
+#. module: oi1_free_worker
+#: model_terms:ir.actions.act_window,help:oi1_free_worker.freeworkerpoule_order_action
+msgid "No freeworker poule found on the order"
+msgstr "Geen vrije werkers poule gevonden gekoppeld aan de order"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__email_normalized
+msgid "Normalized Email"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__comment
+msgid "Notes"
+msgstr "Aantekeningen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_needaction_counter
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__doc_count
+msgid "Number of documents attached"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_has_error_counter
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_needaction_counter
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Aantal berichten die actie vereisen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_has_error_counter
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met leveringsfout"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__message_unread_counter
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Aantal ongelezen berichten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__ocn_token
+msgid "OCN Token"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__object_id
+msgid "Object"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__oi1_text_ids
+msgid "Oi1 Text"
+msgstr "Afspraken / Aanvullende teksten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__online_partner_bank_account
+msgid "Online Partner Bank Account"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__online_partner_vendor_name
+msgid "Online Partner Vendor Name"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__opportunity_ids
+msgid "Opportunities"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__opportunity_count_ids
+msgid "Opportunities Count"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__opportunity_count
+msgid "Opportunity"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_force_thread_id
+msgid ""
+"Optional ID of a thread (record) to which all incoming messages will be "
+"attached, even if they did not reply to it. If set, this will disable the "
+"creation of new records completely."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__payment_responsible_id
+msgid ""
+"Optionally you can assign a user to this field, which will make him "
+"responsible for the action."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_user_id
+msgid "Owner"
+msgstr "Eigenaar"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__owner_company
+msgid "Owner company"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_parent_model_id
+msgid "Parent Model"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__parent_id
+msgid "Parent Poule"
+msgstr "Hoofdpoule"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_parent_model_id
+msgid ""
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
+"(parent_model) and task (model))"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__parent_name
+msgid "Parent name"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_search
+msgid "Parent poule"
+msgstr "Hoofdpoule"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__contract_ids
+msgid "Partner Contracts"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__debit_limit
+msgid "Payable Limit"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__payment_token_ids
+msgid "Payment Tokens"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__privacy_visibility
+msgid ""
+"People to whom this project and its tasks will be visible.\n"
+"\n"
+"- Invited internal users: when following a project, internal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following.\n"
+" A user with the project > administrator access right level can still access this project and its tasks, even if they are not explicitly part of the followers.\n"
+"\n"
+"- All internal users: all internal users can access the project and all of its tasks without distinction.\n"
+"\n"
+"- Invited portal users and all internal users: all internal users can access the project and all of its tasks without distinction.\n"
+"When following a project, portal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following.\n"
+"\n"
+"In any case, an internal user with no project access rights can still access a task, provided that they are given the corresponding URL (and that they are part of the followers if the project is private)."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__rating_percentage_satisfaction
+msgid "Percentage of happy ratings"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__phone
+msgid "Phone"
+msgstr "Telefoon"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__phone_blacklisted
+msgid "Phone Blacklisted"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__plan_to_change_car
+msgid "Plan To Change Car"
+msgstr ""
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/oi1_identification_data_wizard.py:0
+#, python-format
+msgid ""
+"Please provide an expiration data for validating the identity of the free "
+"worker"
+msgstr ""
+"Vul een vervaldatum in als voorwaarde om het identiteitsbewijs te valideren"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Please provide the gender of the contact"
+msgstr "Vul het geslacht of aanhef van het contact in"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_poule_rate
+msgid "Poule rate"
+msgstr "Tarief"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__freeworker_poule_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__freeworker_poule_ids
+msgid "Poules"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__property_product_pricelist
+msgid "Pricelist"
+msgstr "Prijslijst"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__project_id
+msgid "Project"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__user_id
+msgid "Project Manager"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__subtask_project_id
+msgid ""
+"Project in which sub-tasks of the current project will be created. It can be"
+" the current project itself."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__poule_rate_ids
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "Rates"
+msgstr "Tarieven"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__rating_status_period
+msgid "Rating Frequency"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__rating_request_deadline
+msgid "Rating Request Deadline"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__rating_percentage_satisfaction
+msgid "Rating Satisfaction"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__portal_show_rating
+msgid "Rating visible publicly"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__alias_force_thread_id
+msgid "Record Thread ID"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__recruiter_partner_id
+msgid "Recruiter"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__ref
+msgid "Reference"
+msgstr ""
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/free_worker.py:0
+#, python-format
+msgid "Register identification data"
+msgstr "Registreer identificatie gegevens"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__state__concept
+msgid "Registered"
+msgstr "Geregistreerd"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__registration_date
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_search
+msgid "Registration date"
+msgstr "Registratie datum"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__parent_id
+msgid "Related Company"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__partner_residence_id
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Residence"
+msgstr "Verblijfsadres"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_search
+msgid "Residence address"
+msgstr "Verblijfsadres"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_city
+msgid "Residence city"
+msgstr "Verblijfsplaats"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_country_id
+msgid "Residence country"
+msgstr "Verblijfsland"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_street
+msgid "Residence street"
+msgstr "Verblijfsstraat"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_street_name
+msgid "Residence street name"
+msgstr "Straatnaam verblijfsadres"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_street_number
+msgid "Residence street number"
+msgstr "Huisnummer verblijfsadres"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_street_number2
+msgid "Residence street number2"
+msgstr "Huisnummer 2 verblijfsadres"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_street2
+msgid "Residence street2"
+msgstr "Verblijfsstraat extra"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__residence_zip
+msgid "Residence zip"
+msgstr "Postcode verblijfsadres"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__activity_user_id
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwoordelijke gebruiker"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__prio
+msgid "Rule Priority"
+msgstr "Regel prioriteit"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_has_sms_error
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_identification_data_wizard__ssn
+msgid "SSN"
+msgstr "BSN"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__sale_order_count
+msgid "Sale Order Count"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__sale_line_employee_ids
+msgid "Sale line/Employee map"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__sale_order_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__sale_order_id
+msgid "Sales Order"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__sale_line_id
+msgid "Sales Order Item"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__team_id
+msgid "Sales Team"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__sale_warn
+msgid "Sales Warnings"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__sale_line_id
+msgid ""
+"Sales order item to which the project is linked. If an employee timesheets "
+"on a task that does not have a sale order item defines, and if this employee"
+" is not in the 'Employee/Sales Order Item Mapping' of the project, the "
+"timesheet entry will be linked to the sales order item defined on the "
+"project."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__sale_order_id
+msgid "Sales order to which the project is linked."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__user_id
+msgid "Salesperson"
+msgstr "Verkoper"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__phone_sanitized
+msgid "Sanitized Number"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__5
+msgid "Saturday"
+msgstr "Zaterdag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_search_string
+msgid "Search"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__invoice_warn
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__sale_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__self
+msgid "Self"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__sequence
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_language_level__sequence
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_nationality__sequence
+msgid "Sequence"
+msgstr "Volgorde"
+
+#. module: oi1_free_worker
+#: model:ir.ui.menu,name:oi1_free_worker.settings_menu
+msgid "Settings"
+msgstr "Instellingen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__partner_share
+msgid "Share Partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__is_favorite
+msgid "Show Project on dashboard"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__signup_expiration
+msgid "Signup Expiration"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__signup_token
+msgid "Signup Token"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__signup_type
+msgid "Signup Token Type"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__signup_valid
+msgid "Signup Token is Valid"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__signup_url
+msgid "Signup URL"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__from_time
+msgid "Start"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__state_id
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "State"
+msgstr "Status"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__state
+msgid "Status"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__activity_state
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status gebaseerd op activiteiten\n"
+"Te laat: Datum is al gepasseerd\n"
+"Vandaag: Activiteit datum is vandaag\n"
+"Gepland: Toekomstige activiteiten."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__street
+msgid "Street"
+msgstr "Straat"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Street 2..."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__street_name
+msgid "Street Name"
+msgstr "Straatnaam"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "Street Name..."
+msgstr "Straatnaam..."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__street2
+msgid "Street2"
+msgstr "Straat2"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__subtask_project_id
+msgid "Sub-task Project"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__6
+msgid "Sunday"
+msgstr "Zondag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__supplier_rank
+msgid "Supplier Rank"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__category_id
+msgid "Tags"
+msgstr "Labels"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__tasks
+msgid "Task Activities"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__task_count
+msgid "Task Count"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__task_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__task_ids
+msgid "Tasks"
+msgstr "Taken"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__type_ids
+msgid "Tasks Stages"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__vat
+msgid "Tax ID"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__opportunity_count_ids
+msgid "Technical field used for stat button"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__online_partner_bank_account
+msgid ""
+"Technical field used to store information from plaid/yodlee to match partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__online_partner_vendor_name
+msgid ""
+"Technical field used to store information from plaid/yodlee to match partner"
+" (used when a purchase is made)"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_nationality__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"De ISO-landcode in twee letters.\n"
+"U kunt dit veld gebruiken voor snelzoeken."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__basichourrate
+msgid ""
+"The basic hour rate of the poule which the freeworker is paid when working "
+"within the poule"
+msgstr ""
+"Het basis uurtarief dat de vrije werker krijgt betaald when activiteiten "
+"binnen de poule worden uitgevoerd."
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "The birthday of the freeworker, e.g. 01-07-2020"
+msgstr "De geboortedatum van de vrije werker, bijv. 01-07-2020"
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/res_partner.py:0
+#, python-format
+msgid ""
+"The commercial partner %s of partner %s has no banking account this is not "
+"allowed for a commercial partner"
+msgstr ""
+"De begunstige %s van vrije werker %s heeft geen bankrekening en dit is niet "
+"toegestaan."
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/res_partner.py:0
+#, python-format
+msgid ""
+"The contact  %s is related to a freeworker and shouldn't be deleted. Please "
+"delete the freeworker"
+msgstr ""
+"Contact %s is gekoppeld aan een vrije werker en kan niet worden verwijderd. "
+"Verwijder de vrije werker"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__payment_next_action_date
+msgid "The date before which no action should be taken."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__description
+msgid "The description of the poule for internal use"
+msgstr "De omschrijving van de poule voor intern gebruik"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__act_description
+msgid "The description of the poule which is soon on the invoices"
+msgstr "De omschrijving van de poule zoals deze op de facturen verschijnt"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr ""
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/free_worker.py:0
+#, python-format
+msgid "The freeworker code shouldn't be changed of a free worker"
+msgstr "Vrije werkerscode can niet worden gewijzigd."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__x_gender
+msgid "The gender of the free worker"
+msgstr "Het geslacht van de vrije werker"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_identification_data_wizard__document_type_id
+msgid "The identification document type"
+msgstr "Documenttype"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__user_id
+msgid "The internal user in charge of this contact."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__x_name
+msgid "The last name of company_name"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__parent_id
+msgid "The main poule of the poule"
+msgstr "De bovenliggende poule (hoofdpoule)"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_model_id
+msgid ""
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_name
+msgid ""
+"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
+"<jobs@example.odoo.com>"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "The nationality of the freeworker, e.g. british"
+msgstr "De nationaliteit van de vrije werker, bijv. Brits"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__nationality_id
+msgid ""
+"The nationality of the freeworker. Only inhabitants of counties within the "
+"EU are allowed as a freeworker."
+msgstr ""
+"De nationaliteit van de vrije werker. Alleen inwoners van landen binnen de "
+"EU mogen als vrije werker aan de slag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__alias_user_id
+msgid ""
+"The owner of records created upon receiving emails on this alias. If this "
+"field is not set the system will attempt to find the right owner based on "
+"the sender (From) address, or will use the Administrator account if no "
+"system user is found for that address."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__has_unreconciled_entries
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time "
+"the invoices & payments matching was performed."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.constraint,message:oi1_free_worker.constraint_oi1_free_worker_partner_id_unique
+msgid "The partner_id already Exists!"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__communication_partner_id
+msgid ""
+"The person who is in charge of the communication of the free worker, this is"
+" mostly the practical assistant"
+msgstr ""
+"De contact welke verantwoordelijk is voor de communicatie met de vrije "
+"werker. Dit is in de meeste gevallen de Flex. assistent."
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__product_id
+msgid ""
+"The product which is chosen on the invoices when activities within the poule"
+" are invoiced "
+msgstr ""
+"Het product dat wordt gekozen op de facturen when activiteiten binnen de "
+"poule worden gefactureerd"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__sequence
+msgid "The sequence field is used to define order in which poules are visible"
+msgstr ""
+"Het volgorde veld wordt gebruikt om de volgorde te definieren waarin de "
+"poules zichtbaar zijn"
+
+#. module: oi1_free_worker
+#: code:addons/oi1_free_worker/models/oi1_poule_rate.py:0
+#, python-format
+msgid "The time should contain a :"
+msgstr "De tijd moet een : bevatten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__x_prev_code
+msgid ""
+"The unique code of this relation (for example the debtor of creditor code"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__freeworker_code
+msgid ""
+"The unique free worker code of the partner. This number will be generated "
+"when the partner is a free worker "
+msgstr ""
+"De unieke vrije werkerscode. Dit nummer wordt aangemaakt wanneer van een "
+"contact een vrije werker wordt gemaakt"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__property_account_payable_id
+msgid ""
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can"
+" contain more than strictly an email address."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__property_supplier_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__3
+msgid "Thursday"
+msgstr "Donderdag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__type__duration
+msgid "Tijdsduur"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__type__time
+msgid "Tijdstip"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__allow_timesheets
+msgid "Timesheets"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__resource_calendar_id
+msgid "Timetable working hours to adjust the gantt diagram report"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__tz
+msgid "Timezone"
+msgstr "Tijdzone"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__tz_offset
+msgid "Timezone offset"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__title
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_view_map1
+msgid "Title"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__total_due
+msgid "Total Due"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__total_invoiced
+msgid "Total Invoiced"
+msgstr "Totaal gefactureerd"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__total_overdue
+msgid "Total Overdue"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__debit
+msgid "Total Payable"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__credit
+msgid "Total Receivable"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__credit
+msgid "Total amount this customer owes you."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_transport
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__transport_ids
+msgid "Transport"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__1
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__type
+msgid "Type"
+msgstr "Soort"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__activity_exception_decoration
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Het uitzonderingstype van een record"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__unpaid_invoices
+msgid "Unpaid Invoices"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_unread
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_unread
+msgid "Unread Messages"
+msgstr "Ongelezen berichten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__message_unread_counter
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Aantal ongelezen berichten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__unreconciled_aml_ids
+msgid "Unreconciled Aml"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__label_tasks
+msgid "Use Tasks as"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__ocn_token
+msgid "Used for sending notification to registered devices"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__user_ids
+msgid "Users"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__currency_id
+msgid "Utility field to express amount currency"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__valid_registration_date
+msgid "Valid registration"
+msgstr "Geldige registratie"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.account_invoice_supplier_form
+msgid "Vendor"
+msgstr "Leverancier"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__privacy_visibility
+msgid "Visibility"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__fri
+msgid "Vrijdag"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__website
+msgid "Website Link"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__website_message_ids
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__website_message_ids
+msgid "Website Messages"
+msgstr "Website berichten"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__website_message_ids
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__website_message_ids
+msgid "Website communication history"
+msgstr "Website communicatie geschiedenis"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_resource_calendar_attendance_workday_part__dayofweek__2
+msgid "Wednesday"
+msgstr "Woensdag"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_freeworkerpoule__is_favorite
+msgid "Whether this project should be displayed on your dashboard."
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,help:oi1_free_worker.field_oi1_free_worker__recruiter_partner_id
+msgid "Who has recruited the free worker"
+msgstr "Degene welke de vrije werker heeft binnengehaald"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__wed
+msgid "Woensdag"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_resource_calendar_attendance_workday_part
+msgid "Workday Parts for the resource calendar"
+msgstr "Werkdagen van de plannings kalender"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__resource_calendar_attendance_workday_part_ids
+msgid "Workdays"
+msgstr "Werkdagen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__poule_id
+msgid "Worker poule"
+msgstr "Vrije werkers poule"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__resource_calendar_id
+msgid "Working Time"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "ZIP"
+msgstr "Postcode"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_poule_rate__daytype__sat
+msgid "Zaterdag"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__zip
+msgid "Zip"
+msgstr "Postcode"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_freeworkerpoule__basichourrate
+msgid "basic hour rate"
+msgstr "Basis uurtarief"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__code
+msgid "code"
+msgstr "Code"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_convert_free_worker_identification_data
+msgid "convert_free_worker_identification_data"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__description
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__description
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__description
+msgid "description"
+msgstr "Omschrijving"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "do_action_check_private_data"
+msgstr "Controleer of voer identificatie gegevens in"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.oi1_identification_data_wizard
+msgid "do_agree_save_data"
+msgstr "Bevestig geldigheid en sla de gegevens op"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.oi1_identification_data_wizard
+msgid "do_save_data"
+msgstr "Sla de gegevens op"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.experience_form
+msgid "experience form"
+msgstr "Ervaringsformulier"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.experience_level_form
+msgid "experience_level form"
+msgstr "Ervaringsniveau formulier"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.experience_level_action
+msgid "experience_levels"
+msgstr "Ervaringsniveau"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.experience_action
+msgid "experiences"
+msgstr "Ervaringen"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_first_name
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.free_worker_form
+msgid "first name"
+msgstr "Voornaam"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.freeworkerpoule_order_action
+msgid "freeworker poules on order"
+msgstr "Vrije werkerspoules op de order"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.freeworkerpoule_form
+msgid "freeworkerpoule form"
+msgstr "Vrije werkersformulier"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.freeworkerpoule_action
+msgid "freeworkerpoules"
+msgstr "Vrije werker poule"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_poule_rate__hourrate
+msgid "hour rate"
+msgstr "Uurtarief"
+
+#. module: oi1_free_worker
+#: model:ir.model,name:oi1_free_worker.model_oi1_identification_data_wizard
+msgid "identification data wizard"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.language_level_form
+msgid "language_level form"
+msgstr "Ervaringsniveau formulier"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.language_level_action
+msgid "language_levels"
+msgstr "Taalniveaus"
+
+#. module: oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker.level_form
+msgid "level form"
+msgstr "Niveau formulier"
+
+#. module: oi1_free_worker
+#: model:ir.actions.act_window,name:oi1_free_worker.level_action
+msgid "levels"
+msgstr "Niveaus"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__travel_distance__10_km
+msgid "max.10 km"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__travel_distance__30_km
+msgid "max.30 km"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__travel_distance__5_km
+msgid "max.5 km"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields.selection,name:oi1_free_worker.selection__oi1_free_worker__travel_distance__50_km
+msgid "max.50 km"
+msgstr ""
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_education__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_experience_level__experience_name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker_label__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_level__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__name
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__name
+msgid "name"
+msgstr "Naam"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_resource_calendar_attendance_workday_part__sequence
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_transport__sequence
+msgid "sequence"
+msgstr "Volgorde"
+
+#. module: oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker.field_account_move__x_is_freeworker_visible
+#: model:ir.model.fields,field_description:oi1_free_worker.field_oi1_free_worker__x_is_freeworker_visible
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_partner__x_is_freeworker_visible
+#: model:ir.model.fields,field_description:oi1_free_worker.field_res_users__x_is_freeworker_visible
+msgid "x_is_freeworker_visible"
+msgstr "Is vrije werker zichtbaar"

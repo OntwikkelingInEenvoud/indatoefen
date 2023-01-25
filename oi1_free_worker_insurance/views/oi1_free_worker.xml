@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+
+     <record id="oi1_free_worker_insurance.free_worker_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="arch" type="xml">
+                <tree string="Free workers"  create="false" >
+                    <field name="freeworker_code"  optional="show" />
+                    <field name="name"/>
+                    <field name="x_nickname" />
+                    <field name="street" optional="hide" />
+                    <field name="zip" optional="hide"/>
+                    <field name="city" optional="hide"/>
+                    <field name="nationality_id" optional="show" />
+                    <field name="date_first_worked" optional="show" />
+                    <field name="date_last_worked" optional="show" />
+                    <field name="poule_ids" widget="many2many_tags"  optional="hide" />
+                    <field name="registration_date"  optional="show" />
+                    <field name="state"  optional="hide" />
+                    <field name="free_worker_label_ids"  optional="hide" />
+                    <field name="valid_registration_date" optional="hide" />
+                    <field name="schengen_insurance_polis_id_number" optional="show" />
+                    <field name="schengen_insurance_polis_id_date_to" optional="show" />
+                </tree>
+            </field>
+        </record>
+
+     <record id="oi1_free_worker_insurance.free_worker_search" model="ir.ui.view">
+        <field name="name">oi1_free_worker_insurance.free_worker_search</field>
+        <field name="model">oi1_free_worker</field>
+        <field name="arch" type="xml">
+            <search string="Freeworkers">
+                  <field name="name"  filter_domain="['|', ('name','ilike', self), ('freeworker_code','ilike', self)]" />
+                  <filter string="Active" name="active" domain="[('state','!=','old')]" help = "Active Freeworkers" />
+                  <filter string="Schengen Visitor" name="schengenvisitor" domain="[('state','!=','old'), ('nationality_id.schengen_insurance','=', True)]" />
+                  <filter string="Schengen Visitor Needs attention " name="schengenvisitorattention" domain="[('schengen_insurance_needs_attention', '=', True)]" />
+                   <group expand="1" string="Group By">
+                        <filter string="Residence address" name='partner_residence_id'  domain="[('partner_residence_id','!=',False)]" context="{'group_by':'partner_residence_id'}"/>
+                        <filter string="Registration date" name='Registration date'  context="{'group_by':'registration_date'}"/>
+                   </group>
+
+            </search>
+
+        </field>
+    </record>
+
+          <record id="oi1_free_worker_insurance.freeworker_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance.freeworker_form</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="inherit_id" ref="oi1_free_worker.free_worker_form"/>
+            <field name="arch" type="xml">
+
+               <xpath expr="//notebook[last()]" position="inside">
+
+               <page string="Insurance" groups="oi1_free_worker_insurance.insurance_access_group" >
+                   <group>
+                       <field name="insurance_package_id"  />
+                       <field name="no_schengen_polis_needed"  />
+                       <field name="oi1_insurance_polis_ids" context="{'default_free_worker_id':  active_id}"  >
+                            <tree delete="false">
+                                <field name="name" />
+                            </tree>
+                       </field>
+                   </group>
+               </page>
+
+
+
+                 </xpath>
+
+            </field>
+
+        </record>
+
+
+
+
+
+
+
+       <record id="oi1_free_worker_insurance.free_worker_action" model="ir.actions.act_window">
+            <field name="name">Free workers</field>
+            <field name="res_model">oi1_free_worker</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_schengenvisitorattention":1}</field>
+            <field name="search_view_id" ref="oi1_free_worker_insurance.free_worker_search"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('oi1_free_worker_insurance.free_worker_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('oi1_free_worker.free_worker_form')})]"/>
+        </record>
+
+
+
+          <menuitem id="main_insurance_menu" name="Insurance" sequence="75" groups="oi1_free_worker_insurance.insurance_access_group" action="oi1_free_worker_insurance.free_worker_action"
+            web_icon="oi1_free_worker_insurance,static/description/icon.jpg"/>
+
+      </data>
+</odoo>

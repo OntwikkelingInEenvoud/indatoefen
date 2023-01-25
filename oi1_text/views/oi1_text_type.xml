@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+
+        <record id="oi1_text.text_type_view_action"
+                model="ir.actions.act_window">
+            <field name="name">oi1_text.text_type_view_action</field>
+            <field name="res_model">oi1_text.text_type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+
+
+        <record id="oi1_text.text_type_tree"  model="ir.ui.view">
+            <field name="name">oi1_text.text_type_tree</field>
+            <field name="model">oi1_text.text_type</field>
+            <field name="arch" type="xml">
+                <tree string="Text types">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="oi1_text.text_type_form"  model="ir.ui.view">
+            <field name="name">oi1_text.text_type_form</field>
+            <field name="model">oi1_text.text_type</field>
+            <field name="arch" type="xml">
+                <form string="Text form">
+                <sheet>
+                    <group>
+                        <field name="name"  />
+                        <field name="active" />
+                    </group>
+
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <menuitem
+            action="oi1_text.text_type_view_action"
+            id="oi1_text.text_type_action"
+            parent="base.reporting_menuitem"
+            sequence="1"
+            name="Report type"
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman,account.group_account_manager,account.group_account_user"
+        />
+
+
+    </data>
+</odoo>

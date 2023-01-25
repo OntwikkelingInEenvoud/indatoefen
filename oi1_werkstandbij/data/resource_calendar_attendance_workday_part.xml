@@ -1,0 +1,129 @@
+<odoo>
+    <data noupdate="1">
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_0_1">
+            <field name="dayofweek">0</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_0_2">
+            <field name="dayofweek">0</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_0_3">
+            <field name="dayofweek">0</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_0_4">
+            <field name="dayofweek">0</field>
+            <field name="day_period">night</field>
+        </record>
+
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_1_1">
+            <field name="dayofweek">1</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_1_2">
+            <field name="dayofweek">1</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_1_3">
+            <field name="dayofweek">1</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_1_4">
+            <field name="dayofweek">1</field>
+            <field name="day_period">night</field>
+        </record>
+
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_2_1">
+            <field name="dayofweek">2</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_2_2">
+            <field name="dayofweek">2</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_2_3">
+            <field name="dayofweek">2</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_2_4">
+            <field name="dayofweek">2</field>
+            <field name="day_period">night</field>
+        </record>
+
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_3_1">
+            <field name="dayofweek">3</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_3_2">
+            <field name="dayofweek">3</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_3_3">
+            <field name="dayofweek">3</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_3_4">
+            <field name="dayofweek">3</field>
+            <field name="day_period">night</field>
+        </record>
+
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_4_1">
+            <field name="dayofweek">4</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_4_2">
+            <field name="dayofweek">4</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_4_3">
+            <field name="dayofweek">4</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_4_4">
+            <field name="dayofweek">4</field>
+            <field name="day_period">night</field>
+        </record>
+
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_5_1">
+            <field name="dayofweek">5</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_5_2">
+            <field name="dayofweek">5</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_5_3">
+            <field name="dayofweek">5</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_5_4">
+            <field name="dayofweek">5</field>
+            <field name="day_period">night</field>
+        </record>
+
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_6_1">
+            <field name="dayofweek">6</field>
+            <field name="day_period">morning</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_6_2">
+            <field name="dayofweek">6</field>
+            <field name="day_period">afternoon</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_6_3">
+            <field name="dayofweek">6</field>
+            <field name="day_period">evening</field>
+        </record>
+        <record model="oi1_resource_calendar_attendance_workday_part" id="oi1_resource_calendar_attendance_workday_part_6_4">
+            <field name="dayofweek">6</field>
+            <field name="day_period">night</field>
+        </record>
+
+
+
+
+
+
+
+    </data>
+</odoo>

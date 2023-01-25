@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b7b6c2ed-e0ed-4e59-adda-80a5206115f3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1PIEzBTrSKOv45XJWYWwFYXYus1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/media/sf_addons15/oi1_text"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../oi1_daycareprovider/data" />
+      <recent name="$PROJECT_DIR$/../oi1_daycareprovider/wizards" />
+      <recent name="$PROJECT_DIR$/../oi1_sale_quotation_split/data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../oi1_voucher_card/views" />
+      <recent name="$PROJECT_DIR$/../oi1_sepa_direct_debit/views" />
+      <recent name="$PROJECT_DIR$/../oi1_daycareprovider_report/data" />
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/../oi1_reporting_peo_radiation_technology" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ODOO" type="PythonConfigurationType" factoryName="Python">
+      <module name="oi1_text" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="/home/odoo/instances/ODOO12-1/community" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="/home/odoo/instances/ODOO12-1/community/odoo-bin" />
+      <option name="PARAMETERS" value="-c /home/odoo/instances/ODOO12-1/odoodev.conf -i oi1_voucher_card -d test1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7b6c2ed-e0ed-4e59-adda-80a5206115f3" name="Default Changelist" comment="" />
+      <created>1563546762910</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563546762910</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="451" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581848131125">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="451" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.948@67.27.1853.948" timestamp="1581848131125" />
+    <state x="584" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.2493.1308@67.27.2493.1308" timestamp="1581247584787" />
+    <state x="676" y="229" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580127308507">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="676" y="229" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/67.27.1853.948@67.27.1853.948" timestamp="1580127308507" />
+    <state x="726" y="249" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578932074043">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="726" y="249" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.948@67.27.1853.948" timestamp="1578932074043" />
+    <state x="1036" y="571" width="544" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1578495617202">
+      <screen x="67" y="27" width="2493" height="1308" />
+    </state>
+    <state x="1036" y="571" width="544" height="217" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.2493.1308@67.27.2493.1308" timestamp="1578495617202" />
+    <state x="352" y="332" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581846998638">
+      <screen x="67" y="27" width="2493" height="1308" />
+    </state>
+    <state x="832" y="325" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.948@67.27.1853.948" timestamp="1580325183374" />
+    <state x="352" y="332" width="923" height="771" key="FileChooserDialogImpl/67.27.2493.1308@67.27.2493.1308" timestamp="1581846998638" />
+    <state width="1830" height="233" key="GridCell.Tab.0.bottom" timestamp="1581853075431">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1830" height="233" key="GridCell.Tab.0.bottom/67.27.1853.948@67.27.1853.948" timestamp="1581853075431" />
+    <state width="2470" height="403" key="GridCell.Tab.0.bottom/67.27.2493.1308@67.27.2493.1308" timestamp="1581256683460" />
+    <state width="1830" height="233" key="GridCell.Tab.0.center" timestamp="1581853075426">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1830" height="233" key="GridCell.Tab.0.center/67.27.1853.948@67.27.1853.948" timestamp="1581853075426" />
+    <state width="2470" height="403" key="GridCell.Tab.0.center/67.27.2493.1308@67.27.2493.1308" timestamp="1581256683457" />
+    <state width="1830" height="233" key="GridCell.Tab.0.left" timestamp="1581853075424">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1830" height="233" key="GridCell.Tab.0.left/67.27.1853.948@67.27.1853.948" timestamp="1581853075424" />
+    <state width="2470" height="403" key="GridCell.Tab.0.left/67.27.2493.1308@67.27.2493.1308" timestamp="1581256683455" />
+    <state width="1830" height="233" key="GridCell.Tab.0.right" timestamp="1581853075429">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state width="1830" height="233" key="GridCell.Tab.0.right/67.27.1853.948@67.27.1853.948" timestamp="1581853075429" />
+    <state width="2470" height="403" key="GridCell.Tab.0.right/67.27.2493.1308@67.27.2493.1308" timestamp="1581256683459" />
+    <state x="960" y="285" width="707" height="789" key="find.popup" timestamp="1581246753970">
+      <screen x="67" y="27" width="2493" height="1308" />
+    </state>
+    <state x="731" y="214" width="707" height="572" key="find.popup/67.27.1853.948@67.27.1853.948" timestamp="1579079689751" />
+    <state x="960" y="285" width="707" height="789" key="find.popup/67.27.2493.1308@67.27.2493.1308" timestamp="1581246753970" />
+    <state x="738" y="143" width="501" height="713" key="refactoring.ChangeSignatureDialog" timestamp="1578913175732">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="738" y="143" width="501" height="713" key="refactoring.ChangeSignatureDialog/67.27.1853.948@67.27.1853.948" timestamp="1578913175732" />
+    <state x="976" y="321" width="672" height="678" key="search.everywhere.popup" timestamp="1581249643022">
+      <screen x="67" y="27" width="2493" height="1308" />
+    </state>
+    <state x="976" y="321" width="672" height="678" key="search.everywhere.popup/67.27.2493.1308@67.27.2493.1308" timestamp="1581249643022" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

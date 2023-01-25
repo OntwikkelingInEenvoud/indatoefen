@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker_insurance.insurance_tariff_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance.insurance_tariff_form</field>
+            <field name="model">oi1_insurance_tariff</field>
+            <field name="arch" type="xml">
+                <form string="Insurance Tariff">
+
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </h1>
+
+                            <group>
+                                <field name="insurance_id" />
+                                <field name="active" />
+                                <field name="rate" />
+                                <field name="currency_id" />
+                                <field name="percentage" />
+                                <field name="hour_rate" />
+                                <field name="partner_id" />
+                            </group>
+                        </div>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="oi1_free_worker_insurance.insurance_tariff_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance_insurance_tariff_tree</field>
+            <field name="model">oi1_insurance_tariff</field>
+            <field name="arch" type="xml">
+                <tree string="Insurance tariffs">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oi1_free_worker_insurance.insurance_tariff_action">
+            <field name="name">Insurance tariff</field>
+            <field name="res_model">oi1_insurance_tariff</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create a new insurance tariff
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="oi1_free_worker_insurance.insurance_tariff_menu" name="Insurance tariffs" parent="oi1_free_worker_insurance.settings_menu"
+                  action="oi1_free_worker_insurance.insurance_tariff_action" sequence="20"
+                  groups="oi1_free_worker_insurance.insurance_access_group" />
+
+    </data>
+</odoo>

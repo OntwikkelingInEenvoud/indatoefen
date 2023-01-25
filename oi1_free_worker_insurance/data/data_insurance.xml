@@ -1,0 +1,9 @@
+<odoo>
+    <data noupdate="0">
+        <record model="oi1_insurance" id="oi1_free_worker_insurance.oi1_insurance_schengen">
+            <field name="name">EHIC</field>
+            <field name="insurance_type_id" ref="oi1_free_worker_insurance.oi1_insurance_schengen_type"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,2120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_werkstandbij_commission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20220725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-15 18:35+0000\n"
+"PO-Revision-Date: 2022-10-15 18:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_werkstandbij_commission
+#: model:mail.template,body_html:oi1_werkstandbij_commission.commission_template_email
+msgid ""
+"\n"
+"                Beste ${object.partner_id.name}, <br><br>Hierbij ontvangt u het overzicht van de commissieregels van commissie ${object.number} welke is betaald met factuur ${object.invoice_id.number} <br><br>Met vriendelijk groet, <br><br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>\n"
+"                \n"
+"                "
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid " Contact the Odoo application manager there are more then 2 logs found"
+msgstr ""
+"Neem contact op met de Odoo applicatie beheerder. Er zijn meer dan 2 logs "
+"gevonden"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid ""
+" Please adjust the commission in het logs because there is already a "
+"commission %s with a enddate %s "
+msgstr ""
+"Pas de commissie in de logs aan, omdat commissie %s met einddatum %s reeds "
+"is aangemaakt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__qty
+msgid " The quantity of the commission payment"
+msgstr "Het aantal van de commissie betaling"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_rate_list_line.py:0
+#, python-format
+msgid " archived"
+msgstr " gearchiveerd"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_free_worker.py:0
+#, python-format
+msgid "A commission should be unique for each free worker"
+msgstr "Een commissie moet per vrije werker uniek zijn."
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_free_worker_commission
+msgid ""
+"A commission which is created for the free worker without a special role, "
+"such as saving for pension, taxes, insurance"
+msgstr ""
+"Een commissie welke is aangemaakt voor een vrije werker zonder een "
+"specifieke role, zoals sparen voor pensioen, reservering voor belastingen of"
+" verzekeringen. such as saving for pension, taxes, insurance"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__account_analytic_line_id
+msgid "Account Analytic Line"
+msgstr "Urenregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_account_manager_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_account_manager_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_account_manager_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_account_manager_partner_id
+msgid "Account manager"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_assistant_account_manager_partner_id_amount
+msgid "Account manager assistant free"
+msgstr "Account manager assistent vergoeding"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_account_manager_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_account_manager_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_account_manager_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_account_manager_partner_id_amount
+msgid "Account manager free"
+msgstr "Account manager vergoeding"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_account_manager
+msgid "Accountmanager "
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_needaction
+msgid "Action Needed"
+msgstr "Actie benodigd"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__active
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.report,name:oi1_werkstandbij_commission.active_partner_commissions
+msgid "Active partner commissions"
+msgstr "Actieve partner commissies"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__is_actual
+msgid "Actual"
+msgstr "Actueel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment__state__disapproved
+msgid "Afgekeurd"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__amount
+msgid "Amount"
+msgstr "Bedrag"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_rate_list_line.py:0
+#, python-format
+msgid "An end date  %s should be later than a start date %s of line %s"
+msgstr "Einddatum %s dient later te zijn dan startdatum %s van regel %s"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Approve"
+msgstr "Goedkeuren"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "Approved"
+msgstr "Goedgekeurd"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__are_action_buttons_visible
+msgid "Are Action Buttons Visible"
+msgstr "Zijn de actie knoppen zichtbaar"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_assistant_account_manager_partner_id
+msgid "As. Account manager"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_assistant_account_manager
+msgid "Assistant Accountmanager "
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_attachment_count
+msgid "Attachment Count"
+msgstr "Bijlage aantal"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__commission_beneficiary_partner_id
+msgid "Beneficiary of the commission"
+msgstr "De begunstige van de commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__calculation_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__calculation_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__calculation_rate
+msgid "Calculation rate"
+msgstr "Tarief"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_payment_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_view
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_poule_manager
+msgid "Centrale Poulebeheerder"
+msgstr "Pool manager"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_main.py:0
+#, python-format
+msgid ""
+"Check the commission %s because the amount of the subcommissions is higher "
+"then the commission amount "
+msgstr ""
+"Controleer commissie %s. Het bedrag van de subcommissies is namelijk hoger "
+"dan het commissie bedrag"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__code
+msgid "Code"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_main
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__commission_id
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment__type__commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__type__commission
+msgid "Commission"
+msgstr "Commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__commission_free_worker_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__commission_free_worker_ids
+msgid "Commission Free Worker"
+msgstr "Vrije werkers commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_invoice_helper
+msgid "Commission Invoice helper"
+msgstr "Commissie facturerings helper"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__commission_log_ids
+msgid "Commission Log"
+msgstr "Commissie log"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_partner
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__partner_id
+msgid "Commission Partner"
+msgstr "Partner commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:mail.template,subject:oi1_werkstandbij_commission.commission_template_email
+msgid "Commission Payment ${object.number|safe}"
+msgstr "Commissie betaling ${object.number|safe}"
+
+#. module: oi1_werkstandbij_commission
+#: model:mail.template,report_name:oi1_werkstandbij_commission.commission_template_email
+msgid "Commission Payment ${object.number}"
+msgstr "Commissie betaling ${object.number}"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__commission_payment_line_id
+msgid "Commission Payment Line"
+msgstr "Commissie betalingsregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__commission_payment_log_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__commission_payment_log_id
+msgid "Commission Payment Log"
+msgstr "Commissie betalingslog"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.ui.menu,name:oi1_werkstandbij_commission.commission_payment_menu
+msgid "Commission Payments"
+msgstr "Commissie betalingen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__commission_agreement
+msgid "Commission agreement"
+msgstr "Commissie betalingsafspraken"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__commission_contact
+msgid "Commission contact"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_free_worker
+msgid "Commission free worker"
+msgstr "Vrije werkers commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_payment_log
+msgid "Commission hour payment log"
+msgstr "Commissie urenboek log"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Commission lines"
+msgstr "Commissieregels"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_log
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__commission_log_id
+msgid "Commission log"
+msgstr "Commissie log"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_sale_commission_payment
+msgid "Commission payment"
+msgstr "Commissie betaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_commission_period
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_commission_period
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_commission_period
+msgid "Commission period"
+msgstr "Commissie periode"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__commission_rate_list_id
+msgid "Commission rate"
+msgstr "Commissie tarief"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_rate_list
+msgid "Commission rate list"
+msgstr "Commissie tarief list"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_rate_list_line
+msgid "Commission rate list line"
+msgstr "Commissie tarief listregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.ui.menu,name:oi1_werkstandbij_commission.commission_rate_menu
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_rate_tree
+msgid "Commission rates"
+msgstr "Commissie tarieven"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__commission_role_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__commission_role_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__role_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__commission_role_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__commission_role_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__role_id
+msgid "Commission role"
+msgstr "Role"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_text.text_type,name:oi1_werkstandbij_commission.text_commission_type
+msgid "Commission text"
+msgstr "Commissie betalingsafspraak"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_commission_role
+msgid "Commission_role"
+msgstr "Role"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.commission_action
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.commission_payment_action
+#: model:ir.ui.menu,name:oi1_werkstandbij_commission.commission_main_menu
+#: model:ir.ui.menu,name:oi1_werkstandbij_commission.commission_menu
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_tree
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_tree
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.freeworker_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.freeworkerpoule_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_commission_log_tree
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.view_order_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.view_partner_form
+msgid "Commissions"
+msgstr "Commissies"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.commission_rate_action
+msgid "Commissions Rates"
+msgstr "Commissie tarieven"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_reservation
+msgid "Commissions for reservations on order"
+msgstr "Commissies voor de reserveringen op order"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__communication_email
+msgid "Communication email"
+msgstr "Email voor de communicatie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__company_id
+msgid "Company related to sale commission"
+msgstr "Bedrijf gekoppeld aan de verkoopcommissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission__company_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_free_worker__company_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_main__company_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_partner__company_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__company_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__company_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__company_id
+msgid "Company related to this commission"
+msgstr "Bedrijf gekoppeld aan deze commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_view
+msgid "Create an un reservation"
+msgstr "Maak een reservering"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_sale_commission_unreserve_wizard
+msgid "Create payments from the reservations"
+msgstr "Maak uitbetalingen aan op de reserveringen"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij_commission.commission_action
+msgid "Create the first commission"
+msgstr "Maak de eerste commissie aan"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij_commission.oi1_commission_log_action
+msgid "Create the first commission log"
+msgstr "Maak de eerste commissie aan"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij_commission.commission_rate_action
+msgid "Create the first commission rate"
+msgstr "Maak de eerste commissie tarief aan"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij_commission.sale_commission_action
+msgid "Create the first sale commission"
+msgstr "Maak de eerste verkoopcommissie aan"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__model_res_id_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__currency_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_commission__payment_by__customer
+msgid "Customer"
+msgstr "Klant"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__payment_to_freeworker
+msgid "De payment should be subtracted from the invoice of the freeworker"
+msgstr "De betaling zal worden afgetrokken van de factuur van de vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__default_rate
+msgid "Default rate"
+msgstr "Tarief"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__description
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__name
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_form
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__name
+msgid "Description of the payment"
+msgstr "Omschrijving van de betaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_free_worker__use_default_rate
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_main__use_default_rate
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_partner__use_default_rate
+msgid ""
+"Determines if the partner uses the default commission rate or decides to "
+"have his own rate"
+msgstr ""
+"Bepaalt of het contact de default commissie gaat gebruiken of besluit zijn "
+"eigen tarief te hanteren"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_free_worker__x_commission_period
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_res_partner__x_commission_period
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_res_users__x_commission_period
+msgid "Determines the period of the payments of the commissions"
+msgstr "Bepaalt de periode van de betalingen van de commmissies"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Disapprove"
+msgstr "Afkeuren"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_report_oi1_werkstandbij_commission_active_partner_commissions__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_form
+msgid "Division commission in subcommissions"
+msgstr "Verdeling commissie in deelcommissies"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Email"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__end_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__end_date
+msgid "End date"
+msgstr "Einddatum"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__end_date
+msgid "EndDate"
+msgstr "Einddatum"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__end_date
+msgid "Enddate"
+msgstr "Einddatum"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "Error by computing name of log %s with exception %s"
+msgstr "Fout bij het berekenen van de naam van de log %s met uitzondering %s"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid ""
+"Error in gathering commission data. There are more than 1 partners found. "
+"Contact the Odoo application manager "
+msgstr ""
+"Er is een fout opgetreden met de commissie gegevens. Er is meer dan 1 "
+"gekoppelde commissie gevonden."
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_practical_work_planner
+msgid "Flex. Assistent Vrije werker"
+msgstr "Flex. assistant"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Volgers (Kanalen)"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Relaties)"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission.py:0
+#, python-format
+msgid "For this commission the payment by should be by freeworker."
+msgstr ""
+"Voor deze commissie dient betaling bij vrije werker te worden aangezet"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission.py:0
+#, python-format
+msgid ""
+"For this commission there should be a  payment by should be a "
+"commission_beneficiary_partner_id defined"
+msgstr ""
+"For deze commissie dient een begunstige voor de betalingen te worden "
+"gedefinieerd"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_operational_work_planner
+msgid "Foreman"
+msgstr "Voorman"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__free_worker_id
+msgid "Free Worker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_free_worker_commission
+msgid "Free Worker SF-beheerder"
+msgstr "Vrije werker SF-beheerder"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__partner_worker_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__freeworker_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__partner_worker_id
+msgid "Free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__free_worker_commission
+msgid "Free worker commission"
+msgstr "Vrije werkerscommissie"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.freeworker_form
+msgid "Free worker commissions"
+msgstr "Vrije werker commmissies"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__partner_worker_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__partner_worker_id
+msgid "Free worker for which the commission is given"
+msgstr "Vrije werker for wie de commissie is gegeven"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_commission__payment_by__freeworker
+msgid "Freeworker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_freeworkerpoule
+msgid "Freeworker poule"
+msgstr "Vrije werker poule"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment__state__invoiced
+msgid "Gefactureerd"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_werkstandbij_commission_commission_payment_wizard
+msgid "Generate invoices for commission payments"
+msgstr "Maak facturen voor de commissiebetalingen aan"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment__state__approved
+msgid "Goedgekeurd"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "Group By..."
+msgstr "Groeperen op ..."
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__has_a_reservation
+msgid "Has a reservation"
+msgstr "Heeft een reservering"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij_commission.commission_payment_action
+msgid "Here are the commissions shown which are earned by the partners"
+msgstr ""
+"Hier worden de commissies getoond welke worden verdiend door de leveranciers"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__account_analytic_line_id
+msgid "Hour Line"
+msgstr "Urenregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__account_analytic_account_id
+msgid "Hour line"
+msgstr "Urenregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__hour_rate
+msgid "Hour rate"
+msgstr "Uurtarief"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__log_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_report_oi1_werkstandbij_commission_active_partner_commissions__id
+msgid "ID"
+msgstr "Id"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__res_id
+msgid "Id"
+msgstr "id"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_needaction
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt vragen nieuwe berichten uw aandacht."
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_has_error
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "indien aangevinkt hebben sommige leveringen een fout."
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission__active
+msgid "If true then the commission is in use and can be selected. "
+msgstr ""
+"Indien aangevinkt dan is de commissie ingebruik en kan worden geselecteerd."
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "InProgress"
+msgstr "In voortgang"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_log_form
+msgid "Info"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment__state__concept
+msgid "Ingevoerd"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.freeworker_form
+msgid "Internal contacts"
+msgstr "Interne contactpersonen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__invoice_id
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Invoice"
+msgstr "Factuur"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__payment_move_id
+msgid "Invoice used for the payment"
+msgstr "Gefactuur gebruikt voor de betaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_assistant_account_manager
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_assistant_account_manager
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_assistant_account_manager
+msgid "Is Assistant Account manager"
+msgstr "Is een assistent accountmanager"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__is_do_approve_visible
+msgid "Is Do Approve Visible"
+msgstr "Is goedkeuren zichtbaar"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__is_do_disapprove_visible
+msgid "Is Do Disapprove Visible"
+msgstr "Is afkeuren zichtbaar"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__is_do_invoice_visible
+msgid "Is Do Invoice Visible"
+msgstr "Is factureren zichtbaar"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__is_do_un_reserve_visible
+msgid "Is Do Un Reserve Visible"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_is_follower
+msgid "Is Follower"
+msgstr "Is een volger"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_poule_manager
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_poule_manager
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_poule_manager
+msgid "Is Poule manager"
+msgstr "Is een poule manager"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_seller
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_seller
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_seller
+msgid "Is Seller"
+msgstr "Is een verkoper"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_recruiter
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_recruiter
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_recruiter
+msgid "Is a Recruiter"
+msgstr "Is een recruiter"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__is_sub_commission
+msgid "Is a subcommission?"
+msgstr "Is een subcommissie?"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_account_manager
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_account_manager
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_account_manager
+msgid "Is accountmanager"
+msgstr "Is een accountmanager"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_mediator
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_mediator
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_mediator
+msgid "Is mediator"
+msgstr "Is een bemiddelaar"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_practical_work_planner
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_practical_work_planner
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_practical_work_planner
+msgid "Is practical workplanner"
+msgstr "Is een Flex. assistent"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_operational_work_planner
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_is_operational_work_planner
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_is_operational_work_planner
+msgid "Is workplanner"
+msgstr "Is een voorman"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_report_oi1_werkstandbij_commission_active_partner_commissions____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_invoice_helper__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_werkstandbij_commission_commission_payment_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__main_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__main_id
+msgid "Main"
+msgstr "Hoofdcommissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Attachment"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.commission_payment_wizard_menu
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.oi1_sale_commission_payment_wizard_action
+msgid "Make invoices"
+msgstr "Keur verschillende commissies goed en maak concept inkoopfacturen aan"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_payment_wizard_view
+msgid "Make invoices from commissions"
+msgstr "Maak inkoopfacturen van commissies aan"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_view
+msgid "Make unreservation"
+msgstr "Stel een gereserveerd bedrag ter beschikking"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_action
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_menu
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Make unreserve wizard"
+msgstr "Maak een betaling aan voor bedragen welke zijn gereserveerd"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment.py:0
+#: code:addons/oi1_werkstandbij_commission/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__res_partner__x_commission_period__manual
+#, python-format
+msgid "Manual"
+msgstr "Handmatig"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__mediator_partner_id
+msgid "Mediator"
+msgstr "Bemiddelaar"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__mediator_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__recruiter_partner_id_amount
+msgid "Mediator fee"
+msgstr "Bemiddelingsfee"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_has_error
+msgid "Message Delivery error"
+msgstr "Bericht afleverfout"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__model_name
+msgid "Model"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__model_name_res_id
+msgid "Model name res id"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__res_partner__x_commission_period__mm
+msgid "Month"
+msgstr "Maand"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/res_partner.py:0
+#, python-format
+msgid "Month "
+msgstr "Maand"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment.py:0
+#, python-format
+msgid "Not paid Commission Bills"
+msgstr "Openstaande commissie facturen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__number
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__number
+msgid "Number"
+msgstr "Nummer"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Aantal berichten die actie vereisen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met leveringsfout"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Aantal ongelezen berichten"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__oi1_sale_commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__oi1_sale_commission_id
+msgid "Oi1 Sale Commission"
+msgstr "Verkoopcommissie"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission.py:0
+#, python-format
+msgid ""
+"Only unit hour is supported when there is no payment to the freeworker for "
+"commission %s)"
+msgstr ""
+"Gebruik alleen eenheden als uren when er geen betaling van de vrije werker "
+"wordt verwacht voor commissie %s"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__operational_work_planner_partner_id
+msgid "Operational work planner"
+msgstr "Voorman"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__operational_work_planner_partner_id_amount
+msgid "Operational workplanner free"
+msgstr "De vergoeding voor de voorman"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__order_ids
+msgid "Order"
+msgstr "Ordernummer"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__partner_worker_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__partner_id
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "Partner"
+msgstr "Relatie"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment.py:0
+#, python-format
+msgid ""
+"Partner %s is configured for not having btw on the invoice so no btw is "
+"calculated"
+msgstr ""
+"Let op: Contact %s heeft de instelling dat er geen BTW op de inkoopfactuur "
+"wordt berekend."
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_oi1_commission_partner_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_oi1_commission_partner_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_oi1_commission_partner_ids
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.view_partner_form
+msgid "Partner Commissions"
+msgstr "Partner commissies"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__partner_worker_ids
+msgid "Partner Worker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_report_oi1_werkstandbij_commission_active_partner_commissions
+msgid "Partner active commissions report"
+msgstr "Actieve partner commissie rapport"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_partner_declaration.py:0
+#, python-format
+msgid "Partner hour commissions are determined with for hour line"
+msgstr "Leveranciers uurcommissies worden bepaald per uur"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__pur_invoice_line_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__pur_invoice_line_id
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_log_form
+msgid "Payment"
+msgstr "Betaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__payment_by
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__payment_by
+msgid "Payment By"
+msgstr "Betaling door"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__payment_company_id
+msgid "Payment Company"
+msgstr "Betaalbedrijf"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__payment_by
+msgid "Payment by"
+msgstr "Betaling door"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__payment_invoice_id
+msgid "Payment invoice"
+msgstr "Factuur"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment.py:0
+#, python-format
+msgid "Payment of"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__commission_payment_line_id
+msgid "Payments"
+msgstr "Betalingen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__percentage
+msgid "Percentage"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission__percentage
+msgid ""
+"Percentage which sould be used when this amount is higher then the default "
+"rate. Keep 0 voor no percenage"
+msgstr ""
+"Het percentage dat zou moeten worden gebruikt wanneer het bedrag hoger is "
+"dan het default tarief. Houdt het 0 voor geen percentage"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__period
+msgid "Period"
+msgstr "Periode"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment_line.py:0
+#, python-format
+msgid "Please provide a hour line when payment by hours"
+msgstr "Verschaf een urenregel when betaling bij uren"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment.py:0
+#, python-format
+msgid ""
+"Please provide a valid vat number for partner %s which is needed because "
+"there will be vat on the invoice"
+msgstr ""
+"Vul de BTW-nummer bij het contact %s in. Deze is benodigd omdat er met BTW "
+"op de inkoopfactuur zal worden gerekend"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid "Please provide aan description with is longer then 10 characters"
+msgstr "Geef een omschrijving met meer dan 10 karakters"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment_line.py:0
+#, python-format
+msgid "Please provide only an hour line when payment by hours"
+msgstr "Verschaf een urenregel alleen bij betaling met uren"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment_line.py:0
+#, python-format
+msgid "Please provide sale order of a partner related to the hour line"
+msgstr ""
+"Verschaf een verkooporder van de leverancier gekoppeld aan de urenregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__poule_manager_partner_id
+msgid "Poule manager"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__poule_manager_partner_id_amount
+msgid "Poule manager free"
+msgstr "Poule manager vergoeding"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__x_poule_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_project_project__x_poule_ids
+msgid "Poules"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__practical_work_planner_partner_id
+msgid "Practical work planner"
+msgstr "Flex. assistant"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__practical_work_planner_partner_id_amount
+msgid "Practical work planner fee"
+msgstr "Flex. assistent vrije werkers vergoeding"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__x_poule_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_project_project__x_poule_id
+msgid "Preferred poule"
+msgstr "Voorkeurs poule"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__rate
+msgid "Price Unit"
+msgstr "Prijseenheid"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Print"
+msgstr "Geprint"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__product_id
+msgid "Product"
+msgstr "Produkt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__name
+msgid "Provides the description or reason of the payment"
+msgstr "Vul een omschrijving of een reden van de betaling in"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__qty
+msgid "Qty"
+msgstr "Aantal"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_payment_log__calculated_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__rate
+msgid "Rate"
+msgstr "Tarief"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__rate_list_id
+msgid "Rate list"
+msgstr "Tarieven lijst"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list__rate_list_line_ids
+msgid "Rate list lines"
+msgstr "Tarieven lijst regels"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__commission_rate_list_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__commission_rate_list_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__commission_rate_list_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__commission_rate_list_id
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_rate_list
+msgid "Rates"
+msgstr "Tarieven"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_recruiter
+msgid "Recruit agent"
+msgstr "Recruiter"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__recruiter_partner_id
+msgid "Recruiter"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__commission_main_id
+msgid "Related commission"
+msgstr "Commissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment__type__reservation
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__type__reservation
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_reservation
+msgid "Reservation"
+msgstr "Reservering"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__reservation_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_reservation_amount
+msgid "Reservation Amount"
+msgstr "Reserveringsbedrag"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__reservation_commission_payment_line_id
+msgid "Reservation payment line"
+msgstr "Reserveringsbetalingsregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS delivery error"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__sale_commission_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__sale_commission_id
+msgid "Sale Commission"
+msgstr "Verkoopcommissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__sale_commission_payment_lines
+msgid "Sale Commission Payment Lines"
+msgstr "Verkoopcommissie betalingsregels"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.sale_commission_action
+#: model:ir.ui.menu,name:oi1_werkstandbij_commission.sale_commission_menu
+msgid "Sale Commissions"
+msgstr "Verkoopcommissies"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_sale_commission
+msgid "Sale commission"
+msgstr "Verkoopcommissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_sale_commission_payment_line
+msgid "Sale commission payment line"
+msgstr "Verkoopcommissie betalingsregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_oi1_sale_commission_partner_declaration
+msgid "Sale commissions to pay by partners"
+msgstr "Verkoopcommissie te betalen door de leveranciers"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model,name:oi1_werkstandbij_commission.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_sales
+msgid "Sales agent"
+msgstr "Verkoop"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__sale_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__sale_id
+msgid "Sales order"
+msgstr "Verkooporder"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "Search"
+msgstr "Zoek"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_seller_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_seller_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_seller_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_seller_partner_id
+msgid "Seller"
+msgstr "Verkoper"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_seller_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_seller_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_seller_partner_id_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_seller_partner_id_amount
+msgid "Seller free"
+msgstr "Verkoper fee"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__sequence
+msgid "Sequence"
+msgstr "Volgorde"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_log__model_res_id_name
+msgid "Shows the person on which the log is created"
+msgstr "Laat de medewerker zien op wie de log is aangemaakt"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_payment_log.py:0
+#, python-format
+msgid "Source "
+msgstr "Bron"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__start_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__start_date
+msgid "Start date"
+msgstr "Startdatum"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__start_date
+msgid "StartDate"
+msgstr "Startdatum"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__start_date
+msgid "Startdate"
+msgstr "Startdatum"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "State"
+msgstr "Status"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__state
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__state
+msgid "Status"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "Testscherm"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__pur_invoice_line_id
+msgid "The Invoice which is used to pay the commission"
+msgstr "De factuur waarmee de commissie is betaald"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__amount
+msgid "The amount of the payment"
+msgstr "Het bedrag van de betaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission__commission_beneficiary_partner_id
+msgid ""
+"The benificary of the commission which overrules the normal partner within "
+"the commission"
+msgstr ""
+"De begunstige van de commissie welke de normale partner voor de commissie "
+"overschrijft"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.constraint,message:oi1_werkstandbij_commission.constraint_oi1_commission_log_modelname_res_id_commission_id_start_date_unique
+msgid ""
+"The combination of model_name, res_id, role_id and start_date should be "
+"unique"
+msgstr ""
+"De combinatie van model_name, res_id en start_datum dient uniek te zijn"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_free_worker.py:0
+#, python-format
+msgid ""
+"The commission %s should be unique for each free worker within a time period. \n"
+"Commission is already used within this period (See commission logs)"
+msgstr ""
+"The commissie %s moet uniek zijn voor iedere vrije werker binnen een periode \n"
+"Commissie is reeds in gebruik binnen de periode (Zie commissie logs)"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_free_worker.py:0
+#, python-format
+msgid "The commission %s should have a larger end date then a start date"
+msgstr ""
+"De commissie %s dient een grotere einddatum dan een startdatum te hebben."
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid ""
+"The commission %s should have the state approved for making unreservations"
+msgstr "De commissie %s dient te zijn goedgekeurd om bedragen af te boeken"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_free_worker.py:0
+#, python-format
+msgid "The commission can not be changed"
+msgstr "De commissie kan niet worden gewijzigd"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__active
+msgid ""
+"The commission is still active and should be seen within the order or "
+"freeworker"
+msgstr ""
+"De commissie is actief and moet worden gezien binnen de order of vrijewerker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_free_worker__commission_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_main__commission_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_partner__commission_id
+msgid "The commission related to the role"
+msgstr "De commissie gekoppeld aan de role"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__date
+msgid "The date the commission line is generated"
+msgstr "De datum waarop de commissieregel is aangemaakt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__end_date
+msgid ""
+"The date when the payment of the commission ends. Keep empty if no end date "
+"is known"
+msgstr ""
+"De datum waarop de betaling van de commissie stopt. Indien onbekend vul geen"
+" waarde in"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__start_date
+msgid "The date when the payment of the commission starts"
+msgstr "De startdatum van de lopende verkoopcommissie"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_free_worker__description
+msgid ""
+"The description of the commission. Could be the car, house or the insurence "
+"number"
+msgstr ""
+"De omschrijving van de commissie. Het kan een auto, huis of een "
+"verzekeringsnummer zijn"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__sub_commission_ids
+msgid "The different commissions in which the commission is internal divided"
+msgstr "De verschillende subcommissies waarin de commissie is verdeeld."
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "The enddate %s should be greater then the start date %s"
+msgstr "De einddatum %s zou groter zijn dan de startdatum %s"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__hour_rate
+msgid "The hour tariff of the free worker "
+msgstr "Het uurtarief van de vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__account_analytic_line_id
+msgid "The hourline which genereted the commission line"
+msgstr "De urenregel welke de commissieregel heeft aangemaakt"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "The model %s is not used for commissions"
+msgstr "Het model %s wordt niet gebruikt voor commissies"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__commission_id
+msgid "The name of the commission of the commission line"
+msgstr "De naam van de commissie van de commissieregel"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_rate_list__name
+msgid "The name of the commission rate list"
+msgstr "De naam van de commissie tarieven lijst"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_free_worker__x_is_recruiter
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_res_partner__x_is_recruiter
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_res_users__x_is_recruiter
+msgid "The person recruits free workers"
+msgstr "Deze persoon haalt vrije werkers binnen"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_mediator
+msgid "The person who arranges the free worker for the customer poule"
+msgstr "De medewerker welke de vrije werker regelt voor de klant poule"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_sales
+msgid "The person who has arranged the sale of the sales order"
+msgstr "De partij welke de verkoop van de verkooporder heeft geregeld"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_recruiter
+msgid "The person who has recruited the free worker"
+msgstr "De partij welke de vrije werker heeft ingeschreven binnen WSB"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_practical_work_planner
+msgid "The person who helps the free worker with practical issues"
+msgstr "Het contact welke de vrije werker met praktische zaken ondersteunt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__operational_work_planner_partner_id
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_operational_work_planner
+msgid ""
+"The person who helps the free worker with the daily tasks within the poule"
+msgstr ""
+"De medewerker welke de vrije werker binnen de poule helpt met de dagelijkse "
+"werkzaamheden"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_assistant_account_manager
+msgid ""
+"The person who is responsible for assistance of the account manager and the "
+"result of the sales order"
+msgstr ""
+"De persoon welke is verantwoordelijk voor het assisteren van de "
+"accountmanager en het orderresultaat"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_account_manager
+msgid ""
+"The person who is responsible for the customer contact and the result of the"
+" sales order"
+msgstr ""
+"De partij welke verantwoordelijk is voor het klantcontact en het risico van "
+"het resultaat van de verkooporder draagt"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,description:oi1_werkstandbij_commission.oi1_commission_role_poule_manager
+msgid ""
+"The person who is responsible for the health of the general and customer "
+"poules"
+msgstr ""
+"De medewerker welke verantwoordelijk is voor de samenstelling en de "
+"gezondheid van de poule"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__poule_manager_partner_id
+msgid ""
+"The person who makes sure that there are enough free workers within the "
+"poule and that they work well together"
+msgstr ""
+"De medewerker welke er voor zorgt dat er afdoende vrije werkers in de poule "
+"aanwezig zijn en dat men binnen de poule goed samenwerkt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__partner_id
+msgid "The person who receives the commission"
+msgstr "De persoon welke de commissie ontvangt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__rate
+msgid "The rate of the commission payment"
+msgstr "De tarief van de commissiebetaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_free_worker__default_rate
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_log__default_rate
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_main__default_rate
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_partner__default_rate
+msgid "The rate the partners wants to earn for the role"
+msgstr ""
+"Het tarief dat het contact wilt verdienen voor het uitoefenen van de rol"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__commission_payment_log_id
+msgid "The related commission payment log which generated the commission line"
+msgstr "De gekoppelde betalingslog welke de commissieregel heeft aangemaakt"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__commission_payment_log_id
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__sale_commission_id
+msgid "The related commission which generated the commission line"
+msgstr "De gekoppelde commissie welke de commissieregel heeft aangemaakt."
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission__sale_id
+msgid "The sales order for which the commission is given"
+msgstr "De verkooporder waarvoor de commissie is betaald"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__sale_id
+msgid "The sales order which created the commission payment"
+msgstr "De verkooporder welke de commissiebetaling heeft aangemaakt."
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__amount
+msgid "The total amount of the commission payment"
+msgstr "Het totaalbedrag van de commissiebetaling"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid "There is no commission provided"
+msgstr "Er is geen commissie ingevuld"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "There is no commission provided for role %s for partner %s "
+msgstr "Er kan geen commissie worden gevonden voor role %s bij partner %s"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_payment.py:0
+#, python-format
+msgid "There is no emailadres filled in for partner %s "
+msgstr "Er is geen emailadres ingevuld voor contact %s"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission.py:0
+#, python-format
+msgid ""
+"This commission is already used with the role %s so this commission cannot "
+"be changed. Archive this commission instead and create a new one "
+msgstr ""
+"De commissie wordt reeds gebruikt met de role %s. Hierdoor kan de commissie "
+"rol niet worden gewijzigdArchiveer de commissie en maak een nieuwe aan"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_commission_payment_log__payment_move_id
+msgid "This is the invoice which is used for the payment to the freeworker"
+msgstr "Dit is de factuur welke is gebruikt om de vrije werker te betalen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__payment_to_freeworker
+msgid "To pay by worker"
+msgstr "Te betalen door de vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_tree
+msgid "Total"
+msgstr "Totaal"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__type
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__type
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_search
+msgid "Type"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__unit
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__unit
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment_line__unit
+msgid "Unit"
+msgstr "Eenheid"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission__amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_unreserve_wizard__amount
+msgid "Unit Price"
+msgstr "Prijs"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_unread
+msgid "Unread Messages"
+msgstr "Ongelezen berichten"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Aantal ongelezen berichten"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid "Unreservations can only be made on commission of type reservation"
+msgstr ""
+"Uitbetalingen kunnen alleen gedaan worden op commissies welke reserveringen "
+"bevatten."
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid ""
+"Unreservations can only be made on commission which only contains "
+"reservations"
+msgstr ""
+"Uitbetalingen kunnen alleen worden gemaakt op commissies welke reserveringen"
+" bevatten"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_log__use_default
+msgid "Use default"
+msgstr "Gebruik standaard"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_free_worker__use_default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_main__use_default_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_partner__use_default_rate
+msgid "Use default rate"
+msgstr "Gebruik standaardtarief"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/wizard/oi1_commission_payment_wizard.py:0
+#, python-format
+msgid "Warning commission payment %s has not the right state"
+msgstr "Waarschuwing: Commissie betaling %s heeft niet de juiste status"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/wizard/oi1_commission_payment_wizard.py:0
+#, python-format
+msgid "Warning commission payment %s is of type Reservation"
+msgstr "Waarschuwing: Commissie betaling %s is niet van het type reservering"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__website_message_ids
+msgid "Website Messages"
+msgstr "Website berichten"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__website_message_ids
+msgid "Website communication history"
+msgstr "Website communicatie geschiedenis"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__res_partner__x_commission_period__wk
+msgid "Week"
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/res_partner.py:0
+#, python-format
+msgid "Week "
+msgstr "Week"
+
+#. module: oi1_werkstandbij_commission
+#: model:oi1_commission_role,name:oi1_werkstandbij_commission.oi1_commission_role_mediator
+msgid "Werkpoule manager "
+msgstr ""
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_free_worker__recruiter_partner_id
+msgid "Who has recruited the free worker"
+msgstr "Degene welke de vrije werker heeft binnengehaald"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_free_worker__practical_work_planner_partner_id
+msgid "Who is responsible for the daily support of the freeworker"
+msgstr ""
+"Degene welke verantwoordelijk is voor de ondersteuning van de praktische "
+"dagelijkse behoeften van de vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,help:oi1_werkstandbij_commission.field_oi1_free_worker__mediator_partner_id
+msgid "Who is the mediator of the freeworker"
+msgstr "Degene welke de bemiddelaar van de vrije werker is"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_commission_log_ids
+msgid "X Commission Log"
+msgstr "Commissie logs"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__res_partner__x_commission_period__yy
+msgid "Year"
+msgstr "Jaar"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/res_partner.py:0
+#, python-format
+msgid "Year "
+msgstr "Jaar"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_view
+msgid "You can make a payment for an reservation"
+msgstr "Je kan een uitbetaling voor een reservering aanmaken"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_payment_wizard_view
+msgid "You can make an invoice from commission reservations"
+msgstr ""
+"Je kan meerdere commissies goedkeuren en hiervan concept inkoopfacturen "
+"maken"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid "You can not unreserve more amount  %s than the reserved amount %s"
+msgstr "Je kan niet meer uitbetalen %s dan je hebt gereserveerd %s"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_sale_commission_unreserve_wizard.py:0
+#, python-format
+msgid "You should provide a positive amount"
+msgstr "Je moeet een positief bedrag uitbetalen"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_log_form
+msgid "commission form"
+msgstr "Commissie formulier"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_line_form
+msgid "commission line form"
+msgstr "Commisieregel formulier"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_rate_list
+msgid "commission rate list form"
+msgstr "Commissie tarieven formulier"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_role_form
+msgid "commission role form"
+msgstr "Commissie rol formulier"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "contact"
+msgstr "Contact"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission__unit__days
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_partner_declaration__unit__days
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__unit__days
+msgid "days"
+msgstr "dagen"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__description
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__description
+msgid "description"
+msgstr "Omschrijving"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.oi1_sale_commission_payment_wizard_view
+msgid "do_agree_and_invoice_commissions"
+msgstr "De commissies goedkeuren en inkoopfacturen aanmaken"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "free worker poule"
+msgstr "Vrije werkers poule"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission__unit__hours
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_partner_declaration__unit__hours
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__unit__hours
+msgid "hours"
+msgstr "Uren"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_rate_list_line__name
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_commission_role__name
+msgid "name"
+msgstr "Naam"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.actions.act_window,name:oi1_werkstandbij_commission.oi1_commission_log_action
+msgid "oi1_werkstandbij_commission_oi1_commission_log_action"
+msgstr "Commissie logs"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__type__payment
+msgid "payment"
+msgstr "Betaling"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_partner_declaration__qty
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__unit__qty
+msgid "qty"
+msgstr "Aantal"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__qty_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_free_worker__x_qty_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_freeworkerpoule__qty_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_partner__x_qty_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_res_users__x_qty_commission_log_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_sale_order__x_qty_commission_log_ids
+msgid "quantity logs"
+msgstr "Aantal commissies"
+
+#. module: oi1_werkstandbij_commission
+#: code:addons/oi1_werkstandbij_commission/models/oi1_commission_log.py:0
+#, python-format
+msgid "sale_order"
+msgstr "Verkooporder"
+
+#. module: oi1_werkstandbij_commission
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij_commission.commission_payment_form
+msgid "total amount"
+msgstr "Totaal bedrag"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission__unit__weeks
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_partner_declaration__unit__weeks
+#: model:ir.model.fields.selection,name:oi1_werkstandbij_commission.selection__oi1_sale_commission_payment_line__unit__weeks
+msgid "weeks"
+msgstr "Weken"
+
+#. module: oi1_werkstandbij_commission
+#: model:ir.model.fields,field_description:oi1_werkstandbij_commission.field_oi1_sale_commission_payment__partner_is_freeworker
+msgid "x_is_freeworker_visible"
+msgstr "Is vrije werker zichtbaar"

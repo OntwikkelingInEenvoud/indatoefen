@@ -1,0 +1,314 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_free_worker_insurance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20220725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-24 13:57+0000\n"
+"PO-Revision-Date: 2022-10-24 13:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__active
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__active
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__active
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Active"
+msgstr "Actief"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Active Freeworkers"
+msgstr "Actieve vrije werkers"
+
+#. module: oi1_free_worker_insurance
+#: code:addons/oi1_free_worker_insurance/models/oi1_insurance_polis.py:0
+#, python-format
+msgid "Automatic commission %s added"
+msgstr "Commissie %s is automatisch toegevoegd"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__commission_id
+msgid "Commission"
+msgstr "Commissie"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.actions.act_window,help:oi1_free_worker_insurance.free_worker_action
+msgid "Create the first free worker"
+msgstr "Vrije werker niet gevonden"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.actions.act_window,help:oi1_free_worker_insurance.insurance_action
+#: model_terms:ir.actions.act_window,help:oi1_free_worker_insurance.insurance_polis_action
+msgid "Create the first insurance"
+msgstr "Zoek opnieuw of maak een nieuwe verzekering aan"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.actions.act_window,help:oi1_free_worker_insurance.insurance_type_action
+msgid "Create the first insurance type"
+msgstr "Zoek opnieuw of maak ene nieuwe verzekeringstype aan"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__create_uid
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__create_date
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__display_name
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__display_name
+msgid "Display Name"
+msgstr "Weergave naam"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__duration
+msgid "Duration"
+msgstr "Duur in (dagen)"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance__duration
+msgid "Duration in days for no end date provide -1"
+msgstr "Vul een duur in dagen in. Indien geen einddatum vul dan -1 in"
+
+#. module: oi1_free_worker_insurance
+#: model:oi1_insurance,name:oi1_free_worker_insurance.oi1_insurance_schengen
+msgid "EHIC"
+msgstr ""
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model,name:oi1_free_worker_insurance.model_oi1_free_worker
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__free_worker_id
+msgid "Free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.actions.act_window,name:oi1_free_worker_insurance.free_worker_action
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_tree
+msgid "Free workers"
+msgstr "Vrije werkers"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Freeworkers"
+msgstr "Vrije werkers"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__date_from
+msgid "From date"
+msgstr "Vanaf datum"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Group By"
+msgstr "Groeperen op"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__id
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__id
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__id
+msgid "ID"
+msgstr "Id"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.actions.act_window,name:oi1_free_worker_insurance.insurance_action
+#: model:ir.actions.act_window,name:oi1_free_worker_insurance.insurance_polis_action
+#: model:ir.ui.menu,name:oi1_free_worker_insurance.main_insurance_menu
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.freeworker_form
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.insurance_form
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.insurance_polis_form
+msgid "Insurance"
+msgstr "Verzekering"
+
+#. module: oi1_free_worker_insurance
+#: model:res.groups,name:oi1_free_worker_insurance.insurance_access_group
+msgid "Insurance Access"
+msgstr "Toegang op verzekeringen"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.insurance_type_form
+msgid "Insurance Type"
+msgstr "Verzekeringstype"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__partner_id
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__partner_id
+msgid "Insurance company"
+msgstr "Verzekeringsbedrijf"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.actions.act_window,name:oi1_free_worker_insurance.insurance_type_action
+#: model:ir.ui.menu,name:oi1_free_worker_insurance.insurance_type_menu
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.insurance_type_tree
+msgid "Insurance types"
+msgstr "Verzekeringstypen"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.ui.menu,name:oi1_free_worker_insurance.insurance_menu
+#: model:ir.ui.menu,name:oi1_free_worker_insurance.insurance_polis
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.insurance_polis_tree
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.insurance_tree
+msgid "Insurances"
+msgstr "Verzekeringen"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis____last_update
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type____last_update
+msgid "Last Modified on"
+msgstr "Laatst aangepast op"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__write_uid
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__write_uid
+msgid "Last Updated by"
+msgstr "Laatst gewijzigd door"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__write_date
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__name
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__name
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_type__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_free_worker__schengen_insurance_needs_attention
+msgid "Needs schengen attention"
+msgstr "Schengenverzekering heeft aandacht nodig"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_free_worker__no_schengen_polis_needed
+msgid "No Schengen insurance needed"
+msgstr "Geen schengenverzekering benodigd"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_free_worker__oi1_insurance_polis_ids
+msgid "Polis"
+msgstr "Polis"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_free_worker__schengen_insurance_polis_id_number
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__number
+msgid "Polis number"
+msgstr "Polisnummer"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Registration date"
+msgstr "Registratie datum"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Residence address"
+msgstr "Verblijfsadres"
+
+#. module: oi1_free_worker_insurance
+#: model:oi1_insurance_type,name:oi1_free_worker_insurance.oi1_insurance_schengen_type
+msgid "Schengen Insurance"
+msgstr "Schengen verzekering"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_free_worker__schengen_insurance_polis_id
+msgid "Schengen Insurance Polis"
+msgstr "Schengen verzerkingspolis"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Schengen Visitor"
+msgstr "Schengen bezoeker"
+
+#. module: oi1_free_worker_insurance
+#: model_terms:ir.ui.view,arch_db:oi1_free_worker_insurance.free_worker_search
+msgid "Schengen Visitor Needs attention"
+msgstr "Schengen bezoeker heeft aandacht nodig"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.ui.menu,name:oi1_free_worker_insurance.settings_menu
+msgid "Settings"
+msgstr "Instelllingen"
+
+#. module: oi1_free_worker_insurance
+#: code:addons/oi1_free_worker_insurance/models/oi1_insurance_polis.py:0
+#, python-format
+msgid "Start date  %s should not be greater then end date %s."
+msgstr "Startdatum %s moet later zijn dan de einddatum %s."
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance__commission_id
+msgid "The commission which is used for the payment of the free worker"
+msgstr "De commissie welke wordt gebruikt om de vrije werker te betalen"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance_polis__partner_id
+msgid "The company"
+msgstr "Bedrijf"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance__partner_id
+msgid "The default insurance company"
+msgstr "Het standaard verzekeringsbedrijf"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance__name
+msgid "The description of the insurance"
+msgstr "De omschrijving van de verzekering"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance__insurance_type_id
+msgid "The general type of the insurance"
+msgstr "Het generieke type van de verzekering"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,help:oi1_free_worker_insurance.field_oi1_insurance_polis__insurance_id
+msgid "The insurance"
+msgstr "De verzekering"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_free_worker__schengen_insurance_polis_id_date_to
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__date_to
+msgid "To date"
+msgstr "Tot en met datum"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance__insurance_type_id
+#: model:ir.model.fields,field_description:oi1_free_worker_insurance.field_oi1_insurance_polis__insurance_id
+msgid "Type"
+msgstr ""
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model,name:oi1_free_worker_insurance.model_oi1_insurance
+msgid "oi1_insurance"
+msgstr "Verzekering"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model,name:oi1_free_worker_insurance.model_oi1_insurance_polis
+msgid "oi1_insurance_polis"
+msgstr "Verzekeringspolis"
+
+#. module: oi1_free_worker_insurance
+#: model:ir.model,name:oi1_free_worker_insurance.model_oi1_insurance_type
+msgid "oi1_insurance_type"
+msgstr "Verzekeringstype"

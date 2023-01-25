@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="mail_complete_nav" model="mail.template">
+            <field name="name">FreeWorker Payment - Send contract by Email</field>
+            <field name="email_from">${(user.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+            <field name="subject">Missende NAV-gegevens van ${object.name|safe} bij werkstandby</field>
+            <field name="email_to">${(object.partner_id.x_communication_email)}</field>
+            <field name="model_id" ref="oi1_free_worker.model_oi1_free_worker"/>
+            <field eval="True" name="auto_delete"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="body_html"><![CDATA[
+                Beste ${object.partner_id.name}, <br><br>
+
+                Je hebt je ingeschreven als vrije werker via ons portaal:<br>
+                inschrijven.werkstandby.nl/register<br>
+
+                We hebben je inschrijving ontvangen, maar helaas zijn nog niet al je gegevens compleet.<br>
+                In elk geval missen we nog wat NAW-gegevens van je.<br><br>
+
+                Kan je opnieuw naar inschrijven.werkstandby.nl/login gaan?<br>
+                Om een wachtwoord te krijgen moet je aangeven dat je het vergeten bent. Dan ontvang je een mailbericht om een nieuw wachtwoord aan te maken.<br><br>
+
+                Wil je na het aanvullen van je NAW-gegevens ook meteen even checken of je kopie ID goed is geüpload, zodanig dat we kunnen zien dat jij het bent met een ID uit een EU-land? En kijk ook even of je de machtiging wel had ondertekend.<br>
+                Zonder deze gegevens kunnen wij je straks niet uitbetalen.
+
+                <br><br>Met vriendelijk groet,<br><br>Backoffce Werk Standby<br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>
+
+                ]]></field>
+        </record>
+
+    </data>
+</odoo>

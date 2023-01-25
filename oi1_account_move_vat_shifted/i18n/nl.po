@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_account_move_vat_shifted
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20220725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-17 09:17+0000\n"
+"PO-Revision-Date: 2022-11-17 09:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_account_move_vat_shifted
+#: model:ir.model.fields,help:oi1_account_move_vat_shifted.field_res_partner__x_vat_inland_shifted
+#: model:ir.model.fields,help:oi1_account_move_vat_shifted.field_res_users__x_vat_inland_shifted
+#: model:ir.model.fields,help:oi1_account_move_vat_shifted.field_sale_order__x_vat_inland_shifted
+msgid ""
+"Choose this option when the BTW can be shifted for inland partners such as "
+"within the construction"
+msgstr "Kies deze optie als de BTW kan worden verlegd voor binnenlandse leveringen, zoals binnen de bouw"
+
+#. module: oi1_account_move_vat_shifted
+#: model:ir.model,name:oi1_account_move_vat_shifted.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: oi1_account_move_vat_shifted
+#: model:ir.model,name:oi1_account_move_vat_shifted.model_account_move_line
+msgid "Journal Item"
+msgstr "Boeking"
+
+#. module: oi1_account_move_vat_shifted
+#: model:ir.model,name:oi1_account_move_vat_shifted.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: oi1_account_move_vat_shifted
+#: model:ir.model.fields,field_description:oi1_account_move_vat_shifted.field_res_partner__x_vat_inland_shifted
+#: model:ir.model.fields,field_description:oi1_account_move_vat_shifted.field_res_users__x_vat_inland_shifted
+#: model:ir.model.fields,field_description:oi1_account_move_vat_shifted.field_sale_order__x_vat_inland_shifted
+msgid "Vat inland shifted"
+msgstr "Binnenlands btw verlegd"

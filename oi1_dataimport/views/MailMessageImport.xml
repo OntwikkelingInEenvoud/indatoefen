@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+ 
+ <data>
+     <record id="oi1_dataimport.template_main_mail_message" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Notificaties / Berichten (mail.message)</field>
+            <field name="module">dataimport</field>           
+      </record>
+                  
+     <record id="oi1_dataimport.template_main_mail_message_field_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_message_field_partner_id_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">partner_id_x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_message_field_crm_lead_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">crm_lead_x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_message_field_subject"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">subject</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+     <record id="oi1_dataimport.template_main_mail_message_field_message_type"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">message_type</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+     <record id="oi1_dataimport.template_main_mail_message_field_body"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">body</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+
+      <record id="oi1_dataimport.template_main_mail_message_field_date"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">date</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_mail_message" />
+     </record>
+
+
+
+
+
+
+        
+ </data>
+ </odoo>

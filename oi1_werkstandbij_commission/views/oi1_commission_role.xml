@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij_commission.commission_role_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_commission_role_form</field>
+            <field name="model">oi1_commission_role</field>
+            <field name="arch" type="xml">
+                <form string="commission role form">
+                    <sheet>
+                        <group>
+                            <field name="name" readonly="1" />
+                            <field name="description"  readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

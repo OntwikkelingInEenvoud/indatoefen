@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+ 
+ <data>
+     <record id="oi1_dataimport.template_main_attachment" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Bijlagen / Documenten (ir.attachment)</field>
+            <field name="module">dataimport</field>           
+      </record>
+                  
+     <record id="oi1_dataimport.template_main_mail_message_field_name"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_attachment" />
+     </record>
+
+      <record id="oi1_dataimport.template_main_mail_message_field_res_model"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">res_model</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_attachment" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_message_field_res_id"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">res_id</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_attachment" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_message_field_res_id_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">res_id_x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_attachment" />
+     </record>
+
+     <record id="oi1_dataimport.template_main_mail_message_field_store_fname"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">store_fname</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_attachment" />
+     </record>
+
+
+
+
+
+
+
+
+
+
+
+        
+ </data>
+ </odoo>

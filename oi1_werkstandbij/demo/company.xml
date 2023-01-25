@@ -1,0 +1,38 @@
+<odoo>
+    <data noupdate="0">
+        <record model="res.partner.bank" id="oi1_werkstandbij.payment_company_id_bank_account">
+                    <field name="acc_number">NL02ABNA0123456789</field>
+                    <field name="bank_id" ref="base.bank_bnp" />
+                    <field name="partner_id" ref="oi1_werkstandbij.payment_partner_company_id"/>
+                    <field name="company_id" ref = "oi1_werkstandbij.payment_company_id" />
+       </record>
+
+        <record model="res.company" id="oi1_werkstandbij.payment_company_id">
+            <field name="x_default_pur_bank_id" ref="oi1_werkstandbij.payment_company_id_bank_account" />
+            <field name="x_default_sales_bankId" ref="oi1_werkstandbij.payment_company_id_bank_account" />
+        </record>
+
+
+        <record id="bnk" model="account.account">
+            <field name="code">1100</field>
+            <field name="name">Bank Payment company</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="company_id" ref = "oi1_werkstandbij.payment_company_id" />
+
+        </record>
+
+         <record id="oi1_werkstandbij.payment_company_id_bank_journal" model="account.journal">
+            <field name="name">Bank - Payment Company</field>
+            <field name="code">PBNK</field>
+            <field name="type">bank</field>
+            <field name="default_debit_account_id" ref="bnk"/>
+            <field name="default_credit_account_id" ref="bnk"/>
+            <field name="bank_account_id" ref="oi1_werkstandbij.payment_company_id_bank_account" />
+            <field name="bank_id" ref="base.bank_bnp" />
+            <field name="company_id" ref = "oi1_werkstandbij.payment_company_id" />
+
+        </record>
+
+
+    </data>
+</odoo>
