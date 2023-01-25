@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_partner_contactdetails
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-17 18:39+0000\n"
+"PO-Revision-Date: 2020-02-17 18:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_partner_contactdetails
+#: model:ir.model,name:oi1_partner_contactdetails.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: oi1_partner_contactdetails
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_partner__x_contact_name
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_users__x_contact_name
+msgid "Contact naam"
+msgstr ""
+
+#. module: oi1_partner_contactdetails
+#: model_terms:ir.ui.view,arch_db:oi1_partner_contactdetails.resuser_view_form
+msgid "Email Address"
+msgstr "E-mailadres"
+
+#. module: oi1_partner_contactdetails
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_partner__x_initials
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_users__x_initials
+msgid "Initials"
+msgstr "Initialen"
+
+#. module: oi1_partner_contactdetails
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_partner__x_name
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_users__x_name
+msgid "Name"
+msgstr "Naam"
+
+#. module: oi1_partner_contactdetails
+#: model:ir.model,name:oi1_partner_contactdetails.model_res_users
+msgid "Users"
+msgstr "Gebruikers"
+
+#. module: oi1_partner_contactdetails
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_partner__x_first_name
+#: model:ir.model.fields,field_description:oi1_partner_contactdetails.field_res_users__x_first_name
+msgid "first name"
+msgstr "Voornaam"

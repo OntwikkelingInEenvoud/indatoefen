@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* oi1_partner_search
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-26 20:33+0000\n"
+"PO-Revision-Date: 2020-02-26 20:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_partner_search
+#: code:addons/oi1_partner_search/models/res_company.py:15
+#, python-format
+msgid " Partner has no field %s"
+msgstr "Contact heeft geen veld %s"
+
+#. module: oi1_partner_search
+#: model:ir.actions.server,name:oi1_partner_search.calculate_search_code_cron_ir_actions_server
+#: model:ir.cron,cron_name:oi1_partner_search.calculate_search_code_cron
+#: model:ir.cron,name:oi1_partner_search.calculate_search_code_cron
+msgid "Calculate search codes of the partners"
+msgstr "Bereken de zoekcode van de contacten"
+
+#. module: oi1_partner_search
+#: model:ir.model.fields,help:oi1_partner_search.field_res_company__x_partner_search_wildcard
+#: model:ir.model.fields,help:oi1_partner_search.field_res_config_settings__x_partner_search_wildcard
+msgid "Comma separated field list for searching partners"
+msgstr "Een komma gescheiden lijst van velden om contacten te zoeken"
+
+#. module: oi1_partner_search
+#: model_terms:ir.ui.view,arch_db:oi1_partner_search.res_config_settings_view_form
+msgid "Comma separated list of fields for wildcard search partners"
+msgstr "Een komma gescheiden lijst van velden om contacten te zoeken"
+
+#. module: oi1_partner_search
+#: model:ir.model,name:oi1_partner_search.model_res_company
+msgid "Companies"
+msgstr "Bedrijven"
+
+#. module: oi1_partner_search
+#: model:ir.model,name:oi1_partner_search.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie instellingen"
+
+#. module: oi1_partner_search
+#: model:ir.model,name:oi1_partner_search.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: oi1_partner_search
+#: model_terms:ir.ui.view,arch_db:oi1_partner_search.res_config_settings_view_form
+msgid "Makes searching of partners easier by search for more fields"
+msgstr "Maakt het zoeken naar contacten makkelijker door op verschillende velden te zoeken"
+
+#. module: oi1_partner_search
+#: model:ir.model.fields,field_description:oi1_partner_search.field_res_company__x_partner_search_wildcard
+#: model:ir.model.fields,field_description:oi1_partner_search.field_res_config_settings__x_partner_search_wildcard
+msgid "Partner search fields"
+msgstr "Contact zoekvelden"
+
+#. module: oi1_partner_search
+#: model_terms:ir.ui.view,arch_db:oi1_partner_search.res_config_settings_view_form
+msgid "Partners"
+msgstr "Relaties"
+
+#. module: oi1_partner_search
+#: model:ir.model.fields,field_description:oi1_partner_search.field_res_partner__x_search_string
+#: model:ir.model.fields,field_description:oi1_partner_search.field_res_users__x_search_string
+msgid "Search"
+msgstr "Zoek"

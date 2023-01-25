@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_werkstandbij.action_open_invoice_sale_hours_search" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.action_open_invoice_sale_hours_search</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <search string="Booked Hours">
+                    <field name="x_sale_invoice_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij.action_open_invoice_pur_hours_search" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.action_open_invoice_pur_hours_search</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <search string="Worked Hours">
+                    <field name="x_pur_invoice_id"/>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="oi1_werkstandbij.action_open_invoice_pur_hours" model="ir.actions.act_window">
+            <field name="context">{'search_default_x_pur_invoice_id': [active_id], 'default_x_pur_invoice_id':
+                [active_id], 'search_default_changed':True}
+            </field>
+            <field name="name">Freeworker Hours</field>
+            <field name="res_model">account.analytic.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="oi1_werkstandbij.view_account_analytic_line_tree"/>
+            <field name="search_view_id" ref="oi1_werkstandbij.action_open_invoice_pur_hours_search"/>
+        </record>
+
+        <record id="oi1_werkstandbij.account_invoice_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.account_invoice_form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//header" position="inside">
+                        <header>
+                            <field name="x_is_invoice_refund_visible" invisible="1" />
+                        </header>
+                    </xpath>
+
+                    <xpath expr="//div[@name='journal_div']" position="after">
+                        <field name="x_sale_id" />
+                        <field name="x_sale_partner_id"  />
+                    </xpath>
+
+
+                    <field name="partner_bank_id" position="replace">
+                    </field>
+
+                    <field name="ref" position="before">
+                        <field name="partner_bank_id" />
+                        <field name="x_bank_id" />
+                    </field>
+
+                    <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/tree[1]/field[@name='product_id']" position="attributes">
+                        <attribute name="options">{"no_open":true,"no_create":true}</attribute>
+                    </xpath>
+
+                   <xpath expr="//field[@name='partner_bank_id']" position="attributes">
+                        <attribute name="domain">['|', ('partner_id', '=', commercial_partner_id), ('partner_id', '=', bank_partner_id)]</attribute>
+                        <attribute name="options">{"no_create":true,"no_open":true}</attribute>
+                   </xpath>
+
+                </data>
+            </field>
+
+        </record>
+
+    </data>
+
+    <data noupdate="0">
+        <record id="oi1_werkstandbij.purchase_account_move_template_email" model="mail.template">
+                <field name="name">Purchase Payment - Send purchase payment by Email</field>
+                <field name="email_from">{{ ( object.company_id.email or 'noreply@localhost') or ''}}</field>
+                <field name="subject">Commission Payment {{ object.name }}</field>
+                <field name="email_to">{{ object.partner_id.x_communication_email }}</field>
+                <field name="model_id" ref="account.model_account_move"/>
+                <field eval="True" name="auto_delete"/>
+                <field name="report_name">Inkoopfactuur {{object.name}}</field>
+                <field name="lang">{{ object.partner_id.lang }}</field>
+            <field name="body_html" type="html">
+                <body>
+                      <!-- CONTENT -->
+                    <p>
+                    Beste <t t-out="object.partner_id.name" />,
+                    </p>
+                    <p>
+                    Zie hier inkoopfactuur <strong><t t-out="object.name or ''" /></strong>
+                    <t  t-if="object.invoice_origin">
+                        (met referentie: <t t-out="object.invoice_origin"/>)
+                    </t>
+                    <br></br>
+                        voor een bedrag van <strong><t t-out="format_amount(object.amount_total, object.currency_id)"/></strong>
+                        welke wij hebben aangemaakt om u te kunnen betalen.<br></br>
+                    </p>
+                    <p>
+                        <t t-if="object.state == 'paid'">
+                            Deze factuur is reeds betaald.
+                        </t>
+                        <t t-if="object.state != 'paid'">
+                            U zult het genoemde bedrag met vermelding van het factuurnummer <t t-out="object.name" />
+                            op bankrekening <t t-out="object.partner_bank_id.acc_number" /> t.a.v.
+                        </t>
+                        <t t-if="object.partner_bank_id.acc_holder_name">
+                            <t t-out="object.partner_bank_id.acc_holder_name" />
+                        </t>
+                        <t t-if="not object.partner_bank_id.acc_holder_name">
+                            <t t-out="object.partner_bank_id.partner_id.name" />
+                        </t>
+                        ontvangen.
+                    </p>
+                    <p>
+                        Mocht u vragen hebben aarzel dan niet om contact met ons op te nemen.
+                    </p>
+                </body>
+            </field>
+
+        </record>
+
+    </data>
+</odoo>
+        

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij_commission.view_order_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_commission_view_order_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+
+                     <xpath expr="//button[@name='action_view_invoice']" position="before">
+                        <button type="object"
+                            name="do_action_view_commission_logs_on_order"
+                            class="oe_stat_button"
+                            icon="fa-money"
+                            attrs="{'invisible': [('x_qty_commission_log_ids', '=', 0)]}" groups="base.group_user">
+                            <field name="x_qty_commission_log_ids" widget="statinfo" string="Commissions"/>
+                        </button>
+                    </xpath>
+
+                    <field name="user_id" position="replace" >
+                        <field name="user_id" invisible="1" />
+                        <label for="x_account_manager_partner_id"/>
+                        <div>
+                            <field name = "x_account_manager_partner_id"  options="{'no_create': True, 'no_create_edit':True}"  />
+                            <span class="oe_read_only"> - </span>
+                            <field name = "x_account_manager_partner_id_amount"  attrs="{'invisible':[('x_account_manager_partner_id', '=', False)]}"    />
+                        </div>
+                        <label for="x_assistant_account_manager_partner_id" />
+                        <div>
+                            <field name = "x_assistant_account_manager_partner_id"  options="{'no_create': True, 'no_create_edit':True}"  />
+                            <span class="oe_read_only"> - </span>
+                            <field name = "x_assistant_account_manager_partner_id_amount"  attrs="{'invisible':[('x_assistant_account_manager_partner_id', '=', False)]}" />
+                        </div>
+                        <label for="x_seller_partner_id" />
+                        <div>
+                            <field name = "x_seller_partner_id" options="{'no_create': True, 'no_create_edit':True}"  />
+                            <span class="oe_read_only"> - </span>
+                            <field name = "x_seller_partner_id_amount"   attrs="{'invisible':[('x_seller_partner_id', '=', False)]}" />
+                        </div>
+                        <field name="x_reservation_amount" />
+                    </field>
+                </data>
+            </field>
+        </record>
+
+
+    </data>
+
+</odoo>
+        

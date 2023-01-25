@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.oi1_invoice_refund_hour_wizard_view" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.oi1_invoice_refund_hour_wizard_view</field>
+            <field name="model">oi1_werkstandbij.invoice_refund_hour_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Cancel Agreed Hours">
+                    <p class="oe_grey">
+                        Warning.  You can credit a customer invoice with hours. The hours will be removed from the invoice
+                        and can be invoiced again.  A refund invoice will be made.
+                        Concept purchase invoices related to this sale order will also be removed. If there is already sent a invoice to the free worker the system will
+                        not correct this. You should take care by correcting this manually otherwise there is a change that the free workers will get to much money.
+                    </p>
+                    <group>
+
+                    </group>
+                    <footer>
+                        <button name="do_refund_hour_invoice" string="Refund hour invoice" type="object"
+                                context="{'open_invoices': True}" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij.oi1_invoice_refund_hour_wizard_action" model="ir.actions.act_window">
+            <field name="name">Refund invoice hour wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oi1_werkstandbij.invoice_refund_hour_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_invoice_id': active_id}</field>
+        </record>
+
+
+
+    </data>
+</odoo>

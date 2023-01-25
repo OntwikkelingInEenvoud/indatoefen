@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+      
+      <record id="oi1_text.text_type_1" model="oi1_text.text_type">
+           <field name="name">Quotation header text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_2" model="oi1_text.text_type">
+           <field name="name">Quotation footer text</field>           
+      </record>   
+      
+       <record id="oi1_text.text_type_3" model="oi1_text.text_type">
+           <field name="name">Orderconfirmation header text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_4" model="oi1_text.text_type">
+           <field name="name">Orderconfirmation footer text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_5" model="oi1_text.text_type">
+           <field name="name">Purchase Quotation header text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_6" model="oi1_text.text_type">
+           <field name="name">Purchase Quotation footer text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_7" model="oi1_text.text_type">
+           <field name="name">Purchase Order header text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_8" model="oi1_text.text_type">
+           <field name="name">Purchase Order footer text</field>           
+      </record>   
+      
+       <record id="oi1_text.text_type_9" model="oi1_text.text_type">
+           <field name="name">Packing Slip header text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_10" model="oi1_text.text_type">
+           <field name="name">Packing Slip footer text</field>           
+      </record>   
+      
+      <record id="oi1_text.text_type_11" model="oi1_text.text_type">
+           <field name="name">Delivery Terms</field>           
+      </record>
+      
+      <record id="oi1_text.text_type_12" model="oi1_text.text_type">
+           <field name="name">Picking Operations header text</field>           
+      </record>
+      
+      <record id="oi1_text.text_type_13" model="oi1_text.text_type">
+           <field name="name">Picking Operations footer text</field>           
+      </record>
+
+      <record id="oi1_text.text_type_14" model="oi1_text.text_type">
+           <field name="name">Invoice header text</field>
+      </record>
+
+      <record id="oi1_text.text_type_15" model="oi1_text.text_type">
+           <field name="name">Invoice footer text</field>
+      </record>
+
+      <record id="oi1_text.text_type_16" model="oi1_text.text_type">
+           <field name="name">Company slogan</field>
+      </record>
+
+      <record id="oi1_text.text_type_17" model="oi1_text.text_type">
+           <field name="name">Delivery terms short</field>
+      </record>
+
+
+         
+         
+      
+      
+    </data>
+</odoo>
+
+
+

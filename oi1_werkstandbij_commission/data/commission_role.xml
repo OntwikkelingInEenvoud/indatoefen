@@ -1,0 +1,54 @@
+<odoo>
+    <data noupdate="0">
+         <record model="oi1_commission_role" id="oi1_commission_role_free_worker_commission">
+            <field name="name">Free Worker SF-beheerder</field>
+            <field name="description">A commission which is created for the free worker without a special role, such as saving for pension, taxes, insurance</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_mediator">
+            <field name="name">Werkpoule manager </field>
+            <field name="description">The person who arranges the free worker for the customer poule</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_account_manager">
+            <field name="name">Accountmanager </field>
+            <field name="description">The person who is responsible for the customer contact and the result of the sales order</field>
+        </record>
+
+         <record model="oi1_commission_role" id="oi1_commission_role_assistant_account_manager">
+            <field name="name">Assistant Accountmanager </field>
+            <field name="description">The person who is responsible for assistance of the account manager and the result of the sales order</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_sales">
+            <field name="name">Sales agent</field>
+            <field name="description">The person who has arranged the sale of the sales order</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_recruiter">
+            <field name="name">Recruit agent</field>
+            <field name="description">The person who has recruited the free worker</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_practical_work_planner">
+            <field name="name">Flex. Assistent Vrije werker</field>
+            <field name="description">The person who helps the free worker with practical issues</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_operational_work_planner">
+            <field name="name">Foreman</field>
+            <field name="description">The person who helps the free worker with the daily tasks within the poule</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_poule_manager">
+            <field name="name">Centrale Poulebeheerder</field>
+            <field name="description">The person who is responsible for the health of the general and customer poules</field>
+        </record>
+
+        <record model="oi1_commission_role" id="oi1_commission_role_reservation">
+            <field name="name">Reservation</field>
+            <field name="description">Commissions for reservations on order</field>
+        </record>
+
+    </data>
+</odoo>

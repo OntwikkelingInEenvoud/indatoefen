@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_werkstandbij.freeworkerpoule_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_freeworkerpoule_form</field>
+            <field name="model">oi1_freeworkerpoule</field>
+            <field name="inherit_id" ref="oi1_free_worker.freeworkerpoule_form"/>
+            <field name="arch" type="xml">
+
+                <field name="parent_id" position="before">
+                    <field name="company_id" />
+                    <field name="partner_id" />
+                    <field name="sale_order_id"/>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij.freeworkerpoule_tree" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_freeworkerpoule_tree</field>
+            <field name="model">oi1_freeworkerpoule</field>
+            <field name="inherit_id" ref="oi1_free_worker.freeworkerpoule_tree"/>
+            <field name="arch" type="xml">
+
+                <field name="description" position="after">
+                    <field name="sale_order_id" optional="show" />
+                    <field name="partner_id" optional="show" />
+                </field>
+            </field>
+        </record>
+
+
+
+
+        <menuitem action="oi1_free_worker.freeworkerpoule_action"
+                  groups="base.group_user"
+                  id="oi1_free_worker.freeworkerpoule_sales_menu" name="Freeworkerpoules"
+                  parent="sale.sale_order_menu" sequence="5"/>
+
+
+    </data>
+</odoo>

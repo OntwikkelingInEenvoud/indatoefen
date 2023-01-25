@@ -1,0 +1,151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* oi1_dataimport
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 08:47+0000\n"
+"PO-Revision-Date: 2019-03-18 08:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_dataimport
+#: model_terms:ir.ui.view,arch_db:oi1_dataimport.excelimportwizard
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: oi1_dataimport
+#: model_terms:ir.ui.view,arch_db:oi1_dataimport.excelimportwizard
+msgid "Choose a excelconfiguration..."
+msgstr "Kies een excel configuratie"
+
+#. module: oi1_dataimport
+#: model_terms:ir.ui.view,arch_db:oi1_dataimport.excelimportwizard
+msgid "Choose een excelfile to import..."
+msgstr "Kies een excelbestand om te importeren"
+
+#. module: oi1_dataimport
+#: model:ir.model,name:oi1_dataimport.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__create_uid
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__create_date
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_res_partner__x_prev_code
+msgid "Debtor code"
+msgstr "Debiteur code"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__display_name
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport__display_name
+msgid "Display Name"
+msgstr "Weergave naam"
+
+#. module: oi1_dataimport
+#: code:addons/oi1_dataimport/models/OdooImport.py:110
+#, python-format
+msgid "Er kon geen default type voor de groetboekrekening worden bepaald"
+msgstr ""
+
+#. module: oi1_dataimport
+#: code:addons/oi1_dataimport/models/OdooImport.py:147
+#, python-format
+msgid "Er kon geen grootbookrekening type %s worden gevonden."
+msgstr ""
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__excel_configuration_id
+msgid "Excel Configuration"
+msgstr "Excel configuratie"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__data_file
+msgid "Excel bestand"
+msgstr "Excel bestand"
+
+#. module: oi1_dataimport
+#: selection:oi1_excelimportwizard,odoo_object:0
+msgid "Grootboekschema"
+msgstr ""
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__id
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport__id
+msgid "ID"
+msgstr "id"
+
+#. module: oi1_dataimport
+#: model:ir.actions.act_window,name:oi1_dataimport.mail_contact_import_wizard_action
+#: model_terms:ir.ui.view,arch_db:oi1_dataimport.excelimportwizard
+msgid "Import Data"
+msgstr "Importeer gegevens vanaf Excel"
+
+#. module: oi1_dataimport
+#: model:ir.ui.menu,name:oi1_dataimport.mail_contact_import_wizard_menu
+msgid "Import from Excel"
+msgstr "Importeer gegevens vanaf Excel"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard____last_update
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__write_uid
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__write_date
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_odooimport__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: oi1_dataimport
+#: model:ir.model.fields,field_description:oi1_dataimport.field_oi1_excelimportwizard__odoo_object
+msgid "Odoo Object"
+msgstr "Odoo object"
+
+#. module: oi1_dataimport
+#: selection:oi1_excelimportwizard,odoo_object:0
+msgid "Relaties"
+msgstr "Relaties"
+
+#. module: oi1_dataimport
+#: model_terms:ir.ui.view,arch_db:oi1_dataimport.excelimportwizard
+msgid "Select een excelbestand to import"
+msgstr "Selecteer een excelbestand om te importeren"
+
+#. module: oi1_dataimport
+#: model_terms:ir.ui.view,arch_db:oi1_dataimport.excelimportwizard
+msgid "_Import"
+msgstr "Importeren"
+
+#. module: oi1_dataimport
+#: model:ir.model,name:oi1_dataimport.model_oi1_excelimportwizard
+msgid "oi1_excelimportwizard"
+msgstr "Excel import wizard"
+
+#. module: oi1_dataimport
+#: model:ir.model,name:oi1_dataimport.model_oi1_odooimport
+msgid "oi1_odooimport"
+msgstr ""

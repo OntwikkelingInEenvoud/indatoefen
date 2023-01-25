@@ -1,0 +1,1974 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oi1_werkstandbij
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20220725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-09 20:11+0000\n"
+"PO-Revision-Date: 2022-11-09 20:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oi1_werkstandbij
+#: model:mail.template,body_html:oi1_werkstandbij.purchase_account_move_template_email
+msgid ""
+"\n"
+"                <div style=\"margin:0px;padding: 0px;\">\n"
+"   <p style=\"padding:0px;font-size: 13px;\">\n"
+"\n"
+"       Beste ${object.partner_id.name}\n"
+"       % if object.partner_id.parent_id:\n"
+"           (${object.partner_id.parent_id.name})\n"
+"       % endif\n"
+"       <br><br>\n"
+"\n"
+"       Zie hier\n"
+"       % if object.x_payment_company_id_invoice_number:\n"
+"           inkoopfactuur <strong>${object.x_payment_company_id_invoice_number}</strong>\n"
+"       % else:\n"
+"           factuur\n"
+"       %endif\n"
+"       % if object.origin:\n"
+"           (with reference: ${object.origin})\n"
+"       % endif\n"
+"       voor een bedrag van <strong>${format_amount(object.amount_total, object.currency_id)}</strong>\n"
+"       ten aanzien van ${object.x_payment_company_id.name} welke wij hebben aangemaakt om u te kunnen betalen.\n"
+"       % if object.state=='paid':\n"
+"           Deze factuur werd reeds betaald.\n"
+"       % else:\n"
+"           <br><br>U zult het genoemde bedrag met vermelding van het factuurnummer ${object.x_payment_company_id_invoice_number} op bankrekening ${object.invoice_partner_bank_id.acc_number} t.a.v.\n"
+"\n"
+"%if object.invoice_partner_bank_id.acc_holder_name:\n"
+" ${object.invoice_partner_bank_id.acc_holder_name}\n"
+"%else:\n"
+" ${object.invoice_partner_bank_id.partner_id.name}\n"
+"% endif\n"
+"\n"
+"ontvangen<br>\n"
+"       % endif\n"
+"\n"
+"\n"
+"       <br><br>\n"
+"       Mocht u vragen hebben aarzel dan niet om contact met ons op te nemen .\n"
+"   </p>\n"
+"</div>\n"
+"                "
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:mail.template,body_html:oi1_werkstandbij.freeworkerpayment_template_email
+msgid ""
+"\n"
+"                Beste ${object.partner_id.name}, <br><br>Hierbij ontvangt u de opbouw van uw vergoeding ${object.number} <br><br>Met vriendelijk groet, <br><br>${user.name}<br><br><br>&nbsp; &nbsp; <br><br><br><br><br>\n"
+"\n"
+"                "
+msgstr ""
+"<p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                Beste ${object.partner_id.name}, <br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Hierbij ontvangt u de opbouw van uw vergoeding ${object.number} <br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Met vriendelijk groet, <br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">${user.name}<br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">&nbsp; &nbsp; <br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"><br></p><p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                \n"
+"                </p>"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+" Account %s is not active. Choose a different match with account %s of "
+"company %s with the payment company"
+msgstr ""
+"Grootboekrekening %s is niet actief. Kies een andere grootboekrekening met "
+"account %s van bedrijf %s met het betaalbedrijf"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Hour line %s is already invoiced"
+msgstr " Urenregel %s is reeds gefactureerd"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Hour line %s is not approved"
+msgstr "Urenregel %s is niet goedgekeurd"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Hour line %s is not related to an sales order"
+msgstr " Urenregel %s is niet gerelateerd aan een verkooporder"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Hourline %s has no related poule "
+msgstr "Urenregel %s heeft geen gekoppelde pool"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Hourline %s has no related project/poule "
+msgstr "Urenregel %s heeft geen gekoppelde pool"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Invoices shouldn't be created in the invoice company"
+msgstr " Facturen moeten niet worden aangemaakt in het betaalbedrijf"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+" Multiple WSB taxes possible for %s.  Please adjust the name of the taxes."
+msgstr ""
+" Er zijn meerdere WSB btw tarieven mogelijk voor %s.  Pas de namen van de "
+"BTW aan."
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_refund_hour_wizard.py:0
+#, python-format
+msgid " No refund invoice created"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " No sale journal found for company %s."
+msgstr " Geen verkoopjournaal gevonden voor bedrijf %s."
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/sale_order.py:0
+#, python-format
+msgid ""
+" Order %s has a fixed price and a surcharge calculation. This is not "
+"possible"
+msgstr ""
+"Order %s heeft een vaste prijs en een toeslag calculatie. Deze combinatie "
+"kan niet"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+" Payment term with description %s not found within the payment company %s"
+msgstr ""
+"Betalingsconditie met omschrijving %s is niet gevonden binnen het "
+"betaalbedrijf %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid " Please make sure that bank account %s is related to a bank journal "
+msgstr "Zorg ervoor dat bankrekening %s een gekoppelde journalpost heeft"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid " Please provide a payment bank for company %s "
+msgstr "Zorg voor een bankrekening voor betalingen voor bedrijf %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid " Please provide a valid WSB-journal for %s %s."
+msgstr " Verschaf een geldige WBS-journaal voor %s %s."
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid " Please provide a valid WSB-journal for %s."
+msgstr " Verschaf een geldige WSB-journaal voor %s."
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid " Please provide a valid WSB-tax for %s."
+msgstr " Verschaf een geldige WSB-belasting voor %s."
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid ""
+" Product %s is from the company %s. This cannot be used within this company"
+msgstr ""
+" Produkt %s is van het bedrijf %s. Dit product kan niet binnen dit bedrijf "
+"worden gebruikt"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " Product %s is not active. Choose a different product for poule %s"
+msgstr " Produkt %s is niet actief. Kies een andere produkt voor poule %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid " The price unit shouldn't be zero. "
+msgstr " De eenheidsprijs kan niet 0 zijn."
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid " There is not given a paymentterm to salesorder %s. Please provide one"
+msgstr ""
+" Er is geen betalingsconditie bepaald voor verkooporder %s. Ken een "
+"betalingsconditie toe"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "A day has no more then 24 hours"
+msgstr "Een dag heeft niet meer dan 24 uur"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid "A poule should be related to a sales order"
+msgstr "Een pool dient gekoppeld te zijn aan een verkooporder"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner_bank.py:0
+#, python-format
+msgid "Acc number %s is an invalid Iban "
+msgstr "Bankrekening %s is geen geldige IBAN nummer"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_account
+msgid "Account"
+msgstr "Rekening"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__account_analytic_line_id
+msgid "Account Analytic Line"
+msgstr "Urenregel"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__account_move_ids
+msgid "Account Move"
+msgstr "Facturen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr "Tegenboeking rekening"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__account_manager_partner_id
+msgid "Account manager"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_account_analytic_line_view
+msgid "Accounting"
+msgstr "Boekhouding"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "Adjusting of the bank account is not allowed for the benificiary %s "
+msgstr ""
+"Het wijzigen van de bankrekening is niet toegestaan voor de begunstige %s"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_agreecommission_wizard
+msgid "Agree Commissions"
+msgstr "Commissies goedkeuren"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.agreehourline_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_hour_commissions_view
+msgid "Agree Hours"
+msgstr "Uren goedkeuren"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.agreehourline_wizard_action
+msgid "Agree To Hourlines"
+msgstr "Uren goedkeuren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_agreehourline_wizard
+msgid "Agree hour lines"
+msgstr "Uren goedkeuren"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.agreehourline_wizard_menu
+msgid "Agree hourlines"
+msgstr "Uren goedkeuren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Kostenplaatsregel"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"Archiving and unarchiving is only allowed if you're a timesheet "
+"administrator"
+msgstr ""
+"Het archiveren en dearchiveren van urenregels is alleen toegestaan door een "
+"urenboek administrator"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_bank_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_bank_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_bank_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_bank_id
+msgid "Bank"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Bankrekeningen"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid "Bank account %s has person %s within the WSB"
+msgstr "De bankrekening %s behoort tot persoon %s binnen de WSB"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "Bank account changed to %s"
+msgstr "Bankrekening gewijzigd naar %s"
+
+#. module: oi1_werkstandbij
+#: model:product.product,name:oi1_werkstandbij.invoice_surcharge_product
+msgid "Bemiddelingsfee"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__booked_hours
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.action_open_invoice_sale_hours_search
+msgid "Booked Hours"
+msgstr "Geboekte uren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__worked_hours
+msgid "Booked hours"
+msgstr "Geboekte uren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_coc
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_coc
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_coc
+msgid "COC"
+msgstr "Kvk"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.server,name:oi1_werkstandbij.calculate_status_free_worker_ir_actions_server
+#: model:ir.cron,cron_name:oi1_werkstandbij.calculate_status_free_worker
+#: model:ir.cron,name:oi1_werkstandbij.calculate_status_free_worker
+msgid "Calculate status freeworkers"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.agreehourline_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.cancelagreehourline_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.invoice_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_invoice_refund_hour_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_multiple_hours_wizard_view
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.cancelagreehourline_wizard_view
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_invoice_refund_hour_wizard_view
+msgid "Cancel Agreed Hours"
+msgstr "Goedkeuren uren opheffen"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.cancelagreehourline_wizard_action
+msgid "Cancel Agreed To Hourlines"
+msgstr "Hef goedkeuring uren op"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.cancelagreehourline_wizard_menu
+msgid "Cancel Agreed hourlines"
+msgstr "Hef goedgekeurde uren op."
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_cancel_agreehourline_wizard
+msgid "Cancel agreed hour lines"
+msgstr "Hef goedkeuring uren op"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.cancelagreehourline_wizard_view
+msgid "Cancel agreements"
+msgstr "Hef goedkeuring op"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_com_amount
+msgid "Com. Amount"
+msgstr "Com. Bedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_commission
+msgid "Commission"
+msgstr "Commissie"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_commission_invoice_helper
+msgid "Commission Invoice helper"
+msgstr "Commissie facturerings helper"
+
+#. module: oi1_werkstandbij
+#: model:mail.template,subject:oi1_werkstandbij.purchase_account_move_template_email
+msgid "Commission Payment ${object.x_payment_company_id_invoice_number |safe}"
+msgstr "Commissie betaling ${object.x_payment_company_id_invoice_number |safe}"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__commission_payment_log_ids
+msgid "Commission Payment Log"
+msgstr "Commissiebetalingslog"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__commission_amount
+msgid "Commission amount"
+msgstr "Commissie bedrag"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_account_analytic_line_view
+msgid "Commission lines"
+msgstr "Commissieregels"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_sale_commission_payment
+msgid "Commission payment"
+msgstr "Commissie betaling"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_partner_worker_commission_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_partner_worker_commission_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_partner_worker_commission_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_sale_commission_ids
+msgid "Commissions"
+msgstr "Verkoop commissies"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_commission_created
+msgid "Commissions created"
+msgstr "Verkoopcommissie aangemaakt"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid "Commmision log %s has no commission"
+msgstr "Commissie log %s heeft geen commissie"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_res_company
+msgid "Companies"
+msgstr "Bedrijven"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_move.py:0
+#, python-format
+msgid "Compose Email"
+msgstr "Mail samenstellen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_surcharge_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order_line__x_surcharge_amount
+msgid "Conversion factor"
+msgstr "Toeslag factor"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_multiple_hours_wizard_view
+msgid "Copy hour lines"
+msgstr "Kopieer urenregels"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.oi1_multiple_hours_wizard_action
+#: model:ir.actions.act_window,name:oi1_werkstandbij.oi1_multiple_hours_wizard_menu
+msgid "Copy hourlines"
+msgstr "Urenregels kopieren"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.agreehourline_wizard_view
+msgid "Create agreements"
+msgstr "Urenregels goedkeuren"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.agreehourline_wizard_view
+msgid "Create agreements and invoice"
+msgstr "Urenregels goedkeuren en factureren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_invoice_commission_wizard
+msgid "Create commission invoices"
+msgstr "Maak commissie facturen aan"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_multiple_hours_wizard_view
+msgid "Create hour copies"
+msgstr "Urenregels kopieren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_invoice_wizard
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.invoice_wizard_view
+msgid "Create invoices"
+msgstr "Facturen aanmaken"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij.experience_action
+msgid "Create the first experience"
+msgstr "Maak de eerste ervaring aan"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij.experience_level_action
+msgid "Create the first experience_level"
+msgstr "Maak de eerste ervaringsniveau aan"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij.language_level_action
+msgid "Create the first language_level"
+msgstr "Maak het eerste taalniveau aan"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij.level_action
+msgid "Create the first level"
+msgstr "Maak het eerste niveau aan"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration__create_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration__create_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_customer_name
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.account_analytic_line_search
+msgid "Customer"
+msgstr "Klant"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__customer_fee
+msgid "Customer fee"
+msgstr "Klant vergoeding"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__date_last_worked
+msgid "Date last worked"
+msgstr "Laatste werkdatum"
+
+#. module: oi1_werkstandbij
+#: model:oi1_commission_role,description:oi1_werkstandbij.oi1_commission_role_wsb_ssf
+msgid ""
+"De afdracht van gelden ten behoeve van het beschikbaar stellen van het vrije"
+" werkers model en sociaal ondernemen"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__default_bank_partner_id
+msgid "Default Bank Partner"
+msgstr "Default bankrekening houder"
+
+#. module: oi1_werkstandbij
+#: model:product.template,name:oi1_werkstandbij.product_template_default_product_poule
+msgid "Default product poule"
+msgstr "Standaard product pool"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move_line__x_del_date
+msgid "Delivered_date"
+msgstr "Leverdatum"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.experience_level_tree
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.experience_tree
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.language_level_tree
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.level_tree
+msgid "Departments"
+msgstr "Afdelingen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_has_vat_on_invoice
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_has_vat_on_invoice
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_has_vat_on_invoice
+msgid ""
+"Determines if BTW should be added on the invoices. Normally a company should"
+" have vat on the invoice but under certain circumstances this could be "
+"different. Take care with this setting"
+msgstr ""
+"Met deze Deze instelling wordt bepaald of er BTW op de inkoopfacturen kan "
+"worden gezet.  Let op: Normaal gesproken is dit het geval en dan kunnen wij "
+"deze BTW met de belastingdienst verrekenen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration__display_name
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_education
+msgid "Education"
+msgstr "Opleiding"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "E-mail samenstellen wizard"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_to_time
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_to_time
+msgid "End Time"
+msgstr "Eindtijd"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_experience
+msgid "Experience"
+msgstr "Ervaring"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_experience_level
+msgid "Experience level"
+msgstr "Ervaringsniveau"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_price
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order_line__x_price
+msgid "Fee"
+msgstr "Vergoeding"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__date_first_worked
+msgid "First work day"
+msgstr "Eerste werkdag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_free_worker
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.account_analytic_line_search
+msgid "Free worker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_amount
+msgid "Free worker Amount"
+msgstr "Vrije werkers bedrag"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_free_worker.py:0
+#, python-format
+msgid "Free worker hours"
+msgstr "Vrije werkers uren"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_free_worker.py:0
+#, python-format
+msgid "Free worker invoices"
+msgstr "Vrije werker facturen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_poule_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_poule_ids
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_poule_ids
+msgid "Free workers poules"
+msgstr "Ingeschreven poules"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_free_worker_id
+msgid "Freeworker"
+msgstr "Vrije werker"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.action_open_invoice_pur_hours
+msgid "Freeworker Hours"
+msgstr "Aantal urenregels"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_freeworkerpoule
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_poule_id
+msgid "Freeworker poule"
+msgstr "Vrije werker poule"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_bank_statement_import_journal_creation__x_from_company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_journal__x_from_company_id
+msgid "From company id"
+msgstr "Vanaf bedrijf"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields.selection,name:oi1_werkstandbij.selection__account_analytic_line__x_state__invoiced
+msgid "Gefactureerd"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields.selection,name:oi1_werkstandbij.selection__account_analytic_line__x_state__approved
+msgid "Goedgekeurd"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__gross_margin
+msgid "Gross margin"
+msgstr "Bruto marge"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_has_vat_on_invoice
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_has_vat_on_invoice
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_has_vat_on_invoice
+msgid "Has Vat on invoice"
+msgstr "Heeft BTW op de factuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_hour_invoice
+msgid "Hour Invoice"
+msgstr "Uur factuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.hourstoinvoice_action
+#: model:ir.ui.menu,name:oi1_werkstandbij.hourstoinvoice_menu
+msgid "Hours to invoice"
+msgstr "Uren te factureren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration__id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__id
+msgid "ID"
+msgstr "Id"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_order_form
+msgid ""
+"If the sale is locked, you can not modify it anymore. However, you will "
+"still be able to invoice or deliver."
+msgstr ""
+"Als een verkooporder is bevroren dan is deze niet meer te wijzigen. Je kan "
+"nog wel leveren en factureren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields.selection,name:oi1_werkstandbij.selection__account_analytic_line__x_state__concept
+msgid "Ingevoerd"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:mail.template,report_name:oi1_werkstandbij.purchase_account_move_template_email
+msgid "Inkoopfactuur ${object.name}"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_move.py:0
+#, python-format
+msgid "Invoice %s has already refunded with invoice %s"
+msgstr "Verkoopfactuur %s is reeds gecrediteerd met verkoopfactuur %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid "Invoice %s has no multiple origins. This shouldn't be possible."
+msgstr ""
+"Factuur %s heeft meerdere herkomsten. Dit zou niet mogelijk moeten zijn"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_refund_hour_wizard.py:0
+#, python-format
+msgid "Invoice %s is credited with invoice %s"
+msgstr "Factuur %s is gecrediteerd met factuur %s"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.invoice_wizard_action
+#: model:ir.actions.act_window,name:oi1_werkstandbij.invoice_wizard_menu
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.invoice_wizard_view
+msgid "Invoice Hours"
+msgstr "Factureer uren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__qty_account_move_ids
+msgid "Invoice count"
+msgstr "Aantal facturen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_is_booked_hour_invoice
+msgid "Invoice on booked hours"
+msgstr "Factuur op geboekte uren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__invoice_id
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "Invoices"
+msgstr "Facturen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_is_recruiter
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_is_recruiter
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_is_recruiter
+msgid "Is a Recruiter"
+msgstr "Is een recruiter"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_is_a_sales_partner
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_is_a_sales_partner
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_is_a_sales_partner
+msgid "Is a sales partner"
+msgstr "Is een verkoper"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_journal
+msgid "Journal"
+msgstr "Dagboek"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_move
+msgid "Journal Entries"
+msgstr "Boekingen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_move_line
+msgid "Journal Item"
+msgstr "Boeking"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields.selection,name:oi1_werkstandbij.selection__account_analytic_line__x_state__customer_invoiced
+msgid "Klant gefactureerd"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_language_level
+msgid "Language level"
+msgstr "Taal niveau"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration____last_update
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration__write_uid
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_compute_order__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_convert_to_sale_order_line__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_agreehourline_wizard__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_cancel_agreehourline_wizard__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_refund_hour_wizard__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_invoice_wizard__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_migration__write_date
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_level
+msgid "Level"
+msgstr "Niveau"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_bank_statement_import_journal_creation__x_pur_journal_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_journal__x_pur_journal_id
+msgid "Linked Purchase Journal"
+msgstr "Inkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_bank_statement_import_journal_creation__x_sale_journal_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_journal__x_sale_journal_id
+msgid "Linked Sales Journal"
+msgstr "Verkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_order_form
+msgid "Lock"
+msgstr "Blokkeer"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+"Make sure a bank account is given for the payment of invoice %s for partner "
+"%s "
+msgstr ""
+"Zorg ervoor dat een bankrekening is gegeven voor de betaling van factuur %s "
+"voor vrije werker %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "Manual"
+msgstr "Handmatig"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_margin
+msgid "Margin"
+msgstr "Marge"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_migration
+msgid "Migration tools WSB"
+msgstr "Migratie tools WSB"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_min_commission_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_min_commission_amount
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_min_commission_amount
+msgid "Min.Commission amount"
+msgstr "Min. Commissie bedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_min_commission_amount
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_min_commission_amount
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_min_commission_amount
+msgid ""
+"Minimum amount for automatic payment of commissions. Zero is no automatic "
+"payment"
+msgstr ""
+"Minimaal bedrag voor het automatisch uitbetalen van commissies. 0 betekent "
+"geen automatische uitbetaling"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "Month "
+msgstr "Maand"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_nationality
+msgid "Nationality"
+msgstr "Nationaliteit"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_commission_invoice_helper__nett_margin
+msgid "Nett margin"
+msgstr "Netto marge"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid ""
+"No commission found on the commissionlog %s %s. Please make sure there is a "
+"commission"
+msgstr "Er is geen commissie gevonden in de commissielog %s %s. Zorg ervoor dat er een commissie is gekoppeld"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "No commissions on free worker"
+msgstr "Geen commissies op vrije werker"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_refund_hour_wizard.py:0
+#, python-format
+msgid "No hourlines found related to this invoice"
+msgstr "Geen urenregels gevonden gekoppeld aan deze factuur"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "No valid identification document"
+msgstr "Geen geldige legitimiate"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid "No valid invoice found for freeworker %s. Please make a invoice "
+msgstr ""
+"Geen geldige factuur gevonden voor vrije werker %s. Maak een factuur aan"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid "No value given for parameter partner_id"
+msgstr "Geen waarde gegeven voor parameter contact"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.actions.act_window,help:oi1_werkstandbij.hourstoinvoice_action
+msgid "No work to invoice found"
+msgstr "Geen werkzaamheden om te factureren gevonden"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.account_analytic_line_search
+msgid "Not Invoiced"
+msgstr "Niet gefactureerd"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "Only hourlines in the state concept can be changed"
+msgstr "Alleen uren in de status concept kunnen worden gewijzigd"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_sale_id
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.account_analytic_line_search
+msgid "Order"
+msgstr "Ordernummer"
+
+#. module: oi1_werkstandbij
+#: model:product.template,name:oi1_werkstandbij.invoice_surcharge_product_product_template
+msgid "Overeengekomen toeslag"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_hour_commissions_view
+msgid "Overview of commissions on the booked hours"
+msgstr "Overzicht van de vrije commissies op de geboekte uren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid ""
+"Partner %s is not a freeworker so the commission couldn't be calculated"
+msgstr ""
+"Contact %s is geen vrije werker so de commissie kan niet worden berekend."
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_pause_time
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_pause_time
+msgid "Pause Time"
+msgstr "Pauze"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_payment_company_id_invoice_number
+msgid "Payment Invoice number"
+msgstr "Factuur waarmee is betaald"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_is_payment_by_wsb_visible
+msgid "Payment button by WSB visible"
+msgstr "Knop Betaling bij WSB zichtbaar"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.account_invoice_payment_wsb_form
+msgid "Payment by WSB"
+msgstr "Betaling door WSB"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner_bank.py:0
+#, python-format
+msgid ""
+"Person or company %s has already Iban %s. You could assign a beneificiary "
+msgstr ""
+"Persoon of bedrijf %s heeft al IBAN %s. Als het bedrag op deze IBAN gestort "
+"wilt hebben, ken hem dan toe als begunstige"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid "Please provide a Bank ID code for the bank %s "
+msgstr "Vul de SEPA bank id code in voor de bank %s "
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid "Please provide a bank for the IBAN %s "
+msgstr "Vul de bank in voor de IBAN %s "
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_refund_hour_wizard.py:0
+#, python-format
+msgid "Please provide an invoice"
+msgstr "Verschaf een factuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_poule_rate
+msgid "Poule rate"
+msgstr "Tarief"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_order_form
+msgid "Poules"
+msgstr "Pools"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_poule_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_poule_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order_line__x_poule_id
+msgid "Preferred poule"
+msgstr "Voorkeurs poule"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_rate
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_rate
+msgid "Price Unit"
+msgstr "Prijseenheid"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_price_visible
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order_line__x_price_visible
+msgid "Price visible"
+msgstr "Prijs zichtbaar"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_is_print_partner_specification_visible
+msgid "Print Specification visible"
+msgstr "Printspecificatie zichtbaar"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_project_project
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__project_id
+msgid "Project"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"Project/Poule %s has no related sales order so invoicing is not possible "
+msgstr ""
+"Project/Poule %s heeft geen gekoppelde verkooporder dus facturering is niet "
+"mogelijk"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_pur_invoice_id
+msgid "Pur invoice"
+msgstr "Inkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_pur_amount
+msgid "Pur. Amount"
+msgstr "Ink. bedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_pur_invoice_line_id
+msgid "Purchase Invoice"
+msgstr "Inkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move_line__x_purchase_analytic_account_line_ids
+msgid "Purchase analytic account ids"
+msgstr "Inkoopaccounts"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_account_analytic_line_ids
+msgid "Purchase hourlines"
+msgstr "Inkoopurenregels"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_move__x_account_analytic_line_ids
+msgid "Purchase hourlines related to a purchase invoice"
+msgstr "Urenregels gekoppeld aan een inkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_poule_ids_count
+msgid "Qty Poules"
+msgstr "Aantal poules"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__unit_amount
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_is_invoice_refund_visible
+msgid "Refund Payment visible"
+msgstr "Creditfactuur zichtbaar"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_invoice_refund_hour_wizard_view
+msgid "Refund hour invoice"
+msgstr "Verkoopfactuur met geboekte uren crediteren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_invoice_refund_hour_wizard
+msgid "Refund hour invoices"
+msgstr "Crediteer de verkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.oi1_invoice_refund_hour_wizard_action
+msgid "Refund invoice hour wizard"
+msgstr "Crediteer verkoopfactuur met uren wizard"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_is_register_payment_visible
+msgid "Register Payment visible"
+msgstr "Registreer betaling zichtbaar"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_commission_payment_line_ids
+msgid "Related Commissions"
+msgstr "Gekoppelde commissies"
+
+#. module: oi1_werkstandbij
+#: model:product.product,name:oi1_werkstandbij.product_product_reserve
+#: model:product.template,name:oi1_werkstandbij.product_product_reserve_product_template
+msgid "Reservation "
+msgstr "Reservering"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid "Reservation for partner %s "
+msgstr "Reservering voor %s"
+
+#. module: oi1_werkstandbij
+#: model:oi1_commission_role,name:oi1_werkstandbij.oi1_commission_role_wsb_ssf
+msgid "SSF Licentienemer"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_sale_commission
+msgid "Sale commission"
+msgstr "Verkoopcommissie"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_sale_commission_payment_line
+msgid "Sale commission payment line"
+msgstr "Verkoopcommissie betalingsregel"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_sale_commission_partner_declaration
+msgid "Sale commissions to pay by partners"
+msgstr "Verkoopcommissie te betalen door de leveranciers"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_move__x_sale_account_analytic_line_ids
+msgid "Sale hourlines related to a sales invoice"
+msgstr "Verkoopurenregels gekoppeld aan een verkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_sale_id
+msgid "Sale order"
+msgstr "Verkooporder"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_sales_amount
+msgid "Sales Amount"
+msgstr "Verkoopbedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_sale_invoice_line_id
+msgid "Sales Invoice"
+msgstr "Verkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Verkooporderregel"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move_line__x_sales_analytic_account_line_ids
+msgid "Sales analytic account ids"
+msgstr "Verkoopurenregels"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_sale_account_analytic_line_ids
+msgid "Sales hourlines"
+msgstr "Verkoopurenregels"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_sale_invoice_id
+msgid "Sales invoice"
+msgstr "Verkoopfactuur"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_analytic_line__x_sale_id
+msgid "Sales order to which the project is linked."
+msgstr "Verkooporder welke aan het project is gekoppeld"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_sale_partner_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_sale_partner_id
+msgid "Sales partner of the order"
+msgstr "Verkooppartner van de order"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_move_line__x_payment_invoice_id
+msgid "Serves for payment of invoice"
+msgstr "Factuur welke gebruikt is voor de betaling"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_invoice_wizard.py:0
+#, python-format
+msgid "Some free workers don't have a valid identification document"
+msgstr "Enkele vrije werkers hebben geen geldige identificatie formulier"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_from_time
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_from_time
+msgid "Start Time"
+msgstr "Starttijd"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_state
+msgid "Status"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move_line__x_surcharge_amount
+msgid "Surcharge amount"
+msgstr "Toeslagbedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_surcharge_amount_visible
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order_line__x_surcharge_amount_visible
+msgid "Surcharge amount visible"
+msgstr "Toeslag bedrag zichtbaar"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_account_tax
+msgid "Tax"
+msgstr "BTW"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_coc
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_coc
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_coc
+msgid "The COC number of the partner"
+msgstr "Het Kvk-nummer van de leverancier"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "The bank account of the contact"
+msgstr "De bankrekening van het contact"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_partner_bank_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_partner_bank_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_partner_bank_id
+msgid "The bank account which is used for the payments"
+msgstr "De bankrekening welke wordt gebruikt voor de betalingen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_bank_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_bank_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_bank_id
+msgid "The bank of the bank account which is used for the payments"
+msgstr "De bank van de bankrekening welke voor de betalingen wordt gebruikt"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_sale_order_line__x_basic_hour_rate
+msgid ""
+"The basic hour rate of the poule which the freeworker is paid when working "
+"within the poule"
+msgstr ""
+"het basis uurbedrag van de pool welke de vrije werker krijgt betaald als hij"
+" binnen de pool werkt"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "The beneficiary of the free worker who gets the payment"
+msgstr "De begunstige van de vrije werker welke de betalingen ontvangt"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"The calculated hours is 0. Please check the filled in start time, end time "
+"en pause time"
+msgstr ""
+"De berekende tijdsduur is 0. Controleer de startijd, eindtijd en pauzetijd"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_bank_statement_import_journal_creation__x_from_company_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_journal__x_from_company_id
+msgid "The company from which the invoice is purchased"
+msgstr "Het bedrijf van wie de factuur is ingekocht"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The free worker %s has no valid identification document "
+msgstr "De vrije werker %s heeft geen geldige legitamatie bewijs"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_sale_order__x_poule_id
+msgid "The freeworkers poule which will be used the plan the order"
+msgstr "De vrije werkerspoule welke wordt gebruikt om de order in te plannen"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The hours could not be higher then 23"
+msgstr "Het aantal uren binnen de tijd kan niet hoger zijn dan 23"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The hours could not be negative"
+msgstr "Het aantal uren kan niet negatief zijn"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "The hours of the free worker"
+msgstr "Het aantal uren van de vrije werker"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The hours should only contain numbers"
+msgstr "Het aantal uren kan alleen cijfers bevatten"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_move.py:0
+#, python-format
+msgid "The invoice %s which is invoiced by WSB cannot be changed "
+msgstr ""
+"De factuur %s welke reeds is gefactureerd aan de WSB kan niet worden "
+"veranderd"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "The invoices of the free worker"
+msgstr "De facturen van de vrije werker"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_bank_statement_import_journal_creation__x_pur_journal_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_bank_statement_import_journal_creation__x_sale_journal_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_journal__x_pur_journal_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_journal__x_sale_journal_id
+msgid "The journal to which the payments to wsb are booked"
+msgstr "De booking waarop de betalingen naar wsb zijn geboekt"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The minutes could not be higher then 60"
+msgstr "Het aantal minuten kan niet hoger zijn dan 60"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The minutes could not be negative"
+msgstr "Minuten kunnen niet negatief zijn"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The minutes should only contain numbers"
+msgstr "Het aantal minuten kan alleen cijfers bevatten"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_analytic_line__x_pur_invoice_id
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_analytic_line__x_sale_invoice_id
+msgid "The move of this entry line."
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_sale_order__x_wsb_ssf_commission_id
+msgid ""
+"The payment of funds for making the free workers model and social "
+"entrepreneurship available"
+msgstr ""
+"De betaling van gelden voor onderhoud van het vrije werkers model en het "
+"realiseren van de sociale doelstellingen"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+"The payment of invoice %s is not completed, because of differences in the "
+"amount of the payment invoice. Please check invoice. Invoice amount %s "
+"invoice payment amount %s  "
+msgstr ""
+"De betaling van factuur %s is niet voltooid, omdat er verschil is in de "
+"bedragen van de facturen. Controleer de factuur. Factuur bedrag %s and "
+"factuur betalingsbedrag %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+"The payment of invoice %s is not completed, because of differences in the "
+"amount with the WSB invoice. Please the check invoice and the settings "
+msgstr ""
+"De betaling van factuur %s is niet afgerond, omdat er verschil is met het "
+"bedrag van de WSB-factuur.  Controleer de originele factuur en de BTW - "
+"instellingen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_is_recruiter
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_is_recruiter
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_is_recruiter
+msgid "The person recruits free workers"
+msgstr "Deze persoon haalt vrije werkers binnen"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "The related bank of the bank account of the contact"
+msgstr "De bank van de bankrekening van het contact"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_oi1_free_worker__x_is_a_sales_partner
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_partner__x_is_a_sales_partner
+#: model:ir.model.fields,help:oi1_werkstandbij.field_res_users__x_is_a_sales_partner
+msgid "The relation can act as a salespartner within orders"
+msgstr "Deze contact treedt op als verkooppartner binnen orders"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "The time %s should contain a :"
+msgstr "De tijd %s moet een : bevatten"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "There are no commissions defined on free worker % s"
+msgstr "Er zijn commissies aangemaakt op vrije werker %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+"There are vat lines added on the invoice %s in the line %s this is wrong "
+"because free worker %s shouldn't have a vat in his invoice"
+msgstr ""
+"Er zijn BTW regels toegevoegd aan factuur %s in regel %s. Dit klopt niet, "
+"omdat vrije werker %s dient geen BTW te hebben toegevoegd aan zijn factuur"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "There is no bank provided for bankaccount %s"
+msgstr "Er is geen bank gekoppeld aan bankrekening %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#: code:addons/oi1_werkstandbij/models/account_move.py:0
+#, python-format
+msgid "There is no email filled in for partner %s "
+msgstr "Er is geen emailadres ingevuld voor de contactpersoon %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/wizards/oi1_agreehourline_wizard.py:0
+#, python-format
+msgid ""
+"There is no poule or project related to the hour line. Please correct this"
+msgstr "Er is geen poule of project gekoppeld aan de urenregel. Corrigeer dit"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "There is no sales order related to the hour line"
+msgstr "Er is geen verkooporder gekoppeld aan de urenregel"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/oi1_commission_invoice_helper.py:0
+#, python-format
+msgid "There is not provided qty for commission %s"
+msgstr "Er is geen aantal geleverd voor commissie %s"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid ""
+"There no vat lines added on the invoice %s in the line %s this is wrong "
+"because free worker %s should have a vat in his invoice"
+msgstr ""
+"Er zijn btw regels toegevoegd aan factuur %s in factuurregel %s. Dit klopt "
+"niet omdat vrije werker %s BTW regels dient te hebben toegevoegd aan zijn "
+"factuur"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid "There the payment of invoice %s is not completed. Check the settings "
+msgstr ""
+"De betaling van factuur %s is niet afgerond. Controleer de instellingen"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "This hourline can't be changed. There are invoices related to it"
+msgstr "Een urenregel met gekoppelde facturen kan niet worden gewijzigd."
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,help:oi1_werkstandbij.field_account_tax__x_wsb_purchase_tax_id_name
+msgid "This is the description of the purchase vat of the WSB"
+msgstr "Dit is de omschrijving van de inkoop btw van WSB"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_account_analytic_line_tree
+msgid "Total Amount"
+msgstr "Totaalbedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_transport
+msgid "Transport"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:product.product,uom_name:oi1_werkstandbij.invoice_surcharge_product
+#: model:product.product,uom_name:oi1_werkstandbij.product_product_reserve
+#: model:product.product,uom_name:oi1_werkstandbij.product_product_wsb_ssf
+#: model:product.template,uom_name:oi1_werkstandbij.invoice_surcharge_product_product_template
+#: model:product.template,uom_name:oi1_werkstandbij.product_product_reserve_product_template
+#: model:product.template,uom_name:oi1_werkstandbij.product_product_wsb_ssf_product_template
+#: model:product.template,uom_name:oi1_werkstandbij.product_template_default_product_poule
+#: model:product.template,uom_name:oi1_werkstandbij.product_template_free_workers_poule
+msgid "Unit(s)"
+msgstr "Stuk(s)"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_order_form
+msgid "Unlock"
+msgstr "Deblokkeer"
+
+#. module: oi1_werkstandbij
+#: model:mail.template,report_name:oi1_werkstandbij.freeworkerpayment_template_email
+msgid "Vergoedingsbetaling ${object.name}"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:mail.template,subject:oi1_werkstandbij.freeworkerpayment_template_email
+msgid "Vergoedingsspecificatie van ${object.number|safe}"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.view_hour_commissions_menu
+msgid "View Commissions on hours"
+msgstr "Berekende commissie op uren"
+
+#. module: oi1_werkstandbij
+#: model:product.template,name:oi1_werkstandbij.product_template_free_workers_poule
+msgid "Vrije werkers poule"
+msgstr "Vrije werkers pool"
+
+#. module: oi1_werkstandbij
+#: model:product.product,name:oi1_werkstandbij.product_product_wsb_ssf
+#: model:product.template,name:oi1_werkstandbij.product_product_wsb_ssf_product_template
+msgid "WSB / SSF Afdracht "
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_wsb_ssf_commission_id
+msgid "WSB / SSF afdracht"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_account__x_wsb_code
+msgid "WSB Code"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_tax__x_wsb_purchase_tax_id_name
+msgid "WSB Purchase Vat"
+msgstr "WSB Inkoop BTW"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_account_journal_form
+msgid "WSB Settings"
+msgstr "WSB Instellingen"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_analytic_line.py:0
+#, python-format
+msgid "Warning poule/project is not related to a sales order"
+msgstr "Waarschuwing de pool/project is niet gekoppeld aan een verkooporder"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.oi1_invoice_refund_hour_wizard_view
+msgid ""
+"Warning.  You can credit a customer invoice with hours. The hours will be removed from the invoice\n"
+"                        and can be invoiced again.  A refund invoice will be made.\n"
+"                        Concept purchase invoices related to this sale order will also be removed. If there is already sent a invoice to the free worker the system will\n"
+"                        not correct this. You should take care by correcting this manually otherwise there is a change that the free workers will get to much money."
+msgstr "Waarschuwing: Je kan een verkoopfactuur met uren crediteren. De uren worden van de factuur verwijderd en komen op de status goedgekeurd te staan. Ze kunnen opnieuw worden gefactureerd\n"
+"Er zal een creditfactuur worden gemaakt welke automatisch naar de WSB wordt weggeschreven.\n"
+"Let op: Betalingen naar vrije werkers worden verwijderd als deze nog op concept staan. Indien er reeds een betaling naar de vrije werker is aangemaakt, zal het systeem niks uitvoeren en zal je deze\n"
+"betalingen eventueel handmatig moeten corrigeren. Wees hier zorgvuldig mee, want het risico is dat wij teveel aan de vrije werkers gaan betalen"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "Week "
+msgstr "Week"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_resource_calendar_attendance_workday_part
+msgid "Workday Parts for the resource calendar"
+msgstr "Werkdagen van de plannings kalender"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.account_invoice_form
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.action_open_invoice_pur_hours_search
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.freeworker_form
+msgid "Worked Hours"
+msgstr "Gewerkte uren"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_poule_ids
+msgid "Worker poules"
+msgstr "Vrij werkers poules"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_analytic_line__x_customer_id
+msgid "X Customer"
+msgstr "Klant"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_account__x_payment_company
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_payment_company
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_tax__x_payment_company
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_company__x_is_payment_company
+msgid "X Is Payment Company"
+msgstr "Is een betaalbedrijf"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_no_work_invoice_line_ids
+msgid "X No Work Invoice Line"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__x_partner_ids
+msgid "X Partner"
+msgstr "Partner"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_free_worker__x_partner_bank_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_partner__x_partner_bank_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_users__x_partner_bank_id
+msgid "X Partner Bank"
+msgstr "Bankrekening"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_payment_company_id
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_company__x_payment_company_id
+msgid "X Payment Company"
+msgstr "Betaal bedrijf"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_company__x_payment_company_child_ids
+msgid "X Payment Company Child"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_res_company__x_payment_company_id_name
+msgid "X Payment Company Id Name"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move_line__x_payment_invoice_id
+msgid "X Payment Invoice"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_poule_ids
+msgid "X Poule"
+msgstr "Poule"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_pur_invoice_analytic_line_count
+msgid "X Pur Invoice Analytic Line Count"
+msgstr "Inkoopregel"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order__x_role_wsb_ssf
+msgid "X Role Wsb Ssf"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_sale_invoice_analytic_line_count
+msgid "X Sale Invoice Analytic Line Count"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_wsb_account_invoice
+msgid "X Wsb Account Invoice"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/res_partner.py:0
+#, python-format
+msgid "Year "
+msgstr "Jaar"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_partner_year_amount
+msgid "Year amount"
+msgstr "Jaarbedrag"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.agreehourline_wizard_view
+msgid ""
+"You can agree to the hour lines before these are invoiced or invoice them immediately without\n"
+"                        agreement"
+msgstr ""
+"Je kunt de urenregels goedkeuren voordat deze worden gefactureerd of deze "
+"meteen factureren"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.cancelagreehourline_wizard_view
+msgid "You can cancel to the hour lines which are agreed."
+msgstr "U kunt de goedkeuring van de uren opheffen"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.invoice_wizard_view
+msgid "You can invoice agreeed hourlines."
+msgstr "U kunt goedgekeurde uren factureren"
+
+#. module: oi1_werkstandbij
+#: code:addons/oi1_werkstandbij/models/account_invoice_payment_wsb.py:0
+#, python-format
+msgid "acc number %s is not a valid iban. Please provide a valid iban to %s "
+msgstr ""
+"Bankrekening %s is geen geldige IBAN nummer. Ken een geldige bankrekening "
+"toe aan contact %s"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_sale_order_line__x_basic_hour_rate
+msgid "basic hour rate"
+msgstr "Basis uurtarief"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_convert_compute_order
+msgid "convert_compute_order_id_account_move"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_convert_to_sale_order_line
+msgid "convert_to_sale_order_line"
+msgstr ""
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__date_from
+msgid "date from"
+msgstr "Vanaf"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__date_to
+msgid "date to"
+msgstr "Tot"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.experience_form
+msgid "experience form"
+msgstr "Ervaringsformulier"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.experience_level_form
+msgid "experience_level form"
+msgstr "Ervaringsniveau formulier"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.experience_level_action
+msgid "experience_levels"
+msgstr "Ervaringsniveaus"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.experience_action
+msgid "experiences"
+msgstr "Ervaringen"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_oi1_werkstandbij_oi1_multiple_hours_wizard__account_analytic_line_id
+msgid "id"
+msgstr "Id"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.language_level_form
+msgid "language_level form"
+msgstr "Taalniveau formulier"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.language_level_action
+msgid "language_levels"
+msgstr "Taal niveau's"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.level_form
+msgid "level form"
+msgstr "Niveau formulier"
+
+#. module: oi1_werkstandbij
+#: model:ir.actions.act_window,name:oi1_werkstandbij.level_action
+msgid "levels"
+msgstr "Niveau's"
+
+#. module: oi1_werkstandbij
+#: model:ir.model,name:oi1_werkstandbij.model_oi1_werkstandbij_oi1_multiple_hours_wizard
+msgid "oi1_multiple_hours_wizard"
+msgstr "Urenkopie wizard"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move_line__x_sale_id
+msgid "sale order"
+msgstr "Verkooporder"
+
+#. module: oi1_werkstandbij
+#: model_terms:ir.ui.view,arch_db:oi1_werkstandbij.view_account_analytic_line_view
+msgid "total amount"
+msgstr "Totaal bedrag"
+
+#. module: oi1_werkstandbij
+#: model:ir.model.fields,field_description:oi1_werkstandbij.field_account_move__x_is_freeworker_visible
+msgid "x_is_freeworker_visible"
+msgstr "Is vrije werker zichtbaar"

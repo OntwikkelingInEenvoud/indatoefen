@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+
+          <record id="oi1_werkstandbij.view_hour_commissions_view" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij_view_hour_commissions_view</field>
+            <field name="model">oi1_commission_invoice_helper</field>
+            <field name="arch" type="xml">
+                <form string="Agree Hours">
+                    <p class="oe_grey">
+                        Overview of commissions on the booked hours
+                    </p>
+                    <group>
+                        <field name="account_analytic_line_id"  readonly="1" />
+                        <field name="customer_fee" readonly="1" />
+                        <field name="gross_margin" readonly="1" />
+                        <field name="commission_amount" readonly="1" />
+                        <field name="account_manager_partner_id" readonly="1" />
+                        <field name="nett_margin" readonly="1" />
+                    </group>
+                     <field name="commission_payment_log_ids" readonly="1" >
+                         <tree>
+                             <field name="log_id" />
+                             <field name="partner_id" />
+                             <field name="payment_by" />
+                             <field name="role_id" />
+                             <field name="name" />
+                             <field name="calculated_rate" />
+                         </tree>
+
+                     </field>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij.view_hour_commissions_menu" model="ir.actions.act_window">
+            <field name="name">View Commissions on hours</field>
+            <field name="res_model">oi1_commission_invoice_helper</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_account_analytic_line_id': active_id}</field>
+            <field name="binding_view_types">list</field>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new forum post
+                </p>
+            </field>
+        </record>
+
+
+
+    </data>
+
+</odoo>

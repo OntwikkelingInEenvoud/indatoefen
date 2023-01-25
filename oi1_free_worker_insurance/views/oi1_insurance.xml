@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker_insurance.insurance_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance.insurance_form</field>
+            <field name="model">oi1_insurance</field>
+            <field name="arch" type="xml">
+                <form string="Insurance">
+
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <field name="partner_id" />
+                            <field name="insurance_type_id" />
+                            <field name="duration" />
+                            <field name="active" />
+                            <field name="commission_id" />
+                        </group>
+
+                       <field name="insurance_tariff_ids" >
+                           <tree editable="bottom">
+                            <field name="name" />
+                            <field name="hour_rate" />
+                            <field name="rate" />
+                            <field name="percentage" />
+                            <field name="partner_id" />
+                           </tree>
+                       </field>
+
+
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_free_worker_insurance.insurance_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance_insurance_tree</field>
+            <field name="model">oi1_insurance</field>
+            <field name="arch" type="xml">
+                <tree string="Insurances">
+                    <field name="name"/>
+                    <field name="insurance_type_id" />
+                    <field name="partner_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oi1_free_worker_insurance.insurance_action">
+            <field name="name">Insurance</field>
+            <field name="res_model">oi1_insurance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create the first insurance
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="oi1_free_worker_insurance.insurance_menu" name="Insurances" parent="oi1_free_worker_insurance.settings_menu"
+                  action="oi1_free_worker_insurance.insurance_action" sequence="10" groups="oi1_free_worker_insurance.insurance_access_group"  />
+
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.view_account_journal_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.view_account_journal_form</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//notebook[last()]" position="inside">
+                        <page string="WSB Settings" >
+                            <group colspan="2">
+                                <group>
+                                 <field name="x_from_company_id" attrs="{'invisible': ['|', ('type','not in',('sale','purchase')), ('company_id','!=', 3)]}" />
+                                 <field name="x_sale_journal_id" attrs="{'invisible': [('type','not in',('purchase'))]}" />
+                                 <field name="x_pur_journal_id"  attrs="{'invisible': [('type','not in',('sale'))]}" />
+                                </group>
+                                <group/>
+                            </group>
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+         <record id="oi1_werkstandbij.view_account_account_journal_tree" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.view_account_account_journal_tree</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="company_id" position="after">
+                        <field name="x_from_company_id" />
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>   
+        

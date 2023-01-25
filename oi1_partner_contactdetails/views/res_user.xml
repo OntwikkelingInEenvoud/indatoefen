@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+    <data>
+      
+       <record id="oi1_partner_contactdetails.resuser_view_form" model="ir.ui.view">
+       <field name="model">res.users</field>
+       <field name="inherit_id" ref="base.view_users_form"/>
+       <field name="arch" type="xml">
+       
+           <data>
+              <xpath expr="//form[1]/sheet[1]/div[not(@name)][2]/label[1]" position="replace"/>
+              <xpath expr="//form[1]/sheet[1]/div[not(@name)][2]/h1[1]/field[@name='name']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+              </xpath>
+              <xpath expr="//form[1]/sheet[1]/div[not(@name)][2]/group[1]/field[@name='partner_id']" position="before">
+                <field name="x_first_name"/>   <field name="x_last_name"/>
+              </xpath>
+           </data>
+
+          
+       </field>
+
+       </record>          
+
+    </data>
+</odoo>

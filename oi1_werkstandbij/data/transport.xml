@@ -1,0 +1,17 @@
+<odoo>
+    <data noupdate="1">
+        <record model="oi1_transport" id="oi1_transport_car">
+            <field name="name">Car</field>
+            <field name="sequence">1</field>
+        </record>
+        <record model="oi1_transport" id="oi1_transport_public_transport">
+            <field name="name">Public transport</field>
+            <field name="sequence">2</field>
+        </record>
+        <record model="oi1_transport" id="oi1_transport_bike">
+            <field name="name">Bike</field>
+            <field name="sequence">3</field>
+        </record>
+
+    </data>
+</odoo>

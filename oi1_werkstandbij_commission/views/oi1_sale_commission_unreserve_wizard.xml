@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_sale_commission_unreserve_wizard_view" model="ir.ui.view">
+            <field name="name">oi1_sale_commission_unreserve_wizard_view</field>
+            <field name="model">oi1_sale_commission_unreserve_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Make unreservation">
+                    <p class="oe_grey">
+                        You can make a payment for an reservation
+                    </p>
+                    <group>
+                          <field name="number"  readonly="1" />
+                          <field name="oi1_sale_commission_id"  readonly="1" />
+                          <field name="amount"/>
+                          <field name="name"  />
+                    </group>
+                    <footer>
+                        <button name="do_create_un_reservation" string="Create an un reservation" type="object"
+                                class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_sale_commission_unreserve_wizard_action" model="ir.actions.act_window">
+            <field name="name">Make unreserve wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oi1_sale_commission_unreserve_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+         <record id="oi1_werkstandbij_commission.oi1_sale_commission_unreserve_wizard_menu" model="ir.actions.act_window">
+            <field name="view_id" ref="oi1_sale_commission_unreserve_wizard_view" />
+            <field name="name">Make unreserve wizard</field>
+            <field name="res_model">oi1_sale_commission_unreserve_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="binding_view_types">form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_oi1_sale_commission_id': active_id}</field>
+            <field name="binding_model_id" ref="model_oi1_sale_commission_payment"/>
+        </record>
+
+    </data>
+</odoo>

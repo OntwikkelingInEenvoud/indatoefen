@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.res_partner_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.res_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+
+                <field name="property_account_position_id" position="after">
+                    <field name="x_coc"/>
+                </field>
+
+                 <field name="vat" position="after">
+                    <field name="x_is_freeworker"  invisible="1" />
+                    <field name="x_has_vat_on_invoice"  attrs="{'invisible':[('x_is_freeworker','=',True)]}" />
+                </field>
+
+                <xpath expr="//page[@name='sales_purchases']//field[@name='user_id']" position="before">
+                    <field name="x_is_recruiter" />
+                    <field name="x_is_a_sales_partner" />
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
+
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.invoice_wizard_view" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.invoice_wizard_view</field>
+            <field name="model">oi1_werkstandbij.invoice_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Invoice Hours">
+                    <p class="oe_grey">
+                        You can invoice agreeed hourlines.
+                    </p>
+                    <group>
+
+                    </group>
+                    <footer>
+                        <button name="do_create_invoices" string="Create invoices" type="object"
+                                context="{'open_invoices': True}" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij.invoice_wizard_action" model="ir.actions.act_window">
+            <field name="name">Invoice Hours</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oi1_werkstandbij.invoice_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="oi1_werkstandbij.invoice_wizard_menu" model="ir.actions.act_window">
+            <field name="name">Invoice Hours</field>
+            <field name="res_model">oi1_werkstandbij.invoice_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="binding_view_types">list</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_account_analytic_line" />
+        </record>
+
+
+    </data>
+    <data noupdate="1">
+        <record id="oi1_werkstandbij.workerspayment_journal" model="account.journal">
+            <field name="name">Workers Payments</field>
+            <field name="code">WP</field>
+            <field name="type">purchase</field>
+            <field name="refund_sequence" eval="True"/>
+        </record>
+
+        <record id="oi1_werkstandbij.commissionpayment_journal" model="account.journal">
+            <field name="name">Commission Payments</field>
+            <field name="code">C</field>
+            <field name="type">purchase</field>
+            <field name="refund_sequence" eval="True"/>
+        </record>
+
+
+        <record id="oi1_werkstandbij.invoice_surcharge_product" model="product.product">
+            <field name="name">Overeengekomen toeslag</field>
+        </record>
+
+    </data>
+
+    <data>
+
+
+    </data>
+</odoo>

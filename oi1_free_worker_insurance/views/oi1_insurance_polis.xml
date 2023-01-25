@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker_insurance.insurance_polis_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance.insurance_polis_form</field>
+            <field name="model">oi1_insurance_polis</field>
+            <field name="arch" type="xml">
+                <form string="Insurance">
+
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <field name="insurance_id" />
+                            <field name="number" />
+                            <field name="free_worker_id" />
+                            <field name="partner_id" />
+                            <field name="date_from" />
+                            <field name="date_to" />
+                            <field name="active" />
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="oi1_free_worker_insurance.insurance_polis_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance_insurance_polis_tree</field>
+            <field name="model">oi1_insurance_polis</field>
+            <field name="arch" type="xml">
+                <tree string="Insurances">
+                    <field name="name"/>
+                    <field name="free_worker_id" />
+                    <field name="insurance_id" />
+                    <field name="partner_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oi1_free_worker_insurance.insurance_polis_action">
+            <field name="name">Insurance</field>
+            <field name="res_model">oi1_insurance_polis</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create the first insurance
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="oi1_free_worker_insurance.insurance_polis" name="Insurances" parent="main_insurance_menu"
+                  action="oi1_free_worker_insurance.insurance_polis_action" sequence="10"  groups="oi1_free_worker_insurance.insurance_access_group" />
+
+    </data>
+</odoo>

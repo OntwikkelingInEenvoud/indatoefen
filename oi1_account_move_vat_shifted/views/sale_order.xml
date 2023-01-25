@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_account_move_vat_shifted.view_order_form" model="ir.ui.view">
+            <field name="name">oi1_account_move_vat_shifted_view_order_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                   <field name="fiscal_position_id" position="before" >
+                        <field name="x_vat_inland_shifted" />
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+        

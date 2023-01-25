@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+
+      <record model="res.groups" id ="oi1_free_worker.freeworker_view_group">
+                <field name="name">FreeWorker / View</field>
+      </record>
+
+      <record model="res.groups" id ="oi1_free_worker.freeworker_view_private">
+                <field name="name">FreeWorker / Private Data </field>
+      </record>
+
+      <record model="res.groups" id ="oi1_free_worker.freeworker_view_accounting">
+                <field name="name">FreeWorker / Accounting </field>
+      </record>
+
+      <record id="oi1_free_worker.free_worker_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="arch" type="xml">
+                 <form string="Free worker form">
+                     <header>
+                        <field clickable="1" name="state" widget="statusbar"/>
+                        <button string='do_action_check_private_data' name="do_action_check_private_data" type="object" groups="oi1_free_worker.freeworker_view_private" />
+                     </header>
+
+                      <sheet>
+
+                      <div class="oe_button_box" name="button_box">
+
+
+                    </div>
+
+
+
+
+                          <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                          <div class="oe_title">
+                              <h1>
+                                 <field name="freeworker_code" invisible="1" />
+                                 <field name="display_name"  readonly="True" class="oe_read_only"  />
+                                 <div class="o_row oe_edit_only">
+                                        <field name="x_first_name"  placeholder="first name" class="oe_edit_only" />
+                                        <field name="x_name"  default_focus="1" placeholder="Name"  class="oe_edit_only" />
+                                 </div>
+                               </h1>
+                          </div>
+                         <group>
+                             <group string="Name">
+                                 <field name="x_initials"  placeholder="Initials" />
+                                 <field name="x_nickname"  placeholder="Nickname"  />
+                                 <field name="x_gender" placeholder="Please provide the gender of the contact" />
+                                 <field name="free_worker_label_ids"  placeholder="Labels of the free worker" widget="many2many_tags" />
+                                 <field name="function" />
+                             </group>
+
+                         <group string="Contact">
+                            <field name="is_communication_email_different_from_email"  invisible="True" />
+                            <field name="communication_partner_id"  options='{"no_create":true,"no_create_edit":true,"no_open":true}' />
+                            <field name="communication_email" context="{'gravatar_image': True}" attrs="{'invisible': [('is_communication_email_different_from_email', '=', False)]}" />
+                            <field name="email" widget="email" context="{'gravatar_image': True}" />
+                            <field name="phone" widget="phone"/>
+                            <field name="mobile" widget="phone"/>
+
+                            <field name="lang"/>
+
+
+                         </group>
+
+                             <group string="Home address">
+                                 <label for="street" string="Address"/>
+                                 <div class="o_address_format">
+                                 <div>
+                                      <field name="street" class="oe_read_only"/>
+                                </div>
+                                <field name="street_name" placeholder="Street Name..."  class="oe_edit_only"/>
+                                <div class="oe_edit_only o_row">
+                                    <label for="street_number"/>
+                                    <span> </span>
+                                    <field name="street_number" />
+                                    <label for="street_number2"/>
+                                    <field name="street_number2" />
+                                </div>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street" />
+                                <field name="city" placeholder="City" class="o_address_city" />
+                                <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" context="{'country_id': country_id, 'zip': zip}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip" />
+                                <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" />
+                            </div>
+                             </group>
+
+                             <group string="Residence address">
+                                 <label for="partner_residence_id" string="Residence" />
+                                  <div>
+                                    <div><field name="partner_residence_id" /></div>
+                                    <div><field name="residence_street" readonly="1"  /></div>
+                                    <div><field name="residence_street2" readonly="1"  /></div>
+                                    <div><field name="residence_zip" readonly="1"  style="margin-right:10px;"  />
+                                    <field name="residence_city" readonly="1"  /></div>
+                                    <div><field name="residence_country_id" readonly="1"  /></div>
+                                 </div>
+                             </group>
+
+                         </group>
+
+
+                         <notebook>
+                             <page name="general" string="General">
+
+                                 <field name="info" />
+                             </page>
+
+                             <page string="Info" groups="oi1_free_worker.freeworker_view_private" >
+                                 <group>
+                                     <group>
+                                           <field name="owner_company" />
+                                           <field name="valid_registration_date"  />
+                                           <field name="birthdate"  placeholder="The birthday of the freeworker, e.g. 01-07-2020" />
+                                           <field name="nationality_id"  placeholder="The nationality of the freeworker, e.g. british"  options="{'no_create_edit': True, 'no_create':True, 'no_open':True}" />
+                                     </group>
+                                     <group>
+                                           <field name="agreement_with_principals" />
+                                     </group>
+                                 </group>
+                             </page>
+
+
+                              <page string="Matching">
+                        <group>
+                            <field name="registration_date"  />
+
+                            <field name="resource_calendar_attendance_workday_part_ids"  widget="many2many_tags" />
+                            <field name="travel_distance"/>
+                            <field name="transport_ids" widget="many2many_checkboxes"/>
+                            <field name="drivers_license"/>
+                            <field widget="many2many_tags" name="experience_level_ids"/>
+                            <field widget="many2many_tags" name="language_level_ids"/>
+                            <field name="education_text" />
+                            <field name="general_experience_info"/>
+                        </group>
+                    </page>
+
+                        <page string="Agreements">
+
+                          <field name="oi1_text_ids">
+                            <tree>
+                                <field name="text_type_id" />
+                                <field name="name"/>
+                            </tree>
+                            </field>
+                     </page>
+
+
+
+
+                         </notebook>
+                     </sheet>
+                      <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+
+         <record id="oi1_free_worker.free_worker_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="arch" type="xml">
+                <tree string="Free workers">
+                    <field name="freeworker_code"  optional="show" />
+                    <field name="name"/>
+                    <field name="x_nickname" />
+                    <field name="street" />
+                    <field name="zip" />
+                    <field name="city" />
+                    <field name="poule_ids" widget="many2many_tags"  optional="show" />
+                    <field name="registration_date"  optional="show" />
+                    <field name="state"  optional="show" />
+                    <field name="free_worker_label_ids"  optional="show" />
+                    <field name="valid_registration_date" optional="hide" />
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="oi1_free_worker.free_worker_search" model="ir.ui.view">
+        <field name="name">oi1_free_worker.free_worker_search</field>
+        <field name="model">oi1_free_worker</field>
+        <field name="arch" type="xml">
+            <search string="Freeworkers">
+                  <field name="name"  filter_domain="['|', ('name','ilike', self), ('freeworker_code','ilike', self)]" />
+                  <filter string="Active" name="active" domain="[('state','!=','old')]" help = "Active Freeworkers" />
+                  <filter string="To check Registration" name="tocheck" domain="[('state','=','concept')]" help = "Freeworkers whose registration has to be checked" />
+                   <group expand="1" string="Group By">
+                        <filter string="Residence address" name='partner_residence_id'  domain="[('partner_residence_id','!=',False)]" context="{'group_by':'partner_residence_id'}"/>
+                        <filter string="Registration date" name='Registration date'  context="{'group_by':'registration_date'}"/>
+                   </group>
+
+            </search>
+
+        </field>
+    </record>
+
+        <record id="oi1_free_worker.free_worker_action" model="ir.actions.act_window">
+            <field name="name">Free workers</field>
+            <field name="res_model">oi1_free_worker</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_active":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create the first free worker
+                </p>
+            </field>
+        </record>
+
+           <!-- add map to oi1_free_worker.free_worker_action -->
+        <record id="oi1_free_worker.free_worker_view_tree_action" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="oi1_free_worker.free_worker_tree"/>
+            <field name="act_window_id" ref="oi1_free_worker.free_worker_action"/>
+        </record>
+
+
+          <menuitem id="main_free_worker_menu" name="Free Workers" sequence="75" groups="oi1_free_worker.freeworker_view_group" action="oi1_free_worker.free_worker_action"
+            web_icon="hr,static/description/icon.png"/>
+
+
+           <menuitem id="oi1_free_worker.settings_menu" name="Settings" parent="main_free_worker_menu"
+                 sequence="10" groups="oi1_free_worker.freeworker_view_private"/>
+
+            <menuitem id="oi1_free_worker.education_menu" name="Educations" parent="oi1_free_worker.settings_menu"
+                  action="oi1_free_worker.education_action" sequence="10" groups="oi1_free_worker.freeworker_view_private" />
+
+           <record model="ir.ui.menu" id="oi1_free_worker.settings_menu">
+
+        </record>
+
+        <menuitem id="oi1_free_worker.experience_main_menu" name="Experience" parent="main_free_worker_menu"
+                  groups="oi1_free_worker.freeworker_view_private" />
+
+
+
+        <menuitem id="oi1_free_worker.freeworkerpoule_menu" name="Freeworkerpoules" parent="main_free_worker_menu"
+                  action="oi1_free_worker.freeworkerpoule_action" sequence="10" groups="oi1_free_worker.freeworker_view_private" />
+
+
+           <menuitem id="oi1_free_worker.language_main_menu" name="Language" parent="main_free_worker_menu"
+                 groups="oi1_free_worker.freeworker_view_private" />
+
+        <menuitem id="oi1_free_worker.language_level_menu" name="Language Levels"
+                  parent="oi1_free_worker.language_main_menu"
+                  action="oi1_free_worker.language_level_action" sequence="5" groups="oi1_free_worker.freeworker_view_private" />
+
+
+        <menuitem id="oi1_free_worker.experience_main_menu" name="Experience" parent="main_free_worker_menu"
+                 groups="oi1_free_worker.freeworker_view_private" />
+
+
+        <menuitem id="oi1_free_worker.experience_menu" name="Experience fields"
+                  parent="oi1_free_worker.experience_main_menu"
+                  action="oi1_free_worker.experience_action" sequence="10" groups="oi1_free_worker.freeworker_view_private" />
+
+
+          <menuitem id="oi1_free_worker.level_menu" name="Levels" parent="oi1_free_worker.experience_main_menu"
+                  action="oi1_free_worker.level_action" sequence="20" groups="oi1_free_worker.freeworker_view_private"/>
+
+             <menuitem id="oi1_free_worker.experience_level_menu" name="Experience Levels"
+                  parent="oi1_free_worker.experience_main_menu"
+                  action="oi1_free_worker.experience_level_action" sequence="5" groups="oi1_free_worker.freeworker_view_private"/>
+
+
+
+
+      </data>
+
+
+
+
+</odoo>

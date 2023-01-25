@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="0">
+        <record model="oi1_insurance_type" id="oi1_free_worker_insurance.oi1_insurance_schengen_type">
+            <field name="name">Schengen Insurance</field>
+        </record>
+
+    </data>
+</odoo>

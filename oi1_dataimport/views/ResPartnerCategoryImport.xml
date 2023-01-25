@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+ 
+ <data>
+     <record id="oi1_dataimport.template_main_res_partner_category" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Relatie groepen (res.partner.category)</field>
+            <field name="module">dataimport</field>           
+      </record>
+                  
+     <record id="oi1_dataimport.template_main_res_partner_category_field_x_prev_code_cate"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner_category" />
+     </record>
+
+      <record id="oi1_dataimport.template_main_res_partner_category_field_name"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner_category" />
+     </record>
+
+      <record id="oi1_dataimport.template_main_res_partner_category_field_partner_id"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">partner_id</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner_category" />
+     </record>
+
+       <record id="oi1_dataimport.template_main_res_partner_category_partner_id_x_prev_code"
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">partner_id_x_prev_code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_res_partner_category" />
+     </record>
+        
+ </data>
+ </odoo>

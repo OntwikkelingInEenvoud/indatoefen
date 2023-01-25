@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker.level_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_level_form</field>
+            <field name="model">oi1_level</field>
+            <field name="arch" type="xml">
+                <form string="level form">
+
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <field name="description"/>
+                        </group>
+
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="oi1_free_worker.level_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker_level_tree</field>
+            <field name="model">oi1_level</field>
+            <field name="arch" type="xml">
+                <tree string="Departments">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oi1_free_worker.level_action">
+            <field name="name">levels</field>
+            <field name="res_model">oi1_level</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create the first level
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

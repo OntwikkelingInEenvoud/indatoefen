@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.cancelagreehourline_wizard_view" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.cancel_agreehourline_wizard_view</field>
+            <field name="model">oi1_werkstandbij.cancel_agreehourline_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Cancel Agreed Hours">
+                    <p class="oe_grey">
+                        You can cancel to the hour lines which are agreed.
+                    </p>
+                    <group>
+
+                    </group>
+                    <footer>
+                        <button name="do_cancel_agreements" string="Cancel agreements" type="object"
+                                context="{'open_invoices': True}" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="oi1_werkstandbij.agreehourline_cancel_wizard_menu" model="ir.actions.act_window">
+            <field name="view_id" ref="oi1_werkstandbij.cancelagreehourline_wizard_view" />
+            <field name="name">Cancel Agreed hourlines</field>
+            <field name="res_model">oi1_werkstandbij.cancel_agreehourline_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="binding_view_types">list</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_account_analytic_line"/>
+        </record>
+
+
+
+    </data>
+</odoo>

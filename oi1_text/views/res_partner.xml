@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+    <data>
+       <record id="oi1_text.res_partner_form" model="ir.ui.view">
+         <field name="model">res.partner</field>
+         <field name="inherit_id" ref="base.view_partner_form"/>
+         <field name="arch" type="xml">         
+               <xpath expr="//page[@name='internal_notes']" position="inside">                           
+                     <field name="oi1_text_ids" context="{'def_partner_id':active_id}" >
+                        <tree>
+                             <field name="text_type_id" /> 
+                             <field name="name"/>                                 
+                        </tree> 
+                     </field>
+                </xpath>                                      
+         </field> 
+        </record>
+    </data>
+ </odoo>

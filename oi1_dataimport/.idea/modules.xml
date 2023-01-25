@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/base_synchro/.idea/base_synchro.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/base_synchro/.idea/base_synchro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/oi1_dataimport.iml" filepath="$PROJECT_DIR$/.idea/oi1_dataimport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_dataimport_serviceobjecten/.idea/oi1_dataimport_serviceobjecten.iml" filepath="$PROJECT_DIR$/../oi1_dataimport_serviceobjecten/.idea/oi1_dataimport_serviceobjecten.iml" />
+    </modules>
+  </component>
+</project>

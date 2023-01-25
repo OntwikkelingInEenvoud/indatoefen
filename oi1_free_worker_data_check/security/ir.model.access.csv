@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+oi1_free_worker_data_check.access_oi1_free_worker_data_wizard,access_oi1_free_worker_data_wizard,oi1_free_worker_data_check.model_oi1_free_worker_data_wizard,base.group_user,1,1,1,1
+
+
+
+
+
+
+
+
+

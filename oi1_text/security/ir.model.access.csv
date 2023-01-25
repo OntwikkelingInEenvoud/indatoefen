@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_oi1_text_text_type,access_oi1_text_text_type,model_oi1_text_text_type,,1,1,1,0
+access_oi1_text_text,access_oi1_text_text,model_oi1_text_text,,1,1,1,1
+
+
+
+
+
+
+
+

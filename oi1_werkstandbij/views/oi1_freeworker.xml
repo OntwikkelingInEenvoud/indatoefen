@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="hr.menu_hr_root" model="ir.ui.menu">
+            <field name="active">False</field>
+        </record>
+
+         <record id="oi1_werkstandbij.freeworker_tree" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.freeworker_tree</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="inherit_id" ref="oi1_free_worker.free_worker_tree"/>
+            <field name="arch" type="xml">
+                <field name="registration_date" position="after">
+                    <field name="date_last_worked"  optional="show" />
+                </field>
+            </field>
+         </record>
+
+        <record id="oi1_werkstandbij.freeworker_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.freeworker_form</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="inherit_id" ref="oi1_free_worker.free_worker_form"/>
+            <field name="arch" type="xml">
+
+              <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                  <button class="oe_inline oe_stat_button" type="object"
+                                    name="do_button_free_worker_hours"
+                                    help="The hours of the free worker"
+                                    icon="fa-tasks">
+                         <field name="worked_hours"
+                                       string="Worked Hours" widget="statinfo"/>
+
+                 </button>
+                  <button class="oe_inline oe_stat_button" type="object"
+                                    name="do_button_free_invoices"
+                                    help="The invoices of the free worker"
+                                    icon="fa-pencil-square-o">
+                         <field name="qty_account_move_ids"
+                                       string="Invoices" widget="statinfo"/>
+
+                 </button>
+              </xpath>
+
+                <xpath expr="//field[@name='info']" position="before">
+                    <group>
+                        <field name="date_first_worked" />
+                        <field name="date_last_worked" readonly="True" />
+                    </group>
+                </xpath>
+
+               <xpath expr="//notebook[last()]" position="inside">
+
+               <page string="Accounting" groups="oi1_free_worker.freeworker_view_accounting" >
+                                 <group>
+                                     <group>
+                                           <field name="freeworker_code" readonly="1" />
+                                           <field name="x_is_recruiter" />
+                                           <field name="x_has_vat_on_invoice"  />
+                                           <field name="x_commission_period" />
+                                     </group>
+                                     <group string="Bank Accounts" name="banks">
+                                          <field name="is_from_commercial_partner_id" invisible="1" />
+                                          <field name="default_bank_partner_id" />
+                                           <field name="commercial_partner_id" label="Begunstigde" placeholder="The beneficiary of the free worker who gets the payment"
+                                                 options='{"no_create":true,"no_create_edit":true,"no_open":true}'
+                                                />
+                                           <field name="acc_number"  attrs="{'invisible': [('is_from_commercial_partner_id', '=', True)]}"  />
+                                           <field name="bank_id" attrs="{'invisible': [('is_from_commercial_partner_id', '=', True)]}" domain="[('bic', '!=', False)]"  />
+                                            />
+                                     </group>
+                                 </group>
+                             </page>
+
+
+                       <page string="Poules" >
+                        <field name="poule_ids"/>
+                    </page>
+
+                 </xpath>
+
+            </field>
+
+        </record>
+
+        <record id="oi1_werkstandbij.calculate_status_free_worker" model="ir.cron" forcecreate="True">
+            <field name="name">Calculate status freeworkers</field>
+            <field name="model_id" ref="oi1_free_worker.model_oi1_free_worker"/>
+            <field name="state">code</field>
+            <field name="code">model.do_calculate_status_free_workers_cron()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record model="ir.sequence" id="oi1_free_worker.res_partner_freeworker_seq">
+            <field name="name">oi1_werkstandbij.res_partner_freeworker_seq</field>
+            <field name="prefix">VR</field>
+            <field name="padding">0000</field>
+            <field name="code">oi1_werkstandbij.res_partner_freeworker_seq</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="oi1_werkstandbij.view_order_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.view_order_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+
+                    <field name="user_id" position="after" >
+                         <field name="x_sale_partner_id" />
+                     </field>
+
+                   <xpath expr="//form//header//button[@name='action_draft']" position="after">
+                   <button name="action_done" type="object" string="Lock" states="sale"
+                        help="If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver." groups="sales_team.group_sale_manager"/>
+                    <button name="action_unlock" type="object" string="Unlock" states="done" groups="sales_team.group_sale_manager"/>
+                   </xpath>
+
+                    <xpath expr="//button[@name='action_view_invoice']" position="before">
+                        <button type="object"
+                            name="do_action_view_free_worker_poule"
+                            class="oe_stat_button"
+                            icon="fa-user-circle-o"
+                            attrs="{'invisible': [('x_poule_ids_count', '=', 0)]}" groups="base.group_user">
+                            <field name="x_poule_ids_count" widget="statinfo" string="Poules"/>
+                        </button>
+                    </xpath>
+
+                    <xpath expr="//group" position="after">
+                        <group>
+                            <field name="x_role_wsb_ssf" invisible="1" />
+                            <field name="x_wsb_ssf_commission_id"  domain="[('commission_role_id','=',x_role_wsb_ssf)]" />
+                            <field name="x_surcharge_amount_visible" invisible="1"/>
+                            <field name="x_price_visible" invisible="1"/>
+                            <field name="x_poule_id" invisible="1" />
+                            <field name="x_surcharge_amount"
+                                   attrs="{'invisible': [('x_surcharge_amount_visible', '=', False)]}" invisible="1"/>
+                            <field name="x_price"
+                                   attrs="{'invisible': [('x_price_visible', '=', False)]}" invisible="1"/>
+                        </group>
+                    </xpath>
+
+                    <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='price_unit']" position="replace" >
+                        <field name="price_unit"  invisible="1"/>
+                        <field name="x_price"  optional="show"/>
+                        <field name="x_surcharge_amount"  optional="show"/>
+                        <field name="x_poule_id" optional="show" />
+                        <field name="x_basic_hour_rate" optional="show" />
+                    </xpath>
+
+
+
+
+
+                </data>
+            </field>
+        </record>
+
+        <record id="oi1_werkstandbij.view_order_tree" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.view_order_tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="partner_id" position="after">
+                        <field name="x_poule_id"/>
+                    </field>
+                    <field name="amount_total" position="replace">
+                        <field name="x_price"/>
+                        <field name="x_surcharge_amount"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>
+        

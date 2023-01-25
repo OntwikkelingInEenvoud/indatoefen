@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker_insurance.insurance_package_form" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance.insurance_package_form</field>
+            <field name="model">oi1_insurance_package</field>
+            <field name="arch" type="xml">
+                <form string="Insurance package">
+
+                    <sheet>
+                        <div class="oe_title oe_left">
+                            <h1>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </h1>
+                            <group>
+                                <field name="code" />
+                                <field name="description" />
+                                <field name="company_id" />
+                            </group>
+                            <group>
+                                <field name="default_free_worker" />
+                            </group>
+                            <field name="insurance_ids" />
+                        </div>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="oi1_free_worker_insurance.insurance_package_tree" model="ir.ui.view">
+            <field name="name">oi1_free_worker_insurance_insurance_package_tree</field>
+            <field name="model">oi1_insurance_package</field>
+            <field name="arch" type="xml">
+                <tree string="Insurance packages">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oi1_free_worker_insurance.insurance_package_action">
+            <field name="name">Insurance packages</field>
+            <field name="res_model">oi1_insurance_package</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_course">Create the first insurance package
+                </p>
+            </field>
+        </record>
+
+
+            <menuitem id="oi1_free_worker_insurance.insurance_package_menu" name="Insurance packages" parent="oi1_free_worker_insurance.settings_menu"
+                  action="oi1_free_worker_insurance.insurance_package_action" sequence="50" groups="oi1_free_worker_insurance.insurance_access_group" />
+
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+          <record model="oi1_free_worker" id="oi1_free_worker.oi1_free_worker_1">
+            <field name="x_name">Werker</field>
+            <field name="x_first_name">Vrije</field>
+            <field name="active">True</field>
+        </record>
+
+         <record model="oi1_free_worker" id="oi1_free_worker.oi1_free_worker_2">
+            <field name="x_name">Werker2</field>
+            <field name="x_first_name">Hard</field>
+            <field name="active">True</field>
+        </record>
+
+        <record model="oi1_free_worker" id="oi1_free_worker.oi1_free_worker_3">
+            <field name="x_name">Duck</field>
+            <field name="x_first_name">Donald</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

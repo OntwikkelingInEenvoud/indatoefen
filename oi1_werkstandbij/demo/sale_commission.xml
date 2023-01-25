@@ -1,0 +1,24 @@
+<odoo>
+    <data noupdate="0">
+        <record model="product.template" id="oi1_werkstandbij.product_commission_id">
+                    <field name="name">Verkoop commissie</field>
+       </record>
+
+         <record model="res.partner" id="oi1_werkstandbij.commission_partner_id">
+                    <field name="name">Verkoop commissie partner</field>
+       </record>
+
+       <record model="oi1_commission" id="oi1_werkstandbij.oi1_commission_sales">
+                    <field name="name">Verkoop commissie</field>
+                    <field name="description">Verkoop commissie omschrijving</field>
+                    <field name="product_id" ref="oi1_werkstandbij.product_commission_id" />
+       </record>
+
+         <record model="oi1_sale_commission" id="oi1_werkstandbij.oi1_commission_sale_sales">
+                    <field name="name">Verkoop commissie</field>
+                    <field name="commission_id" ref="oi1_werkstandbij.oi1_commission_sales" />
+                    <field name="partner_id" ref="oi1_werkstandbij.commission_partner_id" />
+         </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<openerp>
+ 
+ <data>
+ 
+ <record id="oi1_dataimport.template_main_account_account" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Grootboekschema</field>
+            <field name="module">dataimport</field>           
+        </record>     
+       
+                  
+        <record id="oi1_dataimport.template_main_account_account_field_code" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">code</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_account_account" />           
+        </record>
+        
+        <record id="oi1_dataimport.template_main_account_account_field_name" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">name</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_account_account" />           
+        </record>
+        
+        <record id="oi1_dataimport.template_main_account_account_field_usertype_id" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">usertype_id</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_account_account" />           
+        </record>
+        
+         <record id="oi1_dataimport.template_main_account_account_field_reconcile" 
+                model="oi1_import_excel_configuration.template_detail">
+              <field name="name">reconcile</field>
+              <field name="main_id" ref="oi1_dataimport.template_main_account_account" />           
+        </record>
+        
+        
+        
+        
+        
+ </data>
+ </openerp>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+     <record id="paperformat_CommissionPayment" model="report.paperformat">
+        <field name="name">Commission a4 (Default)</field>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">30</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="oi1_reporting_werkstandbij.commission_payment_report" model="ir.actions.report">
+        <field name="name">Commission Payment</field>
+        <field name="model">oi1_sale_commission_payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">oi1_reporting_werkstandbij.report_commission_payment</field>
+        <field name="report_file">oi1_reporting_werkstandbij.report_commission_payment</field>
+        <field name="binding_model_id" ref="oi1_werkstandbij_commission.model_oi1_sale_commission_payment" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="Invoice" />
+    </record>
+
+
+    <template id="oi1_reporting_werkstandbij.report_commission_payment">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="oi1_reporting_werkstandbij.report_commission_payment_document" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+    </template>
+
+    <template id="oi1_reporting_werkstandbij.report_commission_payment_document">
+
+          <t t-set="company"  t-value="o.sudo().payment_company_id" />
+          <t t-set="bank_id"  t-value="o.sudo().payment_company_id.x_default_pur_bank_id" />
+          <t t-call="oi1_reporting_werkstandbij.external_layout">
+              <div class="page" style="font-size:11px;">
+                  <h2 style="text-align:center;width:100%;padding-top:15px;padding-bottom:15px;"><span t-field="o.name"/></h2>
+
+                  <table style="width:100%;border-top: 1px solid LightGrey;border-bottom: 1px solid LightGrey">
+                      <tr>
+                            <td style="width:35%;padding-top:10px;"><span t-field="o.partner_id.name"></span></td>
+                            <td style="width:25%"></td>
+                            <td style="width:15%">State</td>
+                            <td style="width:25%;"><span t-field="o.state"/></td>
+                      </tr>
+                      <tr>
+                            <td><span t-field="o.partner_id.street"/></td>
+                            <td></td>
+                            <td>
+                               <t t-if="o.sudo().payment_invoice_id.id">
+                                    Payed with invoice
+                               </t>
+                            </td>
+                            <td>
+                                <t t-if="o.sudo().payment_invoice_id.id">
+                                    <span t-field="o.sudo().payment_invoice_id.name"/>
+                                </t>
+                            </td>
+                      </tr>
+                      <tr>
+                            <td><span t-field="o.partner_id.zip"/> <span t-field="o.partner_id.city"/></td>
+                            <td></td>
+                            <td>
+                                <t t-if="o.sudo().payment_invoice_id.id">
+                                    Amount
+                                </t>
+                            </td>
+                            <td style="padding-bottom:10px;">
+                                <t t-if="o.sudo().payment_invoice_id.id">
+                                    <span t-field="o.sudo().payment_invoice_id.amount_total"/>
+                                </t>
+                            </td>
+                      </tr>
+                  </table>
+
+
+                    <t t-if ="len(o.order_ids) > 0">
+                       <t t-foreach="o.order_ids.sorted(key=lambda r: r.partner_id.name)" t-as="order">
+                           <div style="page-break-inside: avoid">
+                               <table style="width:100%">
+                                   <tr>
+                                       <td style="width:60%;font-size:15px;font-weight:bold;padding-top:15px;"><span t-field="order.partner_id.name"/></td>
+                                       <td style="width:15%">Order no.</td>
+                                       <td style="width:25%;padding-bottom:15px;"><span t-field="order.name"/></td>
+                                   </tr>
+                               </table>
+
+                               <table style="width:100%;">
+                                   <thead style="border-bottom:1px solid LightGrey;font-style: italic;">
+                                       <td>Commission</td>
+                                       <td>Description</td>
+                                       <td style="text-align:right;">Quantity</td>
+                                       <td style="text-align:right;">Com.</td>
+                                       <td style="text-align:right;">Amount</td>
+                                   </thead>
+                                   <tbody>
+                                    <t t-set="amount"  t-value="0.0" />
+                                    <t t-foreach="o.sale_commission_payment_lines.filtered(lambda r: r.sale_id == order)" t-as="payment">
+                                        <t t-set="amount"  t-value="amount + payment.amount" />
+                                        <tr>
+                                            <td><span t-field="payment.commission_id.name"/></td>
+                                            <td><span t-field="payment.name"/></td>
+                                            <td style="text-align:right;"><span t-field="payment.qty" t-options='{"widget": "float", "precision": 2}' /></td>
+                                            <td style="text-align:right;"><span t-field="payment.currency_id.symbol"/> <span t-field="payment.rate" t-options='{"widget": "float", "precision": 2}' /></td>
+                                            <td style="text-align:right;"><span t-field="payment.currency_id.symbol"/> <span t-field="payment.amount" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        </tr>
+
+
+                                    </t>
+                                   </tbody>
+                               </table>
+                               <div style="padding-top:15px;" />
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width:90%;text-align:right;font-size:15px;">
+                                            Total
+                                            <span t-field="order.partner_id.name"/>
+                                            <span t-field="order.name"/>
+                                            :
+                                        </td>
+
+                                        <td style="font-size:15px;font-weight:bold;text-align:right;width:10%;border-top:1px solid LightGrey">
+                                            <span t-field="o.currency_id.symbol"/>
+                                            <span t-esc="amount" t-options='{"widget": "float", "precision": 2}'/>
+                                        </td>
+                                    </tr>
+                                </table>
+                           </div>
+                       </t>
+                  </t>
+
+
+                    <t t-foreach="o.partner_worker_ids.sorted(key=lambda r: r.name)" t-as="freeworker">
+                       <div style="page-break-inside: avoid">
+                           <table style="width:100%">
+                               <tr>
+                                   <td style="width:60%;font-size:15px;font-weight:bold;padding-top:15px;"><span t-field="freeworker.name"/></td>
+                               </tr>
+                           </table>
+
+                           <table style="width:100%;">
+                               <thead style="border-bottom:1px solid LightGrey;font-style: italic;">
+                                   <td>Commission</td>
+                                   <td>Description</td>
+                                   <td style="text-align:right;">Quantity</td>
+                                   <td style="text-align:right;">Com.</td>
+                                   <td style="text-align:right;">Amount</td>
+                               </thead>
+                               <tbody>
+                                <t t-set="amount"  t-value="0.0" />
+                                <t t-foreach="o.sale_commission_payment_lines.filtered(lambda r: r.partner_worker_id.id == freeworker.id)" t-as="payment">
+                                    <t t-set="amount"  t-value="amount + payment.amount" />
+                                    <tr>
+                                        <td><span t-field="payment.commission_id.name"/></td>
+                                        <td><span t-field="payment.name"/></td>
+                                        <td style="text-align:right;"><span t-field="payment.qty" t-options='{"widget": "float", "precision": 2}' /></td>
+                                        <td style="text-align:right;"><span t-field="payment.currency_id.symbol"/> <span t-field="payment.rate" t-options='{"widget": "float", "precision": 2}' /></td>
+                                        <td style="text-align:right;"><span t-field="payment.currency_id.symbol"/> <span t-field="payment.amount" t-options='{"widget": "float", "precision": 2}'/></td>
+                                    </tr>
+
+                                </t>
+                               </tbody>
+                           </table>
+                           <div style="padding-top:15px;" />
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="width:90%;text-align:right;font-size:15px;">
+                                        Total
+                                        <span t-field="freeworker.name"/>
+                                        :
+                                    </td>
+
+                                    <td style="font-size:15px;font-weight:bold;text-align:right;width:10%;border-top:1px solid LightGrey">
+                                        <span t-field="o.currency_id.symbol"/>
+                                        <span t-esc="amount" t-options='{"widget": "float", "precision": 2}'/>
+                                    </td>
+                                </tr>
+                            </table>
+                       </div>
+                   </t>
+
+                   <t t-if="len(o.sale_commission_payment_lines.filtered(lambda r: not r.sale_id.id and not r.partner_worker_id.id)) > 0" t-as="reservation">
+
+                           <div style="page-break-inside: avoid">
+
+                           <table style="width:100%;">
+                               <thead style="border-bottom:1px solid LightGrey;font-style: italic;">
+                                   <td>Commission</td>
+                                   <td>Description</td>
+                                   <td style="text-align:right;">Quantity</td>
+                                   <td style="text-align:right;">Com.</td>
+                                   <td style="text-align:right;">Amount</td>
+                               </thead>
+                               <tbody>
+
+                               <t t-foreach="o.sale_commission_payment_lines.filtered(lambda r: not r.sale_id.id and not r.partner_worker_id.id)" t-as="reservation">
+
+                                    <tr>
+                                        <td><span t-field="reservation.commission_id.name"/></td>
+                                        <td><span t-field="reservation.name"/></td>
+                                        <td style="text-align:right;"><span t-field="reservation.qty" t-options='{"widget": "float", "precision": 2}' /></td>
+                                        <td style="text-align:right;"><span t-field="reservation.currency_id.symbol"/> <span t-field="reservation.rate" t-options='{"widget": "float", "precision": 2}' /></td>
+                                        <td style="text-align:right;"><span t-field="reservation.currency_id.symbol"/> <span t-field="reservation.amount" t-options='{"widget": "float", "precision": 2}'/></td>
+                                    </tr>
+
+                               </t>
+
+
+                               </tbody>
+                           </table>
+
+                       </div>
+
+                   </t>
+
+
+
+
+
+
+              </div>
+
+          </t>
+    </template>
+
+    </data>
+</odoo>

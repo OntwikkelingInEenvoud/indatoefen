@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oi1_free_worker_data_check.freeworker_form" model="ir.ui.view">
+            <field name="name">oi1_werkstandbij.freeworker_form</field>
+            <field name="model">oi1_free_worker</field>
+            <field name="inherit_id" ref="oi1_free_worker.free_worker_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//button[@name='do_action_check_private_data']" position="after">
+                    <button string='do_action_check_data' name="do_action_check_data" type="object" groups="oi1_free_worker.freeworker_view_private" />
+                 </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

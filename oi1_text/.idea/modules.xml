@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/config/.idea/config.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/config/.idea/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/kix-code/.idea/kix-code.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/kix-code/.idea/kix-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/museumhw_customizations/.idea/museumhw_customizations.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/museumhw_customizations/.idea/museumhw_customizations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_calendar/.idea/oi1_calendar.iml" filepath="$PROJECT_DIR$/../oi1_calendar/.idea/oi1_calendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_contract/.idea/oi1_contract.iml" filepath="$PROJECT_DIR$/../oi1_contract/.idea/oi1_contract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_dataimport/.idea/oi1_dataimport.iml" filepath="$PROJECT_DIR$/../oi1_dataimport/.idea/oi1_dataimport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_dataimport_crm/.idea/oi1_dataimport_crm.iml" filepath="$PROJECT_DIR$/../oi1_dataimport_crm/.idea/oi1_dataimport_crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_dataimport_products/.idea/oi1_dataimport_products.iml" filepath="$PROJECT_DIR$/../oi1_dataimport_products/.idea/oi1_dataimport_products.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_dataimport_sales/.idea/oi1_dataimport_sales.iml" filepath="$PROJECT_DIR$/../oi1_dataimport_sales/.idea/oi1_dataimport_sales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_daycareprovider/.idea/oi1_daycareprovider.iml" filepath="$PROJECT_DIR$/../oi1_daycareprovider/.idea/oi1_daycareprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_daycareprovider_report/.idea/oi1_daycareprovider_report.iml" filepath="$PROJECT_DIR$/../oi1_daycareprovider_report/.idea/oi1_daycareprovider_report.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_import_excel_configuration/.idea/oi1_import_excel_configuration.iml" filepath="$PROJECT_DIR$/../oi1_import_excel_configuration/.idea/oi1_import_excel_configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_invoice/.idea/oi1_invoice.iml" filepath="$PROJECT_DIR$/../oi1_invoice/.idea/oi1_invoice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_lease_contract_service_object/.idea/oi1_lease_contract_service_object.iml" filepath="$PROJECT_DIR$/../oi1_lease_contract_service_object/.idea/oi1_lease_contract_service_object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_mamut_import/.idea/oi1_mamut_import.iml" filepath="$PROJECT_DIR$/../oi1_mamut_import/.idea/oi1_mamut_import.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_menu_company_dependent/.idea/oi1_menu_company_dependent.iml" filepath="$PROJECT_DIR$/../oi1_menu_company_dependent/.idea/oi1_menu_company_dependent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_partner_contactdetails/.idea/oi1_partner_contactdetails.iml" filepath="$PROJECT_DIR$/../oi1_partner_contactdetails/.idea/oi1_partner_contactdetails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_purchase_sale/.idea/oi1_purchase_sale.iml" filepath="$PROJECT_DIR$/../oi1_purchase_sale/.idea/oi1_purchase_sale.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_qualification_item/.idea/oi1_qualification_item.iml" filepath="$PROJECT_DIR$/../oi1_qualification_item/.idea/oi1_qualification_item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_qualification_item_crm/.idea/oi1_qualification_item_crm.iml" filepath="$PROJECT_DIR$/../oi1_qualification_item_crm/.idea/oi1_qualification_item_crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_qualification_item_partner/.idea/oi1_qualification_item_partner.iml" filepath="$PROJECT_DIR$/../oi1_qualification_item_partner/.idea/oi1_qualification_item_partner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_reporting_mhw/.idea/oi1_reporting_mhw.iml" filepath="$PROJECT_DIR$/../oi1_reporting_mhw/.idea/oi1_reporting_mhw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_sale_order_invoice_rel/.idea/oi1_sale_order_invoice_rel.iml" filepath="$PROJECT_DIR$/../oi1_sale_order_invoice_rel/.idea/oi1_sale_order_invoice_rel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_sale_quotation_split/.idea/oi1_sale_quotation_split.iml" filepath="$PROJECT_DIR$/../oi1_sale_quotation_split/.idea/oi1_sale_quotation_split.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_sale_subscription_line_dates/.idea/oi1_sale_subscription_line_dates.iml" filepath="$PROJECT_DIR$/../oi1_sale_subscription_line_dates/.idea/oi1_sale_subscription_line_dates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_sepa_direct_debit/.idea/oi1_sepa_direct_debit.iml" filepath="$PROJECT_DIR$/../oi1_sepa_direct_debit/.idea/oi1_sepa_direct_debit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_service_workorder/.idea/oi1_service_workorder.iml" filepath="$PROJECT_DIR$/../oi1_service_workorder/.idea/oi1_service_workorder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_serviceobject/.idea/oi1_serviceobject.iml" filepath="$PROJECT_DIR$/../oi1_serviceobject/.idea/oi1_serviceobject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/oi1_text.iml" filepath="$PROJECT_DIR$/.idea/oi1_text.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_voucher_card/.idea/oi1_voucher_card.iml" filepath="$PROJECT_DIR$/../oi1_voucher_card/.idea/oi1_voucher_card.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_werkstandbij/.idea/oi1_werkstandbij.iml" filepath="$PROJECT_DIR$/../oi1_werkstandbij/.idea/oi1_werkstandbij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../oi1_werkstandbij_import_hours_nostradamus/.idea/oi1_werkstandbij_import_hours_nostradamus.iml" filepath="$PROJECT_DIR$/../oi1_werkstandbij_import_hours_nostradamus/.idea/oi1_werkstandbij_import_hours_nostradamus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/partner_street_number/.idea/partner_street_number.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/partner_street_number/.idea/partner_street_number.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/payment_mollie_official/.idea/payment_mollie_official.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/payment_mollie_official/.idea/payment_mollie_official.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/pos_box_intersolve/.idea/pos_box_intersolve.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/pos_box_intersolve/.idea/pos_box_intersolve.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/sale_order_line_date/.idea/sale_order_line_date.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/sale_order_line_date/.idea/sale_order_line_date.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/sf_addons12.iml" filepath="$PROJECT_DIR$/../.idea/sf_addons12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sf_addons12_anderen/vouchers_pos/.idea/vouchers_pos.iml" filepath="$PROJECT_DIR$/../../sf_addons12_anderen/vouchers_pos/.idea/vouchers_pos.iml" />
+    </modules>
+  </component>
+</project>

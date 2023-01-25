@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+        <data>
+         <record id="oi1_dataimport.excelimportwizard" model="ir.ui.view">
+            <field name="name">Import excel data</field>
+            <field name="model">oi1_excelimportwizard</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string="Import Data">
+                    <h2>Select een excelbestand to import</h2>
+                    <group>                       
+                        <field name="data_file" placeholder="Choose een excelfile to import..."/>
+                        <field name="odoo_object" />
+                        <field  name="excel_configuration_id"  
+                                placeholder="Choose a excelconfiguration..." 
+                                options="{&quot;no_open&quot;: True,&quot;no_create&quot;: 1, &quot;no_create_edit&quot;: 1}" />
+                    </group>
+                    <footer>
+                        <button name="do_import_file" string="_Import" type="object" class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="oi1_dataimport.mail_contact_import_wizard_action" model="ir.actions.act_window">
+            <field name="name">Import Data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oi1_excelimportwizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="oi1_dataimport.excelimportwizard"/>
+        </record>
+        <menuitem id="oi1_dataimport.mail_contact_import_wizard_menu"  name="Import from Excel"
+            parent="oi1_import_excel_configuration.menu_import_configuration"
+            action="oi1_dataimport.mail_contact_import_wizard_action" sequence="5"  groups="base.group_user" />
+
+        <record id="oi1_dataimport.template_main_account_account" model="oi1_import_excel_configuration.template_main">
+            <field name="name">Grootboekschema</field>
+            <field name="module">dataimport</field>           
+        </record>
+        </data>
+</odoo>
