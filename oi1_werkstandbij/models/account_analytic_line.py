@@ -234,13 +234,13 @@ class AccountAnalyticLine(models.Model):
     @api.onchange('x_from_time', 'x_to_time', 'date', 'x_poule_id')
     def calculatedRate(self):
         for ts_line in self:
-            if not ts_line.project_id.x_poule_id.id:
-                continue;
-            ts_line.x_rate = ts_line.project_id.x_poule_id.calculate_rate()
+            if not ts_line.x_poule_id.id:
+                continue
+            ts_line.x_rate = ts_line.x_poule_id.calculate_rate()
 
     def getTimeInHour(self, time):
         if not time:
-            return time;
+            return time
         if not ':' in time:
             return False
         times = time.split(":")
