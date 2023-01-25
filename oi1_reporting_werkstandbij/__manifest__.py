@@ -22,7 +22,7 @@
 
 
 	# any module necessary for this one to work correctly
-	'depends': ['base','oi1_text'],
+	'depends': ['base','oi1_text', 'oi1_werkstandbij_commission'],
 
 	# always loaded
 	'data': [
