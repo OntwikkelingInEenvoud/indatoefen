@@ -184,11 +184,13 @@ class Freeworker(models.Model):
 		for free_worker in self:
 			bank_values = {'partner_id':  free_worker.partner_id.id}
 			if 'acc_number' in values:
-				acc_number = values['acc_number']
+				acc_number = values['acc_number'] or ''
+				if acc_number == '':
+					continue
 				bank_values['acc_number'] = acc_number
 				values.pop('acc_number')
 			if 'bank_id' in values:
-				bank_values['bank_id'] = values['bank_id']
+				bank_values['bank_id'] = values['bank_id'] or ''
 				values.pop('bank_id')
 			if free_worker.bank_partner_bank_id.id:
 			   free_worker.bank_partner_bank_id.write(bank_values)
