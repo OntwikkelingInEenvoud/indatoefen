@@ -28,6 +28,8 @@ class Freeworker(models.Model):
 		('f', 'Female'),
 		('fam', 'Family'),
 	], string="Gender", default='', help="The gender of the free worker")
+	poule_ids = fields.Many2many('oi1_freeworkerpoule', 'oi1_poule_free_worker_rel',
+									   'free_worker_id', 'poule_id', string='Poules')
 	partner_id = fields.Many2one('res.partner', string="Address", ondelete='restrict', auto_join=True, required=True)
 	partner_residence_id = fields.Many2one('res.partner', string="Residence", tracking=True)
 	residence_street_name = fields.Char(related="partner_residence_id.street_name", string="Residence street name",
@@ -87,7 +89,6 @@ class Freeworker(models.Model):
 									string="Owner company", tracking=True)
 	free_worker_label_ids = fields.Many2many('oi1_free_worker_label', 'oi1_free_worker_label_rel', 'free_worker_id', 'label_id')
 	valid_registration_date = fields.Date(string="Valid registration", help="Has a valid identification code until this date")
-	poule_ids = fields.Many2many('oi1_freeworkerpoule', string="Free workers poules")
 	has_a_valid_legitimation = fields.Boolean(string="Has valid legitimation", compute="_compute_valid_legitimation")
 	communication_partner_id = fields.Many2one('res.partner', string="Communication partner",
 											   help="The person who is in charge of the communication of the free worker, "

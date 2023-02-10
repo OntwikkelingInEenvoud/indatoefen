@@ -159,8 +159,8 @@ class AccountAnalyticLine(models.Model):
             if not ts_line.project_id.id:
                 continue
             name = ts_line.x_partner_id.name
-            if ts_line.project_id.x_poule_id.id and ts_line.project_id.x_poule_id.description:
-                name = name + " - " + ts_line.project_id.x_poule_id.description + " - "
+            if ts_line.x_poule_id.id and ts_line.x_poule_id.description:
+                name = name + " - " + ts_line.x_poule_id.description + " - "
             if ts_line.date:
                 date = fields.Date.from_string(ts_line.date)
                 str_date = ("0" + str(date.day))[-2:] + "-" + ("0" + str(date.month))[-2:] + "-" + str(date.year)

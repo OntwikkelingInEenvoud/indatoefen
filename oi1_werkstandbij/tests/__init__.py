@@ -8,7 +8,6 @@ from . import test_resource_calendar_attendance_workday_part
 from . import test_commission_invoice_helper
 from . import test_commission_payed_by_freeworker
 from . import test_commission_reservation
-from . import test_tools
 from . import test_invoice_customer_wizard
 from . import test_invoice_free_worker_wizard
 from . import test_export_wsb_wizard

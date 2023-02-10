@@ -24,8 +24,8 @@ class TestCommissionUnReserve(TransactionCase):
         product_product_obj = self.env['product.product']
         unreserve_wizard_obj = self.env['oi1_sale_commission_unreserve_wizard']
         invoice_obj = self.env['account.move']
-
         partner_obj = self.env['res.partner']
+        res_partner_bank_obj = self.env['res.partner.bank']
 
         self.partner_id  = partner_obj.create({'name': 'test_commissie_gebruiker'})
 
@@ -84,6 +84,23 @@ class TestCommissionUnReserve(TransactionCase):
         self.assertIn("should have the state approved", str(e.exception))
 
         commission_payment.state = 'approved'
+
+        with self.assertRaises(UserError) as e:
+            unreserve_wizard.do_create_un_reservation()
+        self.assertIn("bank account", str(e.exception))
+
+        bank_id = self.env['res.bank'].create({'name': 'test_bank'})
+
+        res_partner_bank_obj.create({'acc_number': ' NL28LOYD0781190398',
+                                     'partner_id': self.partner_id.id,
+                                     'bank_id': bank_id.id})
+
+        with self.assertRaises(UserError) as e:
+            unreserve_wizard.do_create_un_reservation()
+        self.assertIn("valid vat number", str(e.exception))
+
+        self.partner_id.vat = "076171784B01"
+
         unreserve_wizard.do_create_un_reservation()
 
         self.assertEqual(len(commission_payment.sale_commission_payment_lines), 2)

@@ -110,6 +110,12 @@ class TestHourBookProcess(TransactionCase):
 			invoice_refund_hour_wizard.do_refund_hour_invoice()
 		self.assertIn('invoice', str(e.exception))
 		invoice_refund_hour_wizard.invoice_id = invoice
+
+		with self.assertRaises(UserError) as e:
+			invoice_refund_hour_wizard.do_refund_hour_invoice()
+		self.assertIn("posted moves", str(e.exception))
+
+		invoice.action_post()
 		invoice_refund_hour_wizard.do_refund_hour_invoice()
 
 		refund_invoices = account_move_obj.search([('partner_id', '=', self.customer.id),

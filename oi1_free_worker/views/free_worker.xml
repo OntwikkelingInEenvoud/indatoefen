@@ -150,6 +150,10 @@
                             </field>
                      </page>
 
+                    <page string="Poules" >
+                        <field name="poule_ids"/>
+                    </page>
+
 
 
 
