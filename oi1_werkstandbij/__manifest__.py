@@ -20,7 +20,7 @@
 	# any module necessary for this one to work correctly
 	'depends': ['base', 'l10n_nl', 'project', 'contacts', 'account', 'sale_management', 'timesheet_grid','oi1_free_worker',
 				'sale_timesheet', 'account_accountant',
-				'oi1_reporting_werkstandbij', 'oi1_werkstandbij_commission', 'account_sepa'],
+				'oi1_reporting_werkstandbij', 'oi1_werkstandbij_commission', 'account_sepa', 'oi1_tools'],
 
 	# always loaded
 	'data': [

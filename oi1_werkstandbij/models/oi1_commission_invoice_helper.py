@@ -222,7 +222,7 @@ class CommissionInvoiceHelper(models.TransientModel):
                                                                 hour_line,
                                                                 invoice_line_values,
                                                                 )
-        invoice_lines = invoice_line_obj.create_account_invoice_move_line(invoice_line_values.values())
+        invoice_lines = invoice_line_obj.create(invoice_line_values.values())
 
         invoice_lines.set_vat_move_line_for_free_worker()
         self._set_commission_payment_lines_by_type_customer(hour_lines, payment_type='freeworker')

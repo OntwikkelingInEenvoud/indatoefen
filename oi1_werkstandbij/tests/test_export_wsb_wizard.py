@@ -96,4 +96,4 @@ class TestTools(TransactionCase):
        self.assertEqual(self.account_move.state, 'Start_Factoring')
 
        wizard.set_export_to_wsb()
-       1/0
+       print("test nog verder maken")

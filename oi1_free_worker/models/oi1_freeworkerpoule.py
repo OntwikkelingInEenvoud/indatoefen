@@ -12,7 +12,8 @@ class FreeWorkerPoule(models.Model):
 	parent_id = fields.Many2one('oi1_freeworkerpoule', string='Parent Poule', index=True, tracking=True, help="The main poule of the poule")
 	description = fields.Char('Description', help="The description of the poule for internal use")
 	act_description = fields.Char('Activity description', required=True, help="The description of the poule which is soon on the invoices")
-	free_worker_ids = fields.Many2many('oi1_free_worker', string='Freeworkers1')
+	free_worker_ids = fields.Many2many('oi1_free_worker','oi1_poule_free_worker_rel',
+									   'poule_id', 'free_worker_id', string='Freeworkers')
 	experiences_ids = fields.Many2many('oi1_experience_level', string="Needed experience", tracking=True)
 	basichourrate = fields.Monetary('basic hour rate', tracking=True, help="The basic hour rate of the poule which the freeworker is paid when working within the poule")
 	currency_id = fields.Many2one('res.currency', compute='_get_currency', string="Currency")

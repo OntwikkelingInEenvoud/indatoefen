@@ -43,14 +43,16 @@ class CommissionPayment(models.Model):
             if len(invoices) > 0:
                 invoice = invoices[0]
             if not invoice:
-                invoice_partner_bank_id = commission.partner_id.x_partner_bank_id
+                if len(commission.partner_id.bank_ids) == 0:
+                    raise exceptions.UserError(_("No bank account provided for partner %s") % commission.partner_id.name)
+                invoice_partner_bank_id = commission.partner_id.bank_ids[0]
                 invoice = invoice_obj.create({'partner_id': commission.partner_id.id,
                                               'invoice_date': date.today(),
                                               'move_type': 'in_invoice',
                                               'journal_id': commission_journal_id,
                                               'company_id': self.env.company.id,
                                               'payment_reference': commission.number,
-                                              'partner_bank_id': invoice_partner_bank_id
+                                              'partner_bank_id': invoice_partner_bank_id.id
                                               })
                 if not self.is_vat_partner_id(invoice.partner_id):
                     body = _("Partner %s is configured for not having btw on the invoice so no btw is calculated"
@@ -64,18 +66,21 @@ class CommissionPayment(models.Model):
                 commission.write({'state': 'invoiced', 'invoice_id': invoice.id})
 
     def is_vat_partner_id(self, partner_id):
-        if not partner_id.x_has_vat_on_invoice:
+        if not partner_id.x_is_freeworker:
+            return True
+        free_worker = partner_id.x_freeworker_id
+        if not free_worker.x_has_vat_on_invoice:
             return False
         return True
 
-    def _get_invoice_free_worker_vat(self, invoice_line):
+    def _get_invoice_free_worker_vat(self, move_id, product_id):
         vat = []
-        if not self.is_vat_partner_id(invoice_line.move_id.partner_id):
+        if not self.is_vat_partner_id(move_id.partner_id):
             return vat
-        if not invoice_line.move_id.partner_id.vat or len(invoice_line.move_id.partner_id.vat) ==0:
+        if not move_id.partner_id.vat or len(move_id.partner_id.vat) ==0:
             raise exceptions.UserError(_('Please provide a valid vat number for partner %s which is needed '
-                                         'because there will be vat on the invoice') % invoice_line.move_id.partner_id.name)
-        vat = invoice_line._get_computed_taxes()
+                                         'because there will be vat on the invoice') % move_id.partner_id.name)
+        vat = product_id.taxes_id
         return vat
 
     def _create_update_invoice_lines(self, commission_line, invoice):
@@ -108,7 +113,7 @@ class CommissionPayment(models.Model):
             invoice_line = invoice_lines[0]
             quantity = invoice_line.quantity + quantity
             values = {'quantity': quantity}
-            invoice_line.update_account_invoice_move_line(values)
+            invoice_line.write(values)
             return invoice_line
         values = {'move_id': invoice.id,
                   'product_id': product.id,
@@ -117,10 +122,10 @@ class CommissionPayment(models.Model):
                   'account_id': product.property_account_expense_id.id
                                 or product.categ_id.property_account_expense_categ_id.id,
                   'name': name,
-                  'exclude_from_invoice_tab': False,
+                  'display_type': 'product',
+                  'tax_ids': self._get_invoice_free_worker_vat(invoice, product)
                   }
-        invoice_line = account_move_line_obj.create_account_invoice_move_line(values)
-        invoice_line.update_account_invoice_move_line({'tax_ids': self._get_invoice_free_worker_vat(invoice_line)})
+        invoice_line = account_move_line_obj.create(values)
         return invoice_line
 
     def do_print_commissionreport(self):

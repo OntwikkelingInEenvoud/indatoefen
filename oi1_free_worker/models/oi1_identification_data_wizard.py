@@ -87,7 +87,7 @@ class IdentificationDataWizard(models.TransientModel):
             json_string = json.dumps(dict_values)
             document_information.document_info = str(json_string)
             self._clean_wizard_data(wizard)
-            wizard.free_worker_id.nationality_id = nationality_id
+            wizard.free_worker_id.nationality_id = wizard.nationality_id
 
     def _clean_wizard_data(self, wizard):
         wizard.ssn = False

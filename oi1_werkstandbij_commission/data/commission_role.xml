@@ -11,12 +11,12 @@
         </record>
 
         <record model="oi1_commission_role" id="oi1_commission_role_account_manager">
-            <field name="name">Accountmanager </field>
+            <field name="name">Account manager </field>
             <field name="description">The person who is responsible for the customer contact and the result of the sales order</field>
         </record>
 
          <record model="oi1_commission_role" id="oi1_commission_role_assistant_account_manager">
-            <field name="name">Assistant Accountmanager </field>
+            <field name="name">Assistant account manager </field>
             <field name="description">The person who is responsible for assistance of the account manager and the result of the sales order</field>
         </record>
 

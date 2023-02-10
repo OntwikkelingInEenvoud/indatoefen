@@ -78,7 +78,6 @@ class ResPartner(models.Model):
             recruiter_role = self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_recruiter')
             operational_work_planner_role = self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_operational_work_planner')
             practical_work_planner_role = self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_practical_work_planner')
-            print(practical_work_planner_role.name);
             account_manager_role = self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_account_manager')
             assistant_account_manager_role = self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_assistant_account_manager')
             seller_role = self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_sales')

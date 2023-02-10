@@ -37,8 +37,6 @@ class InvoiceRefundHourWizard(models.TransientModel):
 
         pur_hour_lines = hour_lines.filtered(lambda l: l.x_pur_invoice_line_id.move_id.state == 'draft')
         pur_account_move_lines = pur_hour_lines.mapped('x_pur_invoice_line_id')
-        pur_account_moves =  pur_account_move_lines.mapped('move_id')
         pur_account_move_lines.with_context({"check_move_validity" : False}).unlink()
-        pur_account_moves.update_invoice_after_account_move_line_change()
         message = _("Invoice %s is credited with invoice %s" % (invoice_id.name, refund_invoice.name))
         invoice_id.with_context({'system': True}).message_post(body=message)

@@ -23,4 +23,9 @@ class Nationality(models.Model):
 	@api.depends('country_id', 'description')
 	def _compute_name(self):
 		for nationality in self:
-			nationality.name = nationality.country_code + " " + nationality.description
+			nationality_name = ''
+			if nationality.country_code:
+				nationality_name = nationality_name + nationality.country_code
+			if nationality.description:
+				nationality_name = nationality_name + nationality.description
+			nationality.name = nationality_name

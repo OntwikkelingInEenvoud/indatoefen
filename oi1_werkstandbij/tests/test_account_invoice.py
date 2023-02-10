@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo.tests.common import TransactionCase, tagged
 from odoo.exceptions import UserError
+from odoo import Command, exceptions, _
 import datetime
 
 
@@ -110,7 +111,7 @@ class TestAccountInvoice(TransactionCase):
 
 		product_template = self.env['product.template'].search([], limit=1)
 		self.assertTrue(len(product_template) == 1)
-		account_invoice_line = account_invoice_line_obj.with_context().create_account_invoice_move_line_from_product\
+		account_invoice_line = self.create_account_invoice_move_line_from_product\
 			(account_invoice, product_template.product_variant_id, 60, 1)
 		self.assertEqual(account_invoice_line.display_type, 'product')
 		self.assertTrue(not account_invoice.x_is_invoice_refund_visible)
@@ -173,7 +174,7 @@ class TestAccountInvoice(TransactionCase):
 													  'invoice_date': datetime.date.today(),
 													  })
 
-		account_invoice_line = account_invoice_line_obj.with_context().create_account_invoice_move_line_from_product \
+		account_invoice_line = self.create_account_invoice_move_line_from_product \
 			(account_invoice, product_template.product_variant_id, 125, 2)
 
 		account_analytic_line.write({'system': 1, 'x_pur_invoice_line_id': account_invoice_line.id})
@@ -270,7 +271,7 @@ class TestAccountInvoice(TransactionCase):
 													  })
 		self.assertEqual(invoice.journal_id.type, 'purchase')
 
-		move_line = account_move_line_obj.create_account_invoice_move_line({
+		move_line = account_move_line_obj.create({
 												 'product_id': product_id.id,
 												 'quantity': 1.0,
 												 'price_unit': 100.0,
@@ -311,6 +312,71 @@ class TestAccountInvoice(TransactionCase):
 			invoice = account_analytic_line.x_pur_invoice_id
 			self.assertTrue(invoice.x_is_freeworker_visible)
 			self.assertFalse(not invoice.x_freeworker_id.id)
+
+	def create_account_invoice_move_line_from_product(self, move_id, product_id, quantity=False, price_unit=False,
+													  name=False):
+		account_id = False
+		taxes = False
+		if not name:
+			name = product_id.name
+		if not price_unit:
+			price_unit = product_id.list_price
+		if not quantity:
+			quantity = 1
+		if move_id.move_type in ('out_invoice', 'out_refund'):
+			account_id, taxes = self.get_sales_invoice_line_data(product_id, move_id)
+		if move_id.move_type in ('in_invoice', 'in_refund'):
+			account_id, taxes = self.get_purchase_invoice_line_data(product_id, move_id)
+		values = {'quantity': quantity,
+				  'price_unit': price_unit,
+				  'name': name,
+				  'product_id': product_id.id,
+				  'account_id': account_id.id,
+				  'tax_ids': [(6, 0, taxes)],
+				  'display_type': 'product'
+				  }
+		move_id.write({'line_ids': [Command.create(values)]})
+		return move_id.line_ids.filtered(lambda l: l.display_type == 'product').sorted(key=lambda r: -r.id)[0]
+
+	def get_sales_invoice_line_data(self, product_id, move_id):
+		account_id = product_id.property_account_income_id or product_id.categ_id.property_account_income_categ_id
+		if not account_id:
+			account_id = move_id.journal_id.default_account_id
+		if not account_id.id:
+			raise exceptions.UserError(
+				_("Please provide an income account for product %s") % product_id.product_tmpl_id.name)
+		taxes = self.add_sales_taxes(product_id, move_id)
+		return account_id, taxes
+
+	def add_sales_taxes(self, product_id, move_id):
+		taxes = product_id.taxes_id.filtered(lambda l: l.company_id.id == self.env.company.id)
+		fiscal_position_id = move_id.partner_id.property_account_position_id
+		if fiscal_position_id and taxes:
+			tax_ids = fiscal_position_id.map_tax(taxes, product_id, move_id.partner_id).ids
+		else:
+			tax_ids = taxes.ids
+		return tax_ids
+
+	def get_purchase_invoice_line_data(self, product_id, move_id):
+		account_id = product_id.property_account_expense_id or product_id.categ_id.property_account_expense_categ_id
+		if not account_id:
+			account_id = move_id.journal_id.default_account_id
+		if not account_id.id:
+			raise exceptions.UserError(
+				_("Please provide an income account for product %s") % product_id.product_tmpl_id.name)
+		taxes = self.get_taxes_purchase_product_id(product_id, move_id)
+		return account_id, taxes
+
+	def get_taxes_purchase_product_id(self, product_id, partner_id, fiscal_position_id=False, company_id=False):
+		if not company_id:
+			company_id = self.env.company
+		taxes = product_id.supplier_taxes_id.filtered(
+			lambda r: r.company_id.id == company_id.id)
+		if fiscal_position_id and taxes:
+			tax_ids = fiscal_position_id.map_tax(taxes, product_id, partner_id).ids
+		else:
+			tax_ids = taxes.ids
+		return tax_ids
 
 
 

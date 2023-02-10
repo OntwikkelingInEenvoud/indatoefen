@@ -9,7 +9,32 @@ class TestTest(TransactionCase):
 
     def setUp(self, *args, **kwargs):
         result = super().setUp(*args, **kwargs)
+        partner_obj = self.env['res.partner']
+        commission_obj = self.env['oi1_commission']
+        product_obj = self.env['product.product']
+        commission_main_obj = self.env['oi1_commission_main']
+
         self.env.user.lang = False
+
+        self.commission_product = product_obj.create({'name': 'test_commission_product'})
+
+        self.practical_commission = commission_obj.create({'name': 'test_practical_work_planner_commission',
+                                                           'commission_role_id': self.env.ref('oi1_werkstandbij_commission.oi1_commission_role_practical_work_planner').id,
+                                                           'product_id': self.commission_product.id
+                                                           })
+        self.recruiter_commission = commission_obj.create({'name': 'test_recruiter',
+                                                           'commission_role_id': self.env.ref(
+                                                               'oi1_commission_role_recruiter').id,
+                                                           'product_id': self.commission_product.id
+                                                           })
+
+        self.practical_work_planner_partner_id = partner_obj.create({'name': 'test_practical_work_planner'})
+        self.recruiter_commission_partner_id = partner_obj.create({'name': 'test_recruiter'})
+
+        commission_main_obj.create({'partner_id': self.practical_work_planner_partner_id.id, 'commission_id': self.practical_commission.id})
+        commission_main_obj.create(
+            {'partner_id': self.recruiter_commission_partner_id.id, 'commission_id': self.recruiter_commission.id})
+
         return result
 
     def test_start_date_on_first_log(self):
@@ -18,11 +43,8 @@ class TestTest(TransactionCase):
 
         free_worker = free_worker_obj.create({'name': 'test'})
         self.assertTrue(free_worker.id)
-
-        practical_work_planner_partner_ids = partner_obj.search([('x_is_practical_work_planner', '=', True)])
-        self.assertFalse(len(practical_work_planner_partner_ids) == 0)
-
-        practical_work_planner_partner_id = practical_work_planner_partner_ids[0]
+        
+        practical_work_planner_partner_id = self.practical_work_planner_partner_id
         free_worker.write({'practical_work_planner_partner_id' : practical_work_planner_partner_id})
 
         commission_logs = free_worker.commission_log_ids
