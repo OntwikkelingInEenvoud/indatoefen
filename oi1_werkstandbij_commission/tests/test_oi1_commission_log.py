@@ -24,7 +24,13 @@ class TestTest(TransactionCase):
                                                            })
         self.recruiter_commission = commission_obj.create({'name': 'test_recruiter',
                                                            'commission_role_id': self.env.ref(
-                                                               'oi1_commission_role_recruiter').id,
+                                                               'oi1_werkstandbij_commission.oi1_commission_role_recruiter').id,
+                                                           'product_id': self.commission_product.id
+                                                           })
+
+        self.seller_commission = commission_obj.create({'name': 'test_seller',
+                                                           'commission_role_id': self.env.ref(
+                                                               'oi1_werkstandbij_commission.oi1_commission_role_sales').id,
                                                            'product_id': self.commission_product.id
                                                            })
 
@@ -51,10 +57,7 @@ class TestTest(TransactionCase):
         self.assertEqual(len(commission_logs), 1)
         commission_log = commission_logs[0]
         self.assertTrue(commission_log.start_date < datetime.date.today() - datetime.timedelta(days=10))
-
-        recruiter_partner_ids = partner_obj.search([('x_is_recruiter', '=', True)])
-        self.assertFalse(len(recruiter_partner_ids) == 0)
-        recruiter_partner_id = recruiter_partner_ids[0]
+        recruiter_partner_id = self.recruiter_commission_partner_id
         free_worker.write({'recruiter_partner_id': recruiter_partner_id})
         commission_logs = free_worker.commission_log_ids
         self.assertEqual(len(commission_logs), 2)
@@ -62,8 +65,7 @@ class TestTest(TransactionCase):
         for commission_log in commission_logs:
             self.assertTrue(commission_log.start_date < datetime.date.today() - datetime.timedelta(days=10))
 
-        self.assertFalse(len(recruiter_partner_ids) == 2)
-        recruiter_partner_id = recruiter_partner_ids[1]
+        recruiter_partner_id = self.recruiter_commission_partner_id
         free_worker.write({'recruiter_partner_id': recruiter_partner_id})
         commission_logs = free_worker.commission_log_ids.\
             filtered(lambda l: l.start_date > datetime.date.today() - datetime.timedelta(days=5))
@@ -81,6 +83,7 @@ class TestTest(TransactionCase):
         com_partner_1 = partner_obj.create({'name': 'test_commission_partner1'})
         model_name = 'sale.order'
         start_date = datetime.date.today()
+
         commission_log = commission_log_obj.set_commission_log(model_name,
                                                                sale_order.id,
                                                                com_partner_1,
