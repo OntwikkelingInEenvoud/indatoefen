@@ -1,4 +1,4 @@
-from odoo import models, fields, api, exceptions, _
+from odoo import models, fields, api, exceptions, Command, _
 from datetime import date
 
 
@@ -59,9 +59,15 @@ class CommissionPayment(models.Model):
                              % invoice.partner_id.name)
                     invoice.message_post(body=body)
 
+            invoice_lines = []
             for commission_line in commission_lines:
-                invoice_line = self._create_update_invoice_lines(commission_line, invoice)
-                commission_line.pur_invoice_line_id = invoice_line.id
+                invoice_lines = self._create_update_invoice_lines(commission_line, invoice)
+
+            if len(invoice_lines) > 0:
+                invoice.with_context(dynamic_unlink=True).write({'line_ids': False})
+                for invoice_line_values in invoice_lines.values():
+                    invoice.write({'invoice_line_ids': [Command.create(invoice_line_values)]})
+
             if len(commission.sale_commission_payment_lines.filtered(lambda l: not l.pur_invoice_line_id)) == 0:
                 commission.write({'state': 'invoiced', 'invoice_id': invoice.id})
 
@@ -83,11 +89,18 @@ class CommissionPayment(models.Model):
         vat = product_id.taxes_id
         return vat
 
-    def _create_update_invoice_lines(self, commission_line, invoice):
+    def _create_update_invoice_lines(self, commission_line, account_move):
         account_move_line_obj = self.env['account.move.line']
+        tools_obj = self.env['oi1.object_tools']
         partner_name = ''
         sale_name = ''
         commission_name = ''
+        dict_invoice_lines = {}
+
+        invoice_lines = tools_obj.get_dictionary_values(account_move.invoice_line_ids)
+        for invoice_line in invoice_lines:
+            key = invoice_line['name'] + "." + str(invoice_line['price_unit'])
+            dict_invoice_lines[key] = invoice_line
 
         quantity = commission_line.qty
         if commission_line.type == 'payment':
@@ -103,19 +116,16 @@ class CommissionPayment(models.Model):
         name = partner_name + sale_name + commission_name
         if commission_line.oi1_sale_commission_id.type == 'reservation':
             name = _("Payment of") + ' ' + name + ' ' + commission_line.name
-        invoice_line_obj = self.env['account.move.line']
+
         product = commission_line.commission_id.product_id
-        invoice_lines = invoice_line_obj.search([('move_id', '=', invoice.id),
-                                                 ('name', '=', name),
-                                                 ('price_unit', '=', commission_line.rate)
-                                                 ])
-        if len(invoice_lines) > 0:
-            invoice_line = invoice_lines[0]
-            quantity = invoice_line.quantity + quantity
-            values = {'quantity': quantity}
-            invoice_line.write(values)
-            return invoice_line
-        values = {'move_id': invoice.id,
+        key = name + "." + str(commission_line.rate)
+        invoice_line = dict_invoice_lines.get(key)
+
+        if invoice_line:
+            invoice_line['quantity'] = invoice_line['quantity'] + quantity
+            invoice_line['sale_commission_payment_line_ids']  = invoice_line['sale_commission_payment_line_ids'] + [(4, commission_line.id)]
+        else:
+            values = {
                   'product_id': product.id,
                   'price_unit': commission_line.rate,
                   'quantity': quantity,
@@ -123,10 +133,11 @@ class CommissionPayment(models.Model):
                                 or product.categ_id.property_account_expense_categ_id.id,
                   'name': name,
                   'display_type': 'product',
-                  'tax_ids': self._get_invoice_free_worker_vat(invoice, product)
+                  'tax_ids': self._get_invoice_free_worker_vat(account_move, product),
+                  'sale_commission_payment_line_ids': [(4 , commission_line.id)]
                   }
-        invoice_line = account_move_line_obj.create(values)
-        return invoice_line
+            dict_invoice_lines[key] = values
+        return dict_invoice_lines
 
     def do_print_commissionreport(self):
         return self.env.ref('oi1_reporting_werkstandbij.commission_payment_report').report_action(self)

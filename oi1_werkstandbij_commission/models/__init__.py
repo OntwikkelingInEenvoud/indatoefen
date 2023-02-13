@@ -18,3 +18,4 @@ from . import oi1_commission_rate_list
 from . import oi1_commission_rate_list_line
 from . import oi1_commission_payment_log
 from . import oi1_sale_commission_unreserve_wizard
+from . import account_move_line

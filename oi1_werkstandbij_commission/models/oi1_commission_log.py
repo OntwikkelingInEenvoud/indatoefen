@@ -113,7 +113,7 @@ class CommissionLog(models.Model):
             if not log.commission_main_id.id and len(log.commission_id.name or '') > 0:
                 name += ' ' + log.commission_id.name
             if not log.commission_main_id.id and log.commission_id.id:
-                name += ' ' + log.commission_id.name
+                name += ' ' + (log.commission_id.name or '')
             if log.commission_free_worker_id.id and len(log.commission_free_worker_id.description or '') > 0:
                 name += ' ' + log.commission_free_worker_id.description
             if log.commission_rate_list_id.id:
