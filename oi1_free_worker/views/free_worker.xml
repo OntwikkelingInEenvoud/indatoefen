@@ -20,7 +20,7 @@
             <field name="arch" type="xml">
                  <form string="Free worker form">
                      <header>
-                        <field clickable="1" name="state" widget="statusbar"/>
+                        <field name="state" widget="statusbar"  options="{'clickable': '1'}" />
                         <button string='do_action_check_private_data' name="do_action_check_private_data" type="object" groups="oi1_free_worker.freeworker_view_private" />
                      </header>
 
