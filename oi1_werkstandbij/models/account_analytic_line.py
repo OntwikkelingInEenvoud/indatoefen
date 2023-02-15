@@ -179,19 +179,20 @@ class AccountAnalyticLine(models.Model):
                 ts_line.x_poule_id = account_analytic_lines[0].x_poule_id
                 ts_line.project_id = account_analytic_lines[0].project_id
                 continue
-            poules = ts_line.x_partner_id.x_poule_ids
-            if len(poules) > 0:
-                ts_line.x_poule_id = poules[0]
-                ts_line.project_id = poules[0].project_id
+            if ts_line.x_partner_id.x_is_freeworker:
+                poules = ts_line.x_partner_id.x_freeworker_id.poule_ids
+                if len(poules) > 0:
+                    ts_line.x_poule_id = poules[0]
+                    ts_line.project_id = poules[0].project_id
 
     @api.onchange('project_id')
     def _compute_description(self):
         for ts_line in self:
             if not ts_line.project_id:
-                continue;
-            description = ts_line.project_id.name;
-            if ts_line.project_id.x_poule_id.id != False:
-                description = ts_line.project_id.x_poule_id.act_description;
+                continue
+            description = ts_line.project_id.name
+            if not ts_line.x_poule_id.id:
+                description = ts_line.project_id.x_poule_id.act_description
             ts_line.name = description
 
     @api.onchange('x_from_time')
